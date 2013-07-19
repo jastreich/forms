@@ -4,7 +4,8 @@ require_once('forms.inc.php');
  * @author Jeremy Streich
  **/
 
-/** @class db_form Represents an HTML form, and saves form data in $db table named by the name attribue of this object.
+/** @class db_form 
+ * Represents an HTML form, and saves form data in $db table named by the name attribue of this object.
  * @todo: decide it this is the way to do this. perhaps write the alternative menthod.
  **/
 class db_form extends forms

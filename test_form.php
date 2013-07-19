@@ -15,7 +15,10 @@ ini_set('display_errors', 'On');
 error_reporting( E_ALL );
 
 require_once('input.inc.php');
+require_once('extended_inputs.inc.php');
+require_once('input_group.inc.php');
 require_once('file_form.inc.php');
+
 /*
 $i = new input('Phone Number','phone','color',(isset($_POST['phone']) ? $_POST['phone'] : ''),true,30,'','','','(XXX) XXX-XXXX');
 $j = new input('Phone Number 2','phone2','text',(isset($_POST['phone2']) ? $_POST['phone2'] : ''),true,30,'','',$RX_PHONE,'(XXX) XXX-XXXX');
@@ -35,7 +38,7 @@ $form->add_field(new text_input('Last Name','last_name','',true,30));
 $form->add_field(new tel_input('Phone Number','phone','',true));
 $form->add_field(new text_input('Address','address','',true,50));
 $form->add_field(new zip_input('Zip Code','zip','',true));
-$form->add_field(new range_input('Input a Range','range',5,true,1,10,true));
+$form->add_field(new range_input('Input a Range','range',5,1,10,true));
 
 $errors = array();
 if(isset($_POST) && count($_POST) > 0)
