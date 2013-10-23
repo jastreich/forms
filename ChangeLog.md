@@ -4,7 +4,8 @@
 
 ## Development
 
-* f080b67 2013-07-19 | Let's try the polly fill again from scratch. (HEAD, master) [Jeremy Streich]
+* 589b902 2013-10-16 | Moved changes from LEAP project back into this one.  Cleaned up git repo to match current file state. (HEAD, master) [Jeremy Streich]
+* f080b67 2013-07-19 | Let's try the polly fill again from scratch. [Jeremy Streich]
 * 8b32a2b 2013-07-19 | Path stuff. :( [Jeremy Streich]
 * 87ed9a1 2013-07-19 | Comme on and work!? [Jeremy Streich]
 * 56b4123 2013-07-19 | Maybe that did it? [Jeremy Streich]

@@ -83,8 +83,8 @@ class forms implements field, observable
     {
       if(false === $field->sanitize())
       {
-        notify(new event($this,SANITIZE,false));
-       	return false;   
+        $this->notify(new event($this,SANITIZE,false));
+       	return false;
       }
     }
     $this->notify(new event($this,SANITIZE,true));

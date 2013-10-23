@@ -16,6 +16,68 @@ define('RX_PHONE','((\+?)((1|0)?)([\s-./]?)((\(\d{3}\)?)|(\d{3}))([\s-./]?)(\d{3
  **/
 define('RX_ZIP','([0-9]{5}([-][0-9]{4})?)');
 
+$state_list = array
+(
+    'AL'=>"Alabama",
+    'AK'=>"Alaska", 
+    'AZ'=>"Arizona", 
+    'AR'=>"Arkansas", 
+    'CA'=>"California", 
+    'CO'=>"Colorado", 
+    'CT'=>"Connecticut", 
+    'DE'=>"Delaware", 
+    'DC'=>"District Of Columbia", 
+    'FL'=>"Florida", 
+    'GA'=>"Georgia", 
+    'HI'=>"Hawaii", 
+    'ID'=>"Idaho", 
+    'IL'=>"Illinois", 
+    'IN'=>"Indiana", 
+    'IA'=>"Iowa", 
+    'KS'=>"Kansas", 
+    'KY'=>"Kentucky", 
+    'LA'=>"Louisiana", 
+    'ME'=>"Maine", 
+    'MD'=>"Maryland", 
+    'MA'=>"Massachusetts", 
+    'MI'=>"Michigan", 
+    'MN'=>"Minnesota", 
+    'MS'=>"Mississippi", 
+    'MO'=>"Missouri", 
+    'MT'=>"Montana",
+    'NE'=>"Nebraska",
+    'NV'=>"Nevada",
+    'NH'=>"New Hampshire",
+    'NJ'=>"New Jersey",
+    'NM'=>"New Mexico",
+    'NY'=>"New York",
+    'NC'=>"North Carolina",
+    'ND'=>"North Dakota",
+    'OH'=>"Ohio", 
+    'OK'=>"Oklahoma", 
+    'OR'=>"Oregon", 
+    'PA'=>"Pennsylvania", 
+    'RI'=>"Rhode Island", 
+    'SC'=>"South Carolina", 
+    'SD'=>"South Dakota",
+    'TN'=>"Tennessee", 
+    'TX'=>"Texas", 
+    'UT'=>"Utah", 
+    'VT'=>"Vermont", 
+    'VA'=>"Virginia", 
+    'WA'=>"Washington", 
+    'WV'=>"West Virginia", 
+    'WI'=>"Wisconsin", 
+    'WY'=>"Wyoming"
+);
+
+$state_abrs =array( "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
+      "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA",
+      "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE",
+      "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC",
+      "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY");
+
+
 /** @class input
  *  @brief The class input describes a form element, it's attributes and how it is validated and sanitized.  Meant to be used with the class forms or it's dervative classes.
  **/
