@@ -1,0 +1,116 @@
+\hypertarget{classdb__form}{\subsection{db\-\_\-form Class Reference}
+\label{classdb__form}\index{db\-\_\-form@{db\-\_\-form}}
+}
+
+
+Represents an H\-T\-M\-L form, and saves form data in \$db table named by the name attribue of this object.  
+
+
+Inheritance diagram for db\-\_\-form\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classdb__form}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdb__form_af9e3c532c73b0c3bf82996e54f0390c7}{create} ()
+\begin{DoxyCompactList}\small\item\em Inserts new record into database \$db table $<$name$>$. \end{DoxyCompactList}\item 
+\hyperlink{classdb__form_aa77f60c8ca3cd52f28ea455eaa2f633d}{read} ()
+\begin{DoxyCompactList}\small\item\em Reads an object back from database table $<$name$>$. \end{DoxyCompactList}\item 
+\hyperlink{classdb__form_a132f6a150aad88391ce063711c08ace3}{update} ()
+\begin{DoxyCompactList}\small\item\em Updates the base record for this form. \end{DoxyCompactList}\item 
+\hyperlink{classdb__form_a09bce6f14faa4db14589a8627c782b4c}{delete} ()
+\begin{DoxyCompactList}\small\item\em Deletes the record for this form. \end{DoxyCompactList}\item 
+\hyperlink{classdb__form_a39893c90e5b3364fdae768079ff66520}{create\-\_\-sql} ()
+\begin{DoxyCompactList}\small\item\em Generates and returns the S\-Q\-L to create the table for this form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+Represents an H\-T\-M\-L form, and saves form data in \$db table named by the name attribue of this object. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]\-: decide it this is the way to do this. perhaps write the alternative menthod. \end{DoxyRefDesc}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classdb__form_af9e3c532c73b0c3bf82996e54f0390c7}{\index{db\-\_\-form@{db\-\_\-form}!create@{create}}
+\index{create@{create}!db_form@{db\-\_\-form}}
+\paragraph[{create}]{\setlength{\rightskip}{0pt plus 5cm}db\-\_\-form\-::create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdb__form_af9e3c532c73b0c3bf82996e54f0390c7}
+
+
+Inserts new record into database \$db table $<$name$>$. 
+
+\begin{DoxyPrecond}{Precondition}
+\$db must be a mysqli connection and $<$name$>$ must exist 
+\end{DoxyPrecond}
+\hypertarget{classdb__form_a39893c90e5b3364fdae768079ff66520}{\index{db\-\_\-form@{db\-\_\-form}!create\-\_\-sql@{create\-\_\-sql}}
+\index{create\-\_\-sql@{create\-\_\-sql}!db_form@{db\-\_\-form}}
+\paragraph[{create\-\_\-sql}]{\setlength{\rightskip}{0pt plus 5cm}db\-\_\-form\-::create\-\_\-sql (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdb__form_a39893c90e5b3364fdae768079ff66520}
+
+
+Generates and returns the S\-Q\-L to create the table for this form. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000004}{Todo}]\end{DoxyRefDesc}
+\hypertarget{classdb__form_a09bce6f14faa4db14589a8627c782b4c}{\index{db\-\_\-form@{db\-\_\-form}!delete@{delete}}
+\index{delete@{delete}!db_form@{db\-\_\-form}}
+\paragraph[{delete}]{\setlength{\rightskip}{0pt plus 5cm}db\-\_\-form\-::delete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdb__form_a09bce6f14faa4db14589a8627c782b4c}
+
+
+Deletes the record for this form. 
+
+\begin{DoxyPrecond}{Precondition}
+\$db must be a mysqli connection and $<$name$>$ must exist 
+\end{DoxyPrecond}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]\end{DoxyRefDesc}
+\hypertarget{classdb__form_aa77f60c8ca3cd52f28ea455eaa2f633d}{\index{db\-\_\-form@{db\-\_\-form}!read@{read}}
+\index{read@{read}!db_form@{db\-\_\-form}}
+\paragraph[{read}]{\setlength{\rightskip}{0pt plus 5cm}db\-\_\-form\-::read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdb__form_aa77f60c8ca3cd52f28ea455eaa2f633d}
+
+
+Reads an object back from database table $<$name$>$. 
+
+\begin{DoxyPrecond}{Precondition}
+\$db must be a mysqli connection and $<$name$>$ must exist 
+\end{DoxyPrecond}
+\hypertarget{classdb__form_a132f6a150aad88391ce063711c08ace3}{\index{db\-\_\-form@{db\-\_\-form}!update@{update}}
+\index{update@{update}!db_form@{db\-\_\-form}}
+\paragraph[{update}]{\setlength{\rightskip}{0pt plus 5cm}db\-\_\-form\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdb__form_a132f6a150aad88391ce063711c08ace3}
+
+
+Updates the base record for this form. 
+
+\begin{DoxyPrecond}{Precondition}
+\$db must be a mysqli connection and $<$name$>$ must exist 
+\end{DoxyPrecond}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]\end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{db__form_8inc_8php}{db\-\_\-form.\-inc.\-php}\end{DoxyCompactItemize}

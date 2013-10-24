@@ -1,0 +1,161 @@
+\hypertarget{classfile__form}{\subsection{file\-\_\-form Class Reference}
+\label{classfile__form}\index{file\-\_\-form@{file\-\_\-form}}
+}
+
+
+This class represents an H\-T\-M\-L form, it's values, how it is validated and allows to read/write form data to serialized files.  
+
+
+Inheritance diagram for file\-\_\-form\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classfile__form}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfile__form_a242c4711e97a3a9062ecbc4dfce8d2e0}{serialize\-\_\-data} ()
+\begin{DoxyCompactList}\small\item\em Serializes form values for storage in variable, cookie or file. \end{DoxyCompactList}\item 
+\hyperlink{classfile__form_a8b8ee5ff11a467aa1411355604c40904}{deserialize\-\_\-data} (\$s)
+\begin{DoxyCompactList}\small\item\em Unserializes a string, and assigns the values to the field. \end{DoxyCompactList}\item 
+\hyperlink{classfile__form_a29009ed5d4695a9298f167b17641ae1f}{save} ()
+\begin{DoxyCompactList}\small\item\em Saves form data out to disk as serialized associated array. \end{DoxyCompactList}\item 
+\hyperlink{classfile__form_a17b09200249a2b5c41261a19693dada8}{create} ()
+\begin{DoxyCompactList}\small\item\em Creates a file from this form data. \end{DoxyCompactList}\item 
+\hyperlink{classfile__form_ab7dce3d792551f836f20948fa9c8ef13}{read} ()
+\begin{DoxyCompactList}\small\item\em Reads the values back into. \end{DoxyCompactList}\item 
+\hyperlink{classfile__form_ad9573af92f2b4758204df70c01335f2e}{update} ()
+\begin{DoxyCompactList}\small\item\em Updates the disk copy of this form. \end{DoxyCompactList}\item 
+\hyperlink{classfile__form_aacbb6b50c48c05a74dd26e8abaee749a}{delete} ()
+\begin{DoxyCompactList}\small\item\em Deletes the saved file containg this form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+This class represents an H\-T\-M\-L form, it's values, how it is validated and allows to read/write form data to serialized files. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classfile__form_a17b09200249a2b5c41261a19693dada8}{\index{file\-\_\-form@{file\-\_\-form}!create@{create}}
+\index{create@{create}!file_form@{file\-\_\-form}}
+\paragraph[{create}]{\setlength{\rightskip}{0pt plus 5cm}file\-\_\-form\-::create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classfile__form_a17b09200249a2b5c41261a19693dada8}
+
+
+Creates a file from this form data. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classfile__form_a29009ed5d4695a9298f167b17641ae1f}{file\-\_\-form\-::save()} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000007}{Todo}]get new id 
+
+locking. \end{DoxyRefDesc}
+\hypertarget{classfile__form_aacbb6b50c48c05a74dd26e8abaee749a}{\index{file\-\_\-form@{file\-\_\-form}!delete@{delete}}
+\index{delete@{delete}!file_form@{file\-\_\-form}}
+\paragraph[{delete}]{\setlength{\rightskip}{0pt plus 5cm}file\-\_\-form\-::delete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classfile__form_aacbb6b50c48c05a74dd26e8abaee749a}
+
+
+Deletes the saved file containg this form. 
+
+\begin{DoxyReturn}{Returns}
+true if successful otherwise false. 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000010}{Todo}]locking. \end{DoxyRefDesc}
+\hypertarget{classfile__form_a8b8ee5ff11a467aa1411355604c40904}{\index{file\-\_\-form@{file\-\_\-form}!deserialize\-\_\-data@{deserialize\-\_\-data}}
+\index{deserialize\-\_\-data@{deserialize\-\_\-data}!file_form@{file\-\_\-form}}
+\paragraph[{deserialize\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}file\-\_\-form\-::deserialize\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{}]{\$s}
+\end{DoxyParamCaption}
+)}}\label{classfile__form_a8b8ee5ff11a467aa1411355604c40904}
+
+
+Unserializes a string, and assigns the values to the field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$s} & the serialized version of an associated array. Ignores values whose keys are not fields of this form. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classfile__form_a242c4711e97a3a9062ecbc4dfce8d2e0}{file\-\_\-form\-::serialize\-\_\-data()} 
+
+\hyperlink{classforms_ad66e3f3a4d5332bbd15e53680930d786}{forms\-::values()} 
+\end{DoxySeeAlso}
+\hypertarget{classfile__form_ab7dce3d792551f836f20948fa9c8ef13}{\index{file\-\_\-form@{file\-\_\-form}!read@{read}}
+\index{read@{read}!file_form@{file\-\_\-form}}
+\paragraph[{read}]{\setlength{\rightskip}{0pt plus 5cm}file\-\_\-form\-::read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classfile__form_ab7dce3d792551f836f20948fa9c8ef13}
+
+
+Reads the values back into. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classfile__form_a8b8ee5ff11a467aa1411355604c40904}{file\-\_\-form\-::deserialize\-\_\-data()} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000008}{Todo}]locking. \end{DoxyRefDesc}
+\hypertarget{classfile__form_a29009ed5d4695a9298f167b17641ae1f}{\index{file\-\_\-form@{file\-\_\-form}!save@{save}}
+\index{save@{save}!file_form@{file\-\_\-form}}
+\paragraph[{save}]{\setlength{\rightskip}{0pt plus 5cm}file\-\_\-form\-::save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classfile__form_a29009ed5d4695a9298f167b17641ae1f}
+
+
+Saves form data out to disk as serialized associated array. 
+
+File is saved to $<$form name$>$=\char`\"{}\char`\"{}$>$.data/$<$id$>$.frm \begin{DoxySeeAlso}{See Also}
+\hyperlink{classfile__form_a242c4711e97a3a9062ecbc4dfce8d2e0}{file\-\_\-form\-::serialize\-\_\-data} 
+\end{DoxySeeAlso}
+\hypertarget{classfile__form_a242c4711e97a3a9062ecbc4dfce8d2e0}{\index{file\-\_\-form@{file\-\_\-form}!serialize\-\_\-data@{serialize\-\_\-data}}
+\index{serialize\-\_\-data@{serialize\-\_\-data}!file_form@{file\-\_\-form}}
+\paragraph[{serialize\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}file\-\_\-form\-::serialize\-\_\-data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classfile__form_a242c4711e97a3a9062ecbc4dfce8d2e0}
+
+
+Serializes form values for storage in variable, cookie or file. 
+
+\begin{DoxyReturn}{Returns}
+string of serialized array of values. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classfile__form_a8b8ee5ff11a467aa1411355604c40904}{file\-\_\-form\-::deserialize\-\_\-data()} 
+\end{DoxySeeAlso}
+\hypertarget{classfile__form_ad9573af92f2b4758204df70c01335f2e}{\index{file\-\_\-form@{file\-\_\-form}!update@{update}}
+\index{update@{update}!file_form@{file\-\_\-form}}
+\paragraph[{update}]{\setlength{\rightskip}{0pt plus 5cm}file\-\_\-form\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classfile__form_ad9573af92f2b4758204df70c01335f2e}
+
+
+Updates the disk copy of this form. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classfile__form_a29009ed5d4695a9298f167b17641ae1f}{file\-\_\-form\-::save()} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000009}{Todo}]locking. \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{file__form_8inc_8php}{file\-\_\-form.\-inc.\-php}\end{DoxyCompactItemize}

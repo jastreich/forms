@@ -1,0 +1,251 @@
+\hypertarget{classinput}{\subsection{input Class Reference}
+\label{classinput}\index{input@{input}}
+}
+
+
+The class input describes a form element, it's attributes and how it is validated and sanitized.  
+
+
+Inheritance diagram for input\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classinput}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classinput_a13d088ddc4014c18efd350940632ecc0}{input} (\$label\-\_\-text, \$name, \$type= 'text', \$value= '', \$required=false, \$maxlength= '', \$min= '', \$max= '', \$pattern= '', \$placeholder= '', \$sanity\-\_\-func=null, \$valid\-\_\-func=null)
+\begin{DoxyCompactList}\small\item\em Constructor, creates an input object. \end{DoxyCompactList}\item 
+\hyperlink{classinput_a83b663057f1d0f61768bc12c5a55f25c}{form} (\$errors=array())
+\begin{DoxyCompactList}\small\item\em Generates the html for the input for inclusion in a form. \end{DoxyCompactList}\item 
+\hyperlink{classinput_a993053ef011cade1db0ceaccb1f4da53}{display} ()
+\begin{DoxyCompactList}\small\item\em Display the name value pair. \end{DoxyCompactList}\item 
+\hyperlink{classinput_ab8456d2b5a929801af6fe0b36afd458c}{sanitize} ()
+\begin{DoxyCompactList}\small\item\em Sanitizes value to help protect against H\-T\-M\-L, S\-Q\-L, P\-H\-P or other injections. \end{DoxyCompactList}\item 
+\hyperlink{classinput_aaf4ed91e7abbc20e2396a4b07dbd031a}{validate} (\$errors=array())
+\begin{DoxyCompactList}\small\item\em Validates input's value, and adds errors to the \$errors array if the value isn't valid, based on the attributes of this object or the input's valid\-\_\-func. \end{DoxyCompactList}\item 
+\hypertarget{classinput_a1b3bcdbb596a1154a944a169ac67f547}{\hyperlink{classinput_a1b3bcdbb596a1154a944a169ac67f547}{get\-\_\-value} ()}\label{classinput_a1b3bcdbb596a1154a944a169ac67f547}
+
+\begin{DoxyCompactList}\small\item\em Inspector function for this input's value \$return The current value of this input. \end{DoxyCompactList}\item 
+\hyperlink{classinput_a2383e00d55bf3dbcc7071b2fe1336aec}{set\-\_\-value} (\$v)
+\begin{DoxyCompactList}\small\item\em Mutator function for this input's value. \end{DoxyCompactList}\item 
+\hyperlink{classinput_a78f0cd122c69a6f62875152c0cfc9bc2}{values} (\$values)
+\begin{DoxyCompactList}\small\item\em Takes an assoicated array of values and assigns the values to input fileds, and the id of this form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classinput_aed2f7eacbada521eb92809232ad75ca3}{{\bfseries \$label\-\_\-text}}\label{classinput_aed2f7eacbada521eb92809232ad75ca3}
+
+\item 
+\hypertarget{classinput_a0cbae4dc5f240d27d6e6d4096e88ad97}{{\bfseries \$name}}\label{classinput_a0cbae4dc5f240d27d6e6d4096e88ad97}
+
+\item 
+\hypertarget{classinput_a63d0edb1fac60fb8c53f35a860a8b645}{{\bfseries \$type}}\label{classinput_a63d0edb1fac60fb8c53f35a860a8b645}
+
+\item 
+\hypertarget{classinput_a1dc6911d9c8cb9fbac36a50cf57ef589}{{\bfseries \$value}}\label{classinput_a1dc6911d9c8cb9fbac36a50cf57ef589}
+
+\item 
+\hypertarget{classinput_a864eeca6da6bd93b04ace1dedb70d0b7}{{\bfseries \$min}}\label{classinput_a864eeca6da6bd93b04ace1dedb70d0b7}
+
+\item 
+\hypertarget{classinput_a332378c7b51bb60333d74473b15a5a8b}{{\bfseries \$max}}\label{classinput_a332378c7b51bb60333d74473b15a5a8b}
+
+\item 
+\hypertarget{classinput_ae5486c2624c42649b39355332ced3b06}{{\bfseries \$maxlength}}\label{classinput_ae5486c2624c42649b39355332ced3b06}
+
+\item 
+\hypertarget{classinput_ac053166030c96a0f0f450e2af7f9eb3b}{{\bfseries \$pattern}}\label{classinput_ac053166030c96a0f0f450e2af7f9eb3b}
+
+\item 
+\hypertarget{classinput_a2cb1d88c81d62d30346f888f74772891}{{\bfseries \$required}}\label{classinput_a2cb1d88c81d62d30346f888f74772891}
+
+\item 
+\hypertarget{classinput_a0e5ba6b06baea9c597e5656c3adaee0f}{{\bfseries \$placeholder}}\label{classinput_a0e5ba6b06baea9c597e5656c3adaee0f}
+
+\item 
+\hypertarget{classinput_ae124da9ea57f47a12780632c6f9bd615}{{\bfseries \$sanity\-\_\-func}}\label{classinput_ae124da9ea57f47a12780632c6f9bd615}
+
+\item 
+\hypertarget{classinput_a12410e036b17064b74b940980be5d4aa}{{\bfseries \$valid\-\_\-func}}\label{classinput_a12410e036b17064b74b940980be5d4aa}
+
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+The class input describes a form element, it's attributes and how it is validated and sanitized. 
+
+Meant to be used with the class forms or it's dervative classes. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classinput_a993053ef011cade1db0ceaccb1f4da53}{\index{input@{input}!display@{display}}
+\index{display@{display}!input@{input}}
+\paragraph[{display}]{\setlength{\rightskip}{0pt plus 5cm}input\-::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classinput_a993053ef011cade1db0ceaccb1f4da53}
+
+
+Display the name value pair. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the formated name value pair for this input. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacefield_a6a8bbd656a0e7cab2604f6df859bb60a}{field}.
+
+\hypertarget{classinput_a83b663057f1d0f61768bc12c5a55f25c}{\index{input@{input}!form@{form}}
+\index{form@{form}!input@{input}}
+\paragraph[{form}]{\setlength{\rightskip}{0pt plus 5cm}input\-::form (
+\begin{DoxyParamCaption}
+\item[{}]{\$errors = {\ttfamily array()}}
+\end{DoxyParamCaption}
+)}}\label{classinput_a83b663057f1d0f61768bc12c5a55f25c}
+
+
+Generates the html for the input for inclusion in a form. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$errors} & an accoiated array errors. If the field name appears in errors, the field's label will be a class of error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array with two elements 'html' the H\-T\-M\-L of the input field and 'js' any Java\-Script that would assoicated with it (empty for basic input types at this time). 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacefield_a1b51c4b8b01f77a26eda359e1fc0fb4c}{field}.
+
+\hypertarget{classinput_a13d088ddc4014c18efd350940632ecc0}{\index{input@{input}!input@{input}}
+\index{input@{input}!input@{input}}
+\paragraph[{input}]{\setlength{\rightskip}{0pt plus 5cm}input\-::input (
+\begin{DoxyParamCaption}
+\item[{}]{\$label\-\_\-text, }
+\item[{}]{\$name, }
+\item[{}]{\$type = {\ttfamily 'text'}, }
+\item[{}]{\$value = {\ttfamily ''}, }
+\item[{}]{\$required = {\ttfamily false}, }
+\item[{}]{\$maxlength = {\ttfamily ''}, }
+\item[{}]{\$min = {\ttfamily ''}, }
+\item[{}]{\$max = {\ttfamily ''}, }
+\item[{}]{\$pattern = {\ttfamily ''}, }
+\item[{}]{\$placeholder = {\ttfamily ''}, }
+\item[{}]{\$sanity\-\_\-func = {\ttfamily null}, }
+\item[{}]{\$valid\-\_\-func = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}}\label{classinput_a13d088ddc4014c18efd350940632ecc0}
+
+
+Constructor, creates an input object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$label\-\_\-text} & The text label on the form field. \\
+\hline
+string & {\em \$name} & The name of the field used to identify this field in the database, and in the form. \\
+\hline
+string & {\em \$type} & The type of input, should be a valid H\-T\-M\-L type. \\
+\hline
+mixed & {\em \$value} & The current value of the field. \\
+\hline
+bool & {\em \$required} & Boolean value, weather or not the user is required to enter a value for the field. \\
+\hline
+mixed & {\em \$maxlength} & The maximum characters this field's value can have, and still be valid. null or empty string will make this be ignored. \\
+\hline
+mixes & {\em \$min} & The minimum value allowed for this imput, when type is date, time or some type that has a numberic value. null or empty string willl make this be ignored. \\
+\hline
+string & {\em \$pattern} & The regex pattern that this field's value must match to be valid. null or empty string will make this ignored. \\
+\hline
+string & {\em \$placeholder} & The placeholder text for this item. null or empty string will suppress this attribute from being printed. \\
+\hline
+mixed & {\em \$sanity\-\_\-func} & A function run on this element to sanitize it, if null will use default sanitation and validation using attributes above. \\
+\hline
+mixed & {\em \$valid\-\_\-func} & A function run on this element to validate it, if null will use default sanitation and validation using attributes above. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classinput_ab8456d2b5a929801af6fe0b36afd458c}{\index{input@{input}!sanitize@{sanitize}}
+\index{sanitize@{sanitize}!input@{input}}
+\paragraph[{sanitize}]{\setlength{\rightskip}{0pt plus 5cm}input\-::sanitize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classinput_ab8456d2b5a929801af6fe0b36afd458c}
+
+
+Sanitizes value to help protect against H\-T\-M\-L, S\-Q\-L, P\-H\-P or other injections. 
+
+Returns false if the value can't be cleaned in a sensible way. \begin{DoxyReturn}{Returns}
+mixed often the value of the field or true if sanitization occured properly, but false if we are unable to sanitize. Use identical test '===' instaead of equality as input may have values of '' or 0. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacefield_a3ed132df10731b5ebe33acc44ac03c85}{field}.
+
+\hypertarget{classinput_a2383e00d55bf3dbcc7071b2fe1336aec}{\index{input@{input}!set\-\_\-value@{set\-\_\-value}}
+\index{set\-\_\-value@{set\-\_\-value}!input@{input}}
+\paragraph[{set\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}input\-::set\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{}]{\$v}
+\end{DoxyParamCaption}
+)}}\label{classinput_a2383e00d55bf3dbcc7071b2fe1336aec}
+
+
+Mutator function for this input's value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$v} & The new value of this input \#post The value of this input will be set to \$v \\
+\hline
+\end{DoxyParams}
+\hypertarget{classinput_aaf4ed91e7abbc20e2396a4b07dbd031a}{\index{input@{input}!validate@{validate}}
+\index{validate@{validate}!input@{input}}
+\paragraph[{validate}]{\setlength{\rightskip}{0pt plus 5cm}input\-::validate (
+\begin{DoxyParamCaption}
+\item[{}]{\$errors = {\ttfamily array()}}
+\end{DoxyParamCaption}
+)}}\label{classinput_aaf4ed91e7abbc20e2396a4b07dbd031a}
+
+
+Validates input's value, and adds errors to the \$errors array if the value isn't valid, based on the attributes of this object or the input's valid\-\_\-func. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$errors} & an array of errors previously in the form, errors will be added to the array and the array returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array errors is returned, possibly with errors appended. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacefield_a352b92f9e8dce69191bad79bdc5d972b}{field}.
+
+\hypertarget{classinput_a78f0cd122c69a6f62875152c0cfc9bc2}{\index{input@{input}!values@{values}}
+\index{values@{values}!input@{input}}
+\paragraph[{values}]{\setlength{\rightskip}{0pt plus 5cm}input\-::values (
+\begin{DoxyParamCaption}
+\item[{}]{\$values}
+\end{DoxyParamCaption}
+)}}\label{classinput_a78f0cd122c69a6f62875152c0cfc9bc2}
+
+
+Takes an assoicated array of values and assigns the values to input fileds, and the id of this form. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$values} & an associated array of values. Ignores values of keys that aren't fields in this form. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfacefield_a54958a09bc0dcd947d611b14741c5996}{field}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{input_8inc_8php}{input.\-inc.\-php}\end{DoxyCompactItemize}

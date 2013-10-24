@@ -1,0 +1,298 @@
+\hypertarget{classpage}{\subsection{page Class Reference}
+\label{classpage}\index{page@{page}}
+}
+
+
+Holds the code to add to the head and foot.  
+
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpage_ac263e47b354ee96045b4f12e0c45da72}{page} (\$title)
+\begin{DoxyCompactList}\small\item\em Constructor for the page object. \end{DoxyCompactList}\item 
+\hyperlink{classpage_acbf2e50910fbabc4af83701b87064476}{add\-\_\-script} (\$js)
+\begin{DoxyCompactList}\small\item\em Adds a Java\-Script file to the foot of this document Files add using this function will be added to the foot before script added with \hyperlink{classpage_a7b3ad75f4c2f61b55ec27aff1a41ca93}{page\-::set\-\_\-js()} and \hyperlink{classpage_a438a833a311c04927ababd5a632d83a7}{page\-::append\-\_\-js()} \end{DoxyCompactList}\item 
+\hyperlink{classpage_a75526b06ca1a417bab2473740f80808e}{set\-\_\-scripts} (\$js)
+\begin{DoxyCompactList}\small\item\em Sets the J\-S files to be included (outside of the features added), replacing the current value. \end{DoxyCompactList}\item 
+\hyperlink{classpage_aa03ff10ebee5c14921287921ed1b1bb9}{add\-\_\-css} (\$css)
+\begin{DoxyCompactList}\small\item\em Adds a C\-S\-S file to the head of this document. \end{DoxyCompactList}\item 
+\hyperlink{classpage_af4c12b3536455dadfd585eb1b1373e09}{set\-\_\-css} (\$css)
+\begin{DoxyCompactList}\small\item\em Sets the C\-S\-S files to be included (outside of the features added), replacing the current value. \end{DoxyCompactList}\item 
+\hyperlink{classpage_a7b3ad75f4c2f61b55ec27aff1a41ca93}{set\-\_\-js} (\$js)
+\begin{DoxyCompactList}\small\item\em Sets the small script on the page, replacing any previously set or appended Java\-Scipt. \end{DoxyCompactList}\item 
+\hyperlink{classpage_a438a833a311c04927ababd5a632d83a7}{append\-\_\-js} (\$js)
+\begin{DoxyCompactList}\small\item\em Append to the Java\-Script on this page. \end{DoxyCompactList}\item 
+\hyperlink{classpage_a417d01aff00de8193f7f9f6a9eac8635}{add\-\_\-feature} (\$fid)
+\begin{DoxyCompactList}\small\item\em Adds a feature to the page. \end{DoxyCompactList}\item 
+\hyperlink{classpage_a17f91936047fb8ba40b8dff21d5b2f55}{set\-\_\-features} (\$fid)
+\begin{DoxyCompactList}\small\item\em Sets the features on this page, replacing the current features. \end{DoxyCompactList}\item 
+\hyperlink{classpage_aeab45580b69b8dc485402dd01694303d}{set\-\_\-content} (\$c)
+\begin{DoxyCompactList}\small\item\em Sets the content of the page. \end{DoxyCompactList}\item 
+\hyperlink{classpage_a7a090c44f986e6bc76eb5e2e1442aef8}{set\-\_\-site\-\_\-id} (\$sid)
+\begin{DoxyCompactList}\small\item\em The site id you'd like to track this page under in Piwik. \end{DoxyCompactList}\item 
+\hyperlink{classpage_ab0afa0eb524cf4c4cb00aafab2912564}{set\-\_\-google\-\_\-analytics} (\$gac)
+\begin{DoxyCompactList}\small\item\em The analytics codes you'd like to track this page with. \end{DoxyCompactList}\item 
+\hypertarget{classpage_a80c80673f7ecafaa6d9d60bde9e8f053}{{\bfseries head} ()}\label{classpage_a80c80673f7ecafaa6d9d60bde9e8f053}
+
+\item 
+\hypertarget{classpage_a671fc2de81fe15dd2b2331e1936fac08}{{\bfseries foot} ()}\label{classpage_a671fc2de81fe15dd2b2331e1936fac08}
+
+\item 
+\hypertarget{classpage_a6f925742090a0edf6f4c2ac68255a3cb}{{\bfseries render} ()}\label{classpage_a6f925742090a0edf6f4c2ac68255a3cb}
+
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Holds the code to add to the head and foot. 
+
+You can call the head and a foot and fill in the middle like this. \href{../../samples/page.example.0.phps}{\tt Example 1} $|$ \href{../../samples/page.example.1.phps}{\tt Example 2} $|$ \href{../../samples/page.example.2.phps}{\tt Example 3}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000014}{Todo}]Finish class. 
+
+create forms\-\_\-page object. And derive a database\-\_\-forms\-\_\-page object from it.\end{DoxyRefDesc}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classpage_aa03ff10ebee5c14921287921ed1b1bb9}{\index{page@{page}!add\-\_\-css@{add\-\_\-css}}
+\index{add\-\_\-css@{add\-\_\-css}!page@{page}}
+\paragraph[{add\-\_\-css}]{\setlength{\rightskip}{0pt plus 5cm}page\-::add\-\_\-css (
+\begin{DoxyParamCaption}
+\item[{}]{\$css}
+\end{DoxyParamCaption}
+)}}\label{classpage_aa03ff10ebee5c14921287921ed1b1bb9}
+
+
+Adds a C\-S\-S file to the head of this document. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$css} & a C\-S\-S file to add to this document. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if \$css doesn't evaluate to a string, and true if \$js is added 
+\end{DoxyReturn}
+\hypertarget{classpage_a417d01aff00de8193f7f9f6a9eac8635}{\index{page@{page}!add\-\_\-feature@{add\-\_\-feature}}
+\index{add\-\_\-feature@{add\-\_\-feature}!page@{page}}
+\paragraph[{add\-\_\-feature}]{\setlength{\rightskip}{0pt plus 5cm}page\-::add\-\_\-feature (
+\begin{DoxyParamCaption}
+\item[{}]{\$fid}
+\end{DoxyParamCaption}
+)}}\label{classpage_a417d01aff00de8193f7f9f6a9eac8635}
+
+
+Adds a feature to the page. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$fid} & the feature id you want to add. Availible are\-: G\-O\-O\-G\-L\-E\-\_\-\-A\-N\-A\-L\-Y\-T\-I\-C\-S, P\-I\-W\-I\-K, F\-O\-R\-M\-S \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+calls to page\-::head() and page\-::foot() will include the code for the past feature. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+false if \$fid isn't valid, otherwise {\ttfamily \$this}. 
+\end{DoxyReturn}
+\hypertarget{classpage_acbf2e50910fbabc4af83701b87064476}{\index{page@{page}!add\-\_\-script@{add\-\_\-script}}
+\index{add\-\_\-script@{add\-\_\-script}!page@{page}}
+\paragraph[{add\-\_\-script}]{\setlength{\rightskip}{0pt plus 5cm}page\-::add\-\_\-script (
+\begin{DoxyParamCaption}
+\item[{}]{\$js}
+\end{DoxyParamCaption}
+)}}\label{classpage_acbf2e50910fbabc4af83701b87064476}
+
+
+Adds a Java\-Script file to the foot of this document Files add using this function will be added to the foot before script added with \hyperlink{classpage_a7b3ad75f4c2f61b55ec27aff1a41ca93}{page\-::set\-\_\-js()} and \hyperlink{classpage_a438a833a311c04927ababd5a632d83a7}{page\-::append\-\_\-js()} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$js} & a Java\-Script file to add to this document. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if \$js doesn't evaluate to a string, and true if \$js is added 
+\end{DoxyReturn}
+\hypertarget{classpage_a438a833a311c04927ababd5a632d83a7}{\index{page@{page}!append\-\_\-js@{append\-\_\-js}}
+\index{append\-\_\-js@{append\-\_\-js}!page@{page}}
+\paragraph[{append\-\_\-js}]{\setlength{\rightskip}{0pt plus 5cm}page\-::append\-\_\-js (
+\begin{DoxyParamCaption}
+\item[{}]{\$js}
+\end{DoxyParamCaption}
+)}}\label{classpage_a438a833a311c04927ababd5a632d83a7}
+
+
+Append to the Java\-Script on this page. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$js} & The code you'd like to append. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if \$js is not a string, {\ttfamily \$this} otherwise. 
+\end{DoxyReturn}
+\hypertarget{classpage_ac263e47b354ee96045b4f12e0c45da72}{\index{page@{page}!page@{page}}
+\index{page@{page}!page@{page}}
+\paragraph[{page}]{\setlength{\rightskip}{0pt plus 5cm}page\-::page (
+\begin{DoxyParamCaption}
+\item[{}]{\$title}
+\end{DoxyParamCaption}
+)}}\label{classpage_ac263e47b354ee96045b4f12e0c45da72}
+
+
+Constructor for the page object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$title} & The title of this page \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpage_aeab45580b69b8dc485402dd01694303d}{\index{page@{page}!set\-\_\-content@{set\-\_\-content}}
+\index{set\-\_\-content@{set\-\_\-content}!page@{page}}
+\paragraph[{set\-\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}page\-::set\-\_\-content (
+\begin{DoxyParamCaption}
+\item[{}]{\$c}
+\end{DoxyParamCaption}
+)}}\label{classpage_aeab45580b69b8dc485402dd01694303d}
+
+
+Sets the content of the page. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$c} & The H\-T\-M\-L body of the page. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if \$c is not a string, otherwise {\ttfamily \$this} 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000015}{Todo}]validation of types. \end{DoxyRefDesc}
+\hypertarget{classpage_af4c12b3536455dadfd585eb1b1373e09}{\index{page@{page}!set\-\_\-css@{set\-\_\-css}}
+\index{set\-\_\-css@{set\-\_\-css}!page@{page}}
+\paragraph[{set\-\_\-css}]{\setlength{\rightskip}{0pt plus 5cm}page\-::set\-\_\-css (
+\begin{DoxyParamCaption}
+\item[{}]{\$css}
+\end{DoxyParamCaption}
+)}}\label{classpage_af4c12b3536455dadfd585eb1b1373e09}
+
+
+Sets the C\-S\-S files to be included (outside of the features added), replacing the current value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$css} & an array of filenames \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if \$css is not an array, otherwise {\ttfamily \$this} 
+\end{DoxyReturn}
+\hypertarget{classpage_a17f91936047fb8ba40b8dff21d5b2f55}{\index{page@{page}!set\-\_\-features@{set\-\_\-features}}
+\index{set\-\_\-features@{set\-\_\-features}!page@{page}}
+\paragraph[{set\-\_\-features}]{\setlength{\rightskip}{0pt plus 5cm}page\-::set\-\_\-features (
+\begin{DoxyParamCaption}
+\item[{}]{\$fid}
+\end{DoxyParamCaption}
+)}}\label{classpage_a17f91936047fb8ba40b8dff21d5b2f55}
+
+
+Sets the features on this page, replacing the current features. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$fid} & an array of feature ids \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classpage_a417d01aff00de8193f7f9f6a9eac8635}{page\-::add\-\_\-feature()} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+false if \$fid is not an array or has a bad feature id, otherwise returns {\ttfamily \$this} 
+\end{DoxyReturn}
+\hypertarget{classpage_ab0afa0eb524cf4c4cb00aafab2912564}{\index{page@{page}!set\-\_\-google\-\_\-analytics@{set\-\_\-google\-\_\-analytics}}
+\index{set\-\_\-google\-\_\-analytics@{set\-\_\-google\-\_\-analytics}!page@{page}}
+\paragraph[{set\-\_\-google\-\_\-analytics}]{\setlength{\rightskip}{0pt plus 5cm}page\-::set\-\_\-google\-\_\-analytics (
+\begin{DoxyParamCaption}
+\item[{}]{\$gac}
+\end{DoxyParamCaption}
+)}}\label{classpage_ab0afa0eb524cf4c4cb00aafab2912564}
+
+
+The analytics codes you'd like to track this page with. 
+
+\begin{DoxyPrecond}{Precondition}
+For this to work, G\-O\-O\-G\-L\-E\-\_\-\-A\-N\-A\-L\-Y\-T\-I\-C\-S must be a feautre of this page. 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$gac} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000016}{Todo}]verification of types \end{DoxyRefDesc}
+\hypertarget{classpage_a7b3ad75f4c2f61b55ec27aff1a41ca93}{\index{page@{page}!set\-\_\-js@{set\-\_\-js}}
+\index{set\-\_\-js@{set\-\_\-js}!page@{page}}
+\paragraph[{set\-\_\-js}]{\setlength{\rightskip}{0pt plus 5cm}page\-::set\-\_\-js (
+\begin{DoxyParamCaption}
+\item[{}]{\$js}
+\end{DoxyParamCaption}
+)}}\label{classpage_a7b3ad75f4c2f61b55ec27aff1a41ca93}
+
+
+Sets the small script on the page, replacing any previously set or appended Java\-Scipt. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$js} & The js you would like on this page. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if \$js is not a string, {\ttfamily \$this} otherwise. 
+\end{DoxyReturn}
+\hypertarget{classpage_a75526b06ca1a417bab2473740f80808e}{\index{page@{page}!set\-\_\-scripts@{set\-\_\-scripts}}
+\index{set\-\_\-scripts@{set\-\_\-scripts}!page@{page}}
+\paragraph[{set\-\_\-scripts}]{\setlength{\rightskip}{0pt plus 5cm}page\-::set\-\_\-scripts (
+\begin{DoxyParamCaption}
+\item[{}]{\$js}
+\end{DoxyParamCaption}
+)}}\label{classpage_a75526b06ca1a417bab2473740f80808e}
+
+
+Sets the J\-S files to be included (outside of the features added), replacing the current value. 
+
+Files added using this function will be added to the foot before script added with \hyperlink{classpage_a7b3ad75f4c2f61b55ec27aff1a41ca93}{page\-::set\-\_\-js()} and \hyperlink{classpage_a438a833a311c04927ababd5a632d83a7}{page\-::append\-\_\-js()} 
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$js} & an array of filenames \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if \$js is not an array, otherwise {\ttfamily \$this} 
+\end{DoxyReturn}
+\hypertarget{classpage_a7a090c44f986e6bc76eb5e2e1442aef8}{\index{page@{page}!set\-\_\-site\-\_\-id@{set\-\_\-site\-\_\-id}}
+\index{set\-\_\-site\-\_\-id@{set\-\_\-site\-\_\-id}!page@{page}}
+\paragraph[{set\-\_\-site\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}page\-::set\-\_\-site\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{}]{\$sid}
+\end{DoxyParamCaption}
+)}}\label{classpage_a7a090c44f986e6bc76eb5e2e1442aef8}
+
+
+The site id you'd like to track this page under in Piwik. 
+
+\begin{DoxyPrecond}{Precondition}
+For this to have an effect it requires P\-I\-W\-I\-K to be a feature of this page. 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$sid} & The sight I\-D in Piwik \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{page_8inc_8php}{page.\-inc.\-php}\end{DoxyCompactItemize}

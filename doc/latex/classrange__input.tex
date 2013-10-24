@@ -1,0 +1,103 @@
+\hypertarget{classrange__input}{\subsection{range\-\_\-input Class Reference}
+\label{classrange__input}\index{range\-\_\-input@{range\-\_\-input}}
+}
+
+
+Represents a slider element, an input with type=\char`\"{}range\char`\"{}.  
+
+
+Inheritance diagram for range\-\_\-input\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classrange__input}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classrange__input_a6038a3b2b1499abb08ff6a10ac7a8e81}{range\-\_\-input} (\$label\-\_\-text, \$name, \$value, \$min= '', \$max= '', \$step= '', \$placeholder= '', \$sanity\-\_\-func=null, \$valid\-\_\-func=null)
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classrange__input}{range\-\_\-input}. \end{DoxyCompactList}\item 
+\hyperlink{classrange__input_a84223d881e2c9279e6ca69c4957bf53e}{form} (\$errors=array())
+\begin{DoxyCompactList}\small\item\em Creates H\-T\-M\-L output of a form or form part (input) from this field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classrange__input_ad5a0fe009154b6827fa0cb0ab2bec839}{{\bfseries \$step}}\label{classrange__input_ad5a0fe009154b6827fa0cb0ab2bec839}
+
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Represents a slider element, an input with type=\char`\"{}range\char`\"{}. 
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classrange__input_a84223d881e2c9279e6ca69c4957bf53e}{\index{range\-\_\-input@{range\-\_\-input}!form@{form}}
+\index{form@{form}!range_input@{range\-\_\-input}}
+\paragraph[{form}]{\setlength{\rightskip}{0pt plus 5cm}range\-\_\-input\-::form (
+\begin{DoxyParamCaption}
+\item[{}]{\$errors = {\ttfamily array()}}
+\end{DoxyParamCaption}
+)}}\label{classrange__input_a84223d881e2c9279e6ca69c4957bf53e}
+
+
+Creates H\-T\-M\-L output of a form or form part (input) from this field. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$errors} & The errors that have been found, should be used to add error styles or display error messages. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an associated array with two element 'html' =$>$ the H\-T\-M\-L of this object 'js' =$>$ the Javascript of this object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacefield_a1b51c4b8b01f77a26eda359e1fc0fb4c}{field}.
+
+\hypertarget{classrange__input_a6038a3b2b1499abb08ff6a10ac7a8e81}{\index{range\-\_\-input@{range\-\_\-input}!range\-\_\-input@{range\-\_\-input}}
+\index{range\-\_\-input@{range\-\_\-input}!range_input@{range\-\_\-input}}
+\paragraph[{range\-\_\-input}]{\setlength{\rightskip}{0pt plus 5cm}range\-\_\-input\-::range\-\_\-input (
+\begin{DoxyParamCaption}
+\item[{}]{\$label\-\_\-text, }
+\item[{}]{\$name, }
+\item[{}]{\$value, }
+\item[{}]{\$min = {\ttfamily ''}, }
+\item[{}]{\$max = {\ttfamily ''}, }
+\item[{}]{\$step = {\ttfamily ''}, }
+\item[{}]{\$placeholder = {\ttfamily ''}, }
+\item[{}]{\$sanity\-\_\-func = {\ttfamily null}, }
+\item[{}]{\$valid\-\_\-func = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}}\label{classrange__input_a6038a3b2b1499abb08ff6a10ac7a8e81}
+
+
+Constructor for \hyperlink{classrange__input}{range\-\_\-input}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$label\-\_\-text} & The text label for this \hyperlink{classrange__input}{range\-\_\-input}. \\
+\hline
+{\em \$name} & The name of this field for internal use. (i.\-e. the name attribute in the render H\-T\-M\-L and/or used in form) \\
+\hline
+{\em \$value} & The current value of this input. Optional. Default is ''. \\
+\hline
+{\em \$min} & The minium value this \hyperlink{classnumber__input}{number\-\_\-input} allows, used in validation and H\-T\-M\-L5 min attribute. Optional. If not set, or set to '', this attribute is ignored. \\
+\hline
+{\em \$max} & The maximum value this \hyperlink{classnumber__input}{number\-\_\-input} allows, used in validation and H\-T\-M\-L5 max attribute. Optional. If not set, or set to '', this attribute is ignored. \\
+\hline
+{\em \$step} & This is the H\-T\-M\-L5 step attribute. Optional. If not set, or set to '', this attribute is ignored. \\
+\hline
+{\em \$placeholder} & This is used for the H\-T\-M\-L5 placeholder attribute. Optional. Default is false. \\
+\hline
+{\em \$sanity\-\_\-func} & Optional function for sanitization. Defualt is null. \\
+\hline
+{\em \$valid\-\_\-func} & Optional function for validation. Default is null. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{extended__inputs_8inc_8php}{extended\-\_\-inputs.\-inc.\-php}\end{DoxyCompactItemize}

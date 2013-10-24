@@ -1,0 +1,103 @@
+\hypertarget{classhidden__input}{\subsection{hidden\-\_\-input Class Reference}
+\label{classhidden__input}\index{hidden\-\_\-input@{hidden\-\_\-input}}
+}
+
+
+The class \hyperlink{classhidden__input}{hidden\-\_\-input} describes a form element, it's attributes and how it is validated and sanitized.  
+
+
+Inheritance diagram for hidden\-\_\-input\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classhidden__input}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhidden__input_a2aeaf443be73e4259caf9dd2cfdecddf}{hidden\-\_\-input} (\$name, \$value= '', \$sanity\-\_\-func=null, \$valid\-\_\-func=null)
+\begin{DoxyCompactList}\small\item\em Constructor, creates an \hyperlink{classhidden__input}{hidden\-\_\-input} object. \end{DoxyCompactList}\item 
+\hyperlink{classhidden__input_ab20546aae2284c4b1475854d0326e2e3}{form} (\$errors=array())
+\begin{DoxyCompactList}\small\item\em Generates the html for the \hyperlink{classhidden__input}{hidden\-\_\-input} for inclusion in a form. \end{DoxyCompactList}\item 
+\hyperlink{classhidden__input_a069e47104ea4bd965718c114013fa96f}{display} ()
+\begin{DoxyCompactList}\small\item\em Display the name value pair. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+The class \hyperlink{classhidden__input}{hidden\-\_\-input} describes a form element, it's attributes and how it is validated and sanitized. 
+
+Meant to be used with the class forms or it's dervative classes. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classhidden__input_a069e47104ea4bd965718c114013fa96f}{\index{hidden\-\_\-input@{hidden\-\_\-input}!display@{display}}
+\index{display@{display}!hidden_input@{hidden\-\_\-input}}
+\paragraph[{display}]{\setlength{\rightskip}{0pt plus 5cm}hidden\-\_\-input\-::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classhidden__input_a069e47104ea4bd965718c114013fa96f}
+
+
+Display the name value pair. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the formated name value pair for this \hyperlink{classhidden__input}{hidden\-\_\-input}. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacefield_a6a8bbd656a0e7cab2604f6df859bb60a}{field}.
+
+\hypertarget{classhidden__input_ab20546aae2284c4b1475854d0326e2e3}{\index{hidden\-\_\-input@{hidden\-\_\-input}!form@{form}}
+\index{form@{form}!hidden_input@{hidden\-\_\-input}}
+\paragraph[{form}]{\setlength{\rightskip}{0pt plus 5cm}hidden\-\_\-input\-::form (
+\begin{DoxyParamCaption}
+\item[{}]{\$errors = {\ttfamily array()}}
+\end{DoxyParamCaption}
+)}}\label{classhidden__input_ab20546aae2284c4b1475854d0326e2e3}
+
+
+Generates the html for the \hyperlink{classhidden__input}{hidden\-\_\-input} for inclusion in a form. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$errors} & an accoiated array errors. If the field name appears in errors, the field's label will be a class of error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array with two elements 'html' the H\-T\-M\-L of the \hyperlink{classhidden__input}{hidden\-\_\-input} field and 'js' any Java\-Script that would assoicated with it (empty for basic \hyperlink{classhidden__input}{hidden\-\_\-input} types at this time). 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacefield_a1b51c4b8b01f77a26eda359e1fc0fb4c}{field}.
+
+\hypertarget{classhidden__input_a2aeaf443be73e4259caf9dd2cfdecddf}{\index{hidden\-\_\-input@{hidden\-\_\-input}!hidden\-\_\-input@{hidden\-\_\-input}}
+\index{hidden\-\_\-input@{hidden\-\_\-input}!hidden_input@{hidden\-\_\-input}}
+\paragraph[{hidden\-\_\-input}]{\setlength{\rightskip}{0pt plus 5cm}hidden\-\_\-input\-::hidden\-\_\-input (
+\begin{DoxyParamCaption}
+\item[{}]{\$name, }
+\item[{}]{\$value = {\ttfamily ''}, }
+\item[{}]{\$sanity\-\_\-func = {\ttfamily null}, }
+\item[{}]{\$valid\-\_\-func = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}}\label{classhidden__input_a2aeaf443be73e4259caf9dd2cfdecddf}
+
+
+Constructor, creates an \hyperlink{classhidden__input}{hidden\-\_\-input} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The name of the field used to identify this field in the database, and in the form. \\
+\hline
+mixed & {\em \$value} & The current value of the field. \\
+\hline
+mixed & {\em \$sanity\-\_\-func} & A function run on this element to sanitize it, if null will use default sanitation and validation using attributes above. \\
+\hline
+mixed & {\em \$valid\-\_\-func} & A function run on this element to validate it, if null will use default sanitation and validation using attributes above. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{hidden__input_8inc_8php}{hidden\-\_\-input.\-inc.\-php}\end{DoxyCompactItemize}

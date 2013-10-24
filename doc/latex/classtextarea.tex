@@ -1,0 +1,90 @@
+\hypertarget{classtextarea}{\subsection{textarea Class Reference}
+\label{classtextarea}\index{textarea@{textarea}}
+}
+
+
+Descibes a textarea, it's sanitzation and validation.  
+
+
+Inheritance diagram for textarea\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classtextarea}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtextarea_a711ac3a17f0e150fd9a0c73c7633e1a1}{textarea} (\$label\-\_\-text, \$name, \$value= '', \$required=false, \$maxlength= '', \$sanity\-\_\-func=null, \$valid\-\_\-func=null)
+\begin{DoxyCompactList}\small\item\em Constructor, creates a text\-\_\-area object. \end{DoxyCompactList}\item 
+\hyperlink{classtextarea_a3e3d02a7c0ff76c86f6b987e1193ca6a}{form} (\$errors=array())
+\begin{DoxyCompactList}\small\item\em Generates the html for the textarea for inclusion in a form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+Descibes a textarea, it's sanitzation and validation. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classtextarea_a3e3d02a7c0ff76c86f6b987e1193ca6a}{\index{textarea@{textarea}!form@{form}}
+\index{form@{form}!textarea@{textarea}}
+\paragraph[{form}]{\setlength{\rightskip}{0pt plus 5cm}textarea\-::form (
+\begin{DoxyParamCaption}
+\item[{}]{\$errors = {\ttfamily array()}}
+\end{DoxyParamCaption}
+)}}\label{classtextarea_a3e3d02a7c0ff76c86f6b987e1193ca6a}
+
+
+Generates the html for the textarea for inclusion in a form. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$errors} & an accoiated array errors. If the field name appears in errors, the field's label will be a class of error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array with two elements 'html' the H\-T\-M\-L of the input field and 'js' any Java\-Script that would assoicated with it (empty for basic input types at this time). 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacefield_a1b51c4b8b01f77a26eda359e1fc0fb4c}{field}.
+
+\hypertarget{classtextarea_a711ac3a17f0e150fd9a0c73c7633e1a1}{\index{textarea@{textarea}!textarea@{textarea}}
+\index{textarea@{textarea}!textarea@{textarea}}
+\paragraph[{textarea}]{\setlength{\rightskip}{0pt plus 5cm}textarea\-::textarea (
+\begin{DoxyParamCaption}
+\item[{}]{\$label\-\_\-text, }
+\item[{}]{\$name, }
+\item[{}]{\$value = {\ttfamily ''}, }
+\item[{}]{\$required = {\ttfamily false}, }
+\item[{}]{\$maxlength = {\ttfamily ''}, }
+\item[{}]{\$sanity\-\_\-func = {\ttfamily null}, }
+\item[{}]{\$valid\-\_\-func = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}}\label{classtextarea_a711ac3a17f0e150fd9a0c73c7633e1a1}
+
+
+Constructor, creates a text\-\_\-area object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$label\-\_\-text} & The text label on the form field. \\
+\hline
+string & {\em \$name} & The name of the field used to identify this field in the database, and in the form. \\
+\hline
+mixed & {\em \$value} & The current value of the field. \\
+\hline
+bool & {\em \$required} & Boolean value, weather or not the user is required to enter a value for the field. \\
+\hline
+mixed & {\em \$maxlength} & The maximum characters this field's value can have, and still be valid. null or empty string will make this be ignored. \\
+\hline
+mixed & {\em \$sanity\-\_\-func} & A function run on this element to sanitize it, if null will use default sanitation and validation using attributes above. \\
+\hline
+mixed & {\em \$valid\-\_\-func} & A function run on this element to validate it, if null will use default sanitation and validation using attributes above. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{textarea_8inc_8php}{textarea.\-inc.\-php}\end{DoxyCompactItemize}

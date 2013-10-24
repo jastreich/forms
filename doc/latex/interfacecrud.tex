@@ -1,0 +1,108 @@
+\hypertarget{interfacecrud}{\subsection{crud Interface Reference}
+\label{interfacecrud}\index{crud@{crud}}
+}
+
+
+Describes an object that knows how to Create, Read, Update and Delete iteself.  
+
+
+Inheritance diagram for crud\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfacecrud}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfacecrud_aef5aaa8df2d390d2a96118dd3411fd1d}{create} ()
+\begin{DoxyCompactList}\small\item\em Create \$this object in database or file. \end{DoxyCompactList}\item 
+\hyperlink{interfacecrud_a9cbe80658a42208cee8825ad2a0db457}{read} ()
+\begin{DoxyCompactList}\small\item\em Read the object from database into \$this object. \end{DoxyCompactList}\item 
+\hyperlink{interfacecrud_a7e58697e70dc818f35ea1f548641a30d}{update} ()
+\begin{DoxyCompactList}\small\item\em Update the record for \$this object. \end{DoxyCompactList}\item 
+\hyperlink{interfacecrud_a1e74e05aa1d6785caadb51164df38f3b}{delete} ()
+\begin{DoxyCompactList}\small\item\em Delete the record for \$this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Describes an object that knows how to Create, Read, Update and Delete iteself. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{interfacecrud_aef5aaa8df2d390d2a96118dd3411fd1d}{\index{crud@{crud}!create@{create}}
+\index{create@{create}!crud@{crud}}
+\paragraph[{create}]{\setlength{\rightskip}{0pt plus 5cm}crud\-::create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacecrud_aef5aaa8df2d390d2a96118dd3411fd1d}
+
+
+Create \$this object in database or file. 
+
+\begin{DoxyPostcond}{Postcondition}
+\$this object is created in the storage medium. 
+\end{DoxyPostcond}
+
+
+Implemented in \hyperlink{classdatabase__form_a2f217d182a55038d501b66f2a2d51abc}{database\-\_\-form}.
+
+\hypertarget{interfacecrud_a1e74e05aa1d6785caadb51164df38f3b}{\index{crud@{crud}!delete@{delete}}
+\index{delete@{delete}!crud@{crud}}
+\paragraph[{delete}]{\setlength{\rightskip}{0pt plus 5cm}crud\-::delete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacecrud_a1e74e05aa1d6785caadb51164df38f3b}
+
+
+Delete the record for \$this object. 
+
+\begin{DoxyPostcond}{Postcondition}
+The record for \$this object will be removed from the storage medium. 
+\end{DoxyPostcond}
+
+
+Implemented in \hyperlink{classdatabase__form_ac65c871bc6d3a45319bbb3f20901cc56}{database\-\_\-form}.
+
+\hypertarget{interfacecrud_a9cbe80658a42208cee8825ad2a0db457}{\index{crud@{crud}!read@{read}}
+\index{read@{read}!crud@{crud}}
+\paragraph[{read}]{\setlength{\rightskip}{0pt plus 5cm}crud\-::read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacecrud_a9cbe80658a42208cee8825ad2a0db457}
+
+
+Read the object from database into \$this object. 
+
+\begin{DoxyPostcond}{Postcondition}
+If successful \$this object will have the data that was in the storage medium. 
+\end{DoxyPostcond}
+
+
+Implemented in \hyperlink{classdatabase__form_aff5e2b2b523b84443a34bc37472d5c8a}{database\-\_\-form}.
+
+\hypertarget{interfacecrud_a7e58697e70dc818f35ea1f548641a30d}{\index{crud@{crud}!update@{update}}
+\index{update@{update}!crud@{crud}}
+\paragraph[{update}]{\setlength{\rightskip}{0pt plus 5cm}crud\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacecrud_a7e58697e70dc818f35ea1f548641a30d}
+
+
+Update the record for \$this object. 
+
+\begin{DoxyPostcond}{Postcondition}
+The record for \$this object in the storage medium will be changed to match \$this object's current state. 
+\end{DoxyPostcond}
+
+
+Implemented in \hyperlink{classdatabase__form_a9c66a1a5dbd77ce0d110dd1672f74743}{database\-\_\-form}.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{crud_8inc_8php}{crud.\-inc.\-php}\end{DoxyCompactItemize}

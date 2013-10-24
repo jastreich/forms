@@ -1,0 +1,179 @@
+\hypertarget{classdatalist__input}{\subsection{datalist\-\_\-input Class Reference}
+\label{classdatalist__input}\index{datalist\-\_\-input@{datalist\-\_\-input}}
+}
+
+
+Adaptor to input class, adds a datalist.  
+
+
+Inheritance diagram for datalist\-\_\-input\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classdatalist__input}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdatalist__input_aba53bff8ed66c85b97ce1ff23bfc15ec}{form} (\$errors=array())
+\begin{DoxyCompactList}\small\item\em Generates the html for the input for inclusion in a form. \end{DoxyCompactList}\item 
+\hyperlink{classdatalist__input_a5d082a8f7ebee9b5835490d75128c7e1}{datalist\-\_\-input} (\$\hyperlink{classinput}{input}, \$datalist)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classdatalist__input_a6f94bf1247bd5da6f79c864b18073ed5}{display} ()
+\begin{DoxyCompactList}\small\item\em Display function wraps \hyperlink{classinput_a993053ef011cade1db0ceaccb1f4da53}{input\-::display()} \end{DoxyCompactList}\item 
+\hyperlink{classdatalist__input_a52e50cc544ff141a03c2fc65bfdaf9ea}{sanitize} ()
+\begin{DoxyCompactList}\small\item\em Sanitization function wraps \hyperlink{classinput_ab8456d2b5a929801af6fe0b36afd458c}{input\-::sanitize()} \end{DoxyCompactList}\item 
+\hyperlink{classdatalist__input_ab2827973f443100315d378d4a97b9516}{validate} (\$errors=array())
+\begin{DoxyCompactList}\small\item\em Validation function wraps input\-::valudate() \end{DoxyCompactList}\item 
+\hyperlink{classdatalist__input_afeb3a182794c4fb9c235c888b2029430}{get\-\_\-value} ()
+\begin{DoxyCompactList}\small\item\em Inspector for value of input, wraps \hyperlink{classinput_a1b3bcdbb596a1154a944a169ac67f547}{input\-::get\-\_\-value()} \end{DoxyCompactList}\item 
+\hyperlink{classdatalist__input_a73b5d2cfe2f300a62a39f5dfd5a18e70}{set\-\_\-value} (\$v)
+\begin{DoxyCompactList}\small\item\em Mutator function wraps \hyperlink{classinput_a2383e00d55bf3dbcc7071b2fe1336aec}{input\-::set\-\_\-value()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+Adaptor to input class, adds a datalist. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classdatalist__input_a5d082a8f7ebee9b5835490d75128c7e1}{\index{datalist\-\_\-input@{datalist\-\_\-input}!datalist\-\_\-input@{datalist\-\_\-input}}
+\index{datalist\-\_\-input@{datalist\-\_\-input}!datalist_input@{datalist\-\_\-input}}
+\paragraph[{datalist\-\_\-input}]{\setlength{\rightskip}{0pt plus 5cm}datalist\-\_\-input\-::datalist\-\_\-input (
+\begin{DoxyParamCaption}
+\item[{}]{\$input, }
+\item[{}]{\$datalist}
+\end{DoxyParamCaption}
+)}}\label{classdatalist__input_a5d082a8f7ebee9b5835490d75128c7e1}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+input & {\em \$input} & The input we are wrapping \\
+\hline
+array & {\em \$datalist} & The list of values we want in the datalist \\
+\hline
+\end{DoxyParams}
+\hypertarget{classdatalist__input_a6f94bf1247bd5da6f79c864b18073ed5}{\index{datalist\-\_\-input@{datalist\-\_\-input}!display@{display}}
+\index{display@{display}!datalist_input@{datalist\-\_\-input}}
+\paragraph[{display}]{\setlength{\rightskip}{0pt plus 5cm}datalist\-\_\-input\-::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdatalist__input_a6f94bf1247bd5da6f79c864b18073ed5}
+
+
+Display function wraps \hyperlink{classinput_a993053ef011cade1db0ceaccb1f4da53}{input\-::display()} 
+
+\begin{DoxyReturn}{Returns}
+A string containing the formated name value pair for this input. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classinput_a993053ef011cade1db0ceaccb1f4da53}{input\-::display()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacefield_a6a8bbd656a0e7cab2604f6df859bb60a}{field}.
+
+\hypertarget{classdatalist__input_aba53bff8ed66c85b97ce1ff23bfc15ec}{\index{datalist\-\_\-input@{datalist\-\_\-input}!form@{form}}
+\index{form@{form}!datalist_input@{datalist\-\_\-input}}
+\paragraph[{form}]{\setlength{\rightskip}{0pt plus 5cm}datalist\-\_\-input\-::form (
+\begin{DoxyParamCaption}
+\item[{}]{\$errors = {\ttfamily array()}}
+\end{DoxyParamCaption}
+)}}\label{classdatalist__input_aba53bff8ed66c85b97ce1ff23bfc15ec}
+
+
+Generates the html for the input for inclusion in a form. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$errors} & an accoiated array errors. If the field name appears in errors, the field's label will be a class of error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array with two elements 'html' the H\-T\-M\-L of the input field and 'js' any Java\-Script that would assoicated with it (empty for basic input types at this time). 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000006}{Todo}]fix so it doesn't require J\-S. \end{DoxyRefDesc}
+
+
+Implements \hyperlink{interfacefield_a1b51c4b8b01f77a26eda359e1fc0fb4c}{field}.
+
+\hypertarget{classdatalist__input_afeb3a182794c4fb9c235c888b2029430}{\index{datalist\-\_\-input@{datalist\-\_\-input}!get\-\_\-value@{get\-\_\-value}}
+\index{get\-\_\-value@{get\-\_\-value}!datalist_input@{datalist\-\_\-input}}
+\paragraph[{get\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}datalist\-\_\-input\-::get\-\_\-value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdatalist__input_afeb3a182794c4fb9c235c888b2029430}
+
+
+Inspector for value of input, wraps \hyperlink{classinput_a1b3bcdbb596a1154a944a169ac67f547}{input\-::get\-\_\-value()} 
+
+\begin{DoxyReturn}{Returns}
+the current value of \$this input 
+\end{DoxyReturn}
+\hypertarget{classdatalist__input_a52e50cc544ff141a03c2fc65bfdaf9ea}{\index{datalist\-\_\-input@{datalist\-\_\-input}!sanitize@{sanitize}}
+\index{sanitize@{sanitize}!datalist_input@{datalist\-\_\-input}}
+\paragraph[{sanitize}]{\setlength{\rightskip}{0pt plus 5cm}datalist\-\_\-input\-::sanitize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classdatalist__input_a52e50cc544ff141a03c2fc65bfdaf9ea}
+
+
+Sanitization function wraps \hyperlink{classinput_ab8456d2b5a929801af6fe0b36afd458c}{input\-::sanitize()} 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classinput_ab8456d2b5a929801af6fe0b36afd458c}{input\-::sanitize} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacefield_a3ed132df10731b5ebe33acc44ac03c85}{field}.
+
+\hypertarget{classdatalist__input_a73b5d2cfe2f300a62a39f5dfd5a18e70}{\index{datalist\-\_\-input@{datalist\-\_\-input}!set\-\_\-value@{set\-\_\-value}}
+\index{set\-\_\-value@{set\-\_\-value}!datalist_input@{datalist\-\_\-input}}
+\paragraph[{set\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}datalist\-\_\-input\-::set\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{}]{\$v}
+\end{DoxyParamCaption}
+)}}\label{classdatalist__input_a73b5d2cfe2f300a62a39f5dfd5a18e70}
+
+
+Mutator function wraps \hyperlink{classinput_a2383e00d55bf3dbcc7071b2fe1336aec}{input\-::set\-\_\-value()} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$v} & The new value of this input \\
+\hline
+\end{DoxyParams}
+\hypertarget{classdatalist__input_ab2827973f443100315d378d4a97b9516}{\index{datalist\-\_\-input@{datalist\-\_\-input}!validate@{validate}}
+\index{validate@{validate}!datalist_input@{datalist\-\_\-input}}
+\paragraph[{validate}]{\setlength{\rightskip}{0pt plus 5cm}datalist\-\_\-input\-::validate (
+\begin{DoxyParamCaption}
+\item[{}]{\$errors = {\ttfamily array()}}
+\end{DoxyParamCaption}
+)}}\label{classdatalist__input_ab2827973f443100315d378d4a97b9516}
+
+
+Validation function wraps input\-::valudate() 
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$errors} & an array of errors previously in the form, errors will be added to the array and the array returned. @ return array errors is returned, possibly with errors appended. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classinput_aaf4ed91e7abbc20e2396a4b07dbd031a}{input\-::validate()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacefield_a352b92f9e8dce69191bad79bdc5d972b}{field}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{extended__inputs_8inc_8php}{extended\-\_\-inputs.\-inc.\-php}\end{DoxyCompactItemize}
