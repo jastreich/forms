@@ -1,0 +1,79 @@
+
+/*:: Universal Styles Here
+:::: (things that won't ever change!)
+---------------------------------------------------- */
+
+body{ background-color:#555; padding-top:50px; }
+
+#hero{ background-color:#ffbd00; padding-bottom:2em; }
+#hero h1{ margin-bottom:0; }
+#hero p{ margin-top:0; }
+#hero button{ background-color:#ffbd00; border-color:#111; color:#111; }
+#hero button:hover{ background-color:#ffd45a; }
+
+article{ width:100%; background-color:#fff; }
+
+span.white{ color:#fff }
+span.yellow{ color:#ffbd00; }
+
+header { width:100%; background-color:#111; height:50px; border-bottom:1px solid #ffbd00;  }
+
+footer{ width:100%; color:#111; padding-bottom:8em; text-shadow:0 1px 1px #7c7c7c; }
+footer h2{ font-size:1.4375em; margin-bottom:0; }
+
+address{ font-style:normal; font-size:0.875em; }
+
+.help-block{ color:#777; font-size:0.875em; margin:0.5em 0 0 0; }
+
+.grid div{ background-color:#fff; border:1px solid #f5f5f5; }
+.grid .nested .row div[class*='col-']{ border-color:#f7e59c; background-color:#faf2d0; }
+.grid .nested .row .row div[class*='col-']{ border-color:#ddc04c; background-color:#f3e6b3; }
+.grid .nested .row .row  .row div[class*='col-']{ border-color:#b1a267; background-color:#f1db82; }
+
+
+/*:: Media Queries
+---------------------------------------------------- */
+
+@media (min-width: 320px) {
+
+	#pull{ display:block; position:absolute; right:15px; top:11px; z-index:1100; margin:0; border:1px solid #464646; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; line-height:1.2143em; z-index:1100; border-radius:3px; -moz-border-raduis:3px; -webkit-border-radius:3px; }
+	#pull:hover{ cursor:pointer; }
+	#pull .menu-icon{ float:left; width:auto; margin-right:0; padding:7px 6px 4px 6px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background: #0e0e0e; }
+	#pull .icon-bar{ display:block; height:2px; width:20px; margin-bottom:3px; background-color:#fff; -webkit-border-bottom-left-radius: 1px; -moz-border-radius-bottomleft: 1px; border-bottom-left-radius: 1px; -webkit-border-bottom-right-radius: 1px; -moz-border-radius-bottomright: 1px; border-bottom-right-radius: 1px; -webkit-border-top-left-radius: 1px; -moz-border-radius-topleft: 1px; border-top-left-radius: 1px; -webkit-border-top-right-radius: 1px; -moz-border-radius-topright: 1px; border-top-right-radius: 1px; }
+	
+	header .container{ padding:0; }
+	.navbar{ position:fixed; top:0; right:0; left:0; z-index:1000; }
+	.navbar h1{ display:block; width:80%; margin:0 1em 0 0; padding: 0 0 0 15px; color:#ccc; font-size:1.25em; line-height:2.4125em; }
+	.navbar h1 a{ color:#ccc; }
+	.navbar h1 a:hover{ text-decoration:none; }
+	.navbar ul { display:none; margin:0; padding:0; }
+	.navbar ul.show{ display:block; float:none; width:100%; background-color:#111; border-top:1px solid #464646; border-bottom:1px solid #ffbd00; }
+	.navbar li { float:none; list-style:none; margin:0; padding:0;  }
+	.navbar li a{ display:block; width:100%; color:#999; padding:7px 0 8px 15px; border-bottom:1px solid #464646; }
+	.navbar li a:hover{ color:#fff; text-decoration:none; }
+	.navbar li a.active{ background-color:#f1db82; color:#111; }
+	
+	.no-js body{ padding-top:0; }
+	.no-js #pull{ display:none; }
+	.no-js .navbar{ display:block; position:relative; height:auto; }
+	.no-js .navbar ul{ display:block; border-top:1px solid #464646; }
+}
+
+@media (min-width: 768px) {
+
+	#pull{ display:none; }
+	
+	.navbar h1{ float:left; width:auto; }
+	.navbar ul{ display:block; border:0 none; }
+	.navbar  li{ float:left; }
+	.navbar  li a{ width: auto; height:50px; padding:0 1em; line-height:3.125em; border:0 none; }
+	
+	.lt-ie9 .navbar h1 { padding-left:0; }
+	
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}

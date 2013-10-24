@@ -1,20 +1,29 @@
-<!Doctype html>
-<head>
-<style type="text/css">
-  label{display:block;}
-  label.required{color:red;}
-  .required:after{content:'*';font-weight:bold;vertical-align:super;color:red;}
-  :valid{box-shadow:0 0 5px #5cd053;border-color: #28921f;}
-  :invalid,.error>input{box-shadow:0 0 5px #d45252;border-color:#b03535;}
-  input[type=submit]{box-shadow:0 0 5px #ccc;border-color:#ccc;}
-</style>
-</head>
-<body>
+<?php
+error_reporting (E_ALL);
+ini_set('display_errors',1);
+//ini_set('display_errors', 'On');
+//error_reporting( E_ALL );
+require_once('page.inc.php');
+$page = new page('Form');
+$page->set_features(array(PIWIK,FORMS,FANCY_BOX));
+$page->add_css('path/to/my/style.css');
+echo $page->head();
+?>
+
+<header class="navbar"></header>
+<article>
+  <section id="hero">
+    <div class="container cf">
+      <h1>
+<?php echo (isset($_GET['form_name']) ? $_GET['form_name'] : 'Error: No form selected');?>
+      </h1>
+    </div>
+  </section>
+  <div class="container cf">
+    <div class="row">
+      <div class="col-xs-12">
 
 <?php
-ini_set('display_errors', 'On');
-error_reporting( E_ALL );
-
 if( isset($_GET['form_name']) )
 {
   require_once('database_form.inc.php');
@@ -95,5 +104,25 @@ if( isset($_GET['form_name']) )
   }
 }
 ?>
-</body>
-</html>
+
+      </div>
+    </div>
+  </div>
+</article>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>LSITO <small>Web Development Team</small></h2>
+        <address>University of Wisconsin&ndash;Milwaukee<br/>Holton Hall (check the basement…over by the water heater…and the sump pump)</address>
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<?php
+echo $page->foot();
+?>
+

@@ -8,12 +8,24 @@ require_once('field.inc.php');
 require_once('observable.inc.php');
 require_once('event.inc.php');
 
-define('FORM',1);
-define('SANITIZE',2);
-define('VALIDATE',3);
-define('DISPLAY',4);
-define('ADD_FIELD',6);
-define('VALUES',7);
+define('PRE_FORM',1);
+define('POST_FORM',2);
+
+define('PRE_SANITIZE',3);
+define('POST_SANITIZE',4);
+
+define('PRE_VALIDATE',5);
+define('POST_VALIDATE',6);
+
+define('PRE_DISPLAY',7);
+define('POST_DISPLAY',8);
+
+define('PRE_ADD_FIELD',9);
+define('POST_ADD_FIELD',10);
+
+define('PRE_VALUES',11);
+define('POST_VALUES',12);
+
 
 /** @class forms
  * This class describes an HTML form, containing a collection of inputs, and does mass validation and sanitization on them.
@@ -47,15 +59,17 @@ class forms implements field, observable
    **/
   public function form($errors = array())
   {
+    $this->notify(new event($this,PRE_FORM,array($errors)));
     $ret = array();
     $ret['html'] = '';
     $ret['js'] = '';
     if('' !== $this->id)
     {
-      $ret['html'] .= '<input type="hidden" name="id" value="' . $this->id . '" />';
+      $ret['html'] .= '<input type="hidden" name="' . $this->pre. 'id" value="' . $this->id . '" />';
     }
     foreach($this->fields as $field)
     {
+
       $form = $field->form($errors);
       $ret['html'] .= $form['html'];
       $ret['js'] .= $form['js'];
@@ -70,7 +84,7 @@ class forms implements field, observable
         $ret['tinymce'] = true;
       }
     }
-    $this->notify(new event($this,FORM,array($errors,$ret)));
+    $this->notify(new event($this,POST_FORM,array($errors,$ret)));
     return $ret;
   }
 
@@ -79,6 +93,7 @@ class forms implements field, observable
    **/
   public function sanitize()
   {
+    $this->notify(new event($this,PRE_SANITIZE,true));
     foreach($this->fields as $field)
     {
       if(false === $field->sanitize())
@@ -87,7 +102,7 @@ class forms implements field, observable
        	return false;
       }
     }
-    $this->notify(new event($this,SANITIZE,true));
+    $this->notify(new event($this,POST_SANITIZE,true));
     return true;
   }
 
@@ -96,13 +111,14 @@ class forms implements field, observable
    **/
   public function display()
   {
+    $this->notify(new event($this,PRE_DISPLAY));
     $ret = '<table><tbody>';
     foreach($this->fields as $field)
     {
       $ret .= $field->display();
     }
     $ret .= '</tbody></table>';
-    $this->notify(new event($this,DISPLAY));
+    $this->notify(new event($this,POST_DISPLAY));
     return $ret;
   }
 
@@ -113,11 +129,12 @@ class forms implements field, observable
    */
   public function validate($errors = array())
   {
+    $this->notify(new event($this,PRE_VALIDATE, 0 == count($errors) ));
     foreach($this->fields as $field)
     {
       $errors = $field->validate($errors);
     }
-    $this->notify(new event($this,VALIDATE, 0 == count($errors) ));
+    $this->notify(new event($this,POST_VALIDATE, 0 == count($errors) ));
     return $errors;
   }
 
@@ -127,13 +144,14 @@ class forms implements field, observable
    **/
   public function add_field(field $f)
   {
+    $this->notify(new event($this,PRE_ADD_FIELD));
     if(!isset($this->fields[$f->name]))
     {
       $this->fields[$f->name] = $f;
-      $this->notify(new event($this,ADD_FIELD,$f));
+      $this->notify(new event($this,POST_ADD_FIELD,$f));
       return true;
     }
-    $this->notify(new event($this,ADD_FIELD,false));
+    $this->notify(new event($this,POST_ADD_FIELD,false));
     return false;
   }
 
@@ -142,28 +160,16 @@ class forms implements field, observable
    **/
   public function values($values)
   {
-    foreach($values as $k => $v)
+    $this->notify(new event($this,PRE_VALUES,$values));
+    foreach($this->fields as $field)
     {
-      if('id' == $k)
-      {
-        $this->id = $v;
-      }
-      else
-      {
-        if(isset($this->fields[$k]))
-        {
-          $this->fields[$k]->set_value($v);
-        }
-        else
-        {
-          if(isset($_GET['dev']))
-          {
-            echo $k . ' not found in object.';
-          }
-        }
-      }
+      $field->values($values);
     }
-    $this->notify(new event($this,VALUES,$values));
+    if(isset($values[$this->pre + 'id']))
+    {
+      $this->id = $values[$this->pre + 'id'];
+    }
+    $this->notify(new event($this,POST_VALUES,$values));
   }
 
   /** Notify observers an $event has taken place.

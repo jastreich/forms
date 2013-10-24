@@ -1,3 +1,5 @@
 *.git
 commit.sh
 pull.sh
+doc
+.doc

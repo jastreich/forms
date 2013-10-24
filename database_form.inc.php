@@ -8,24 +8,32 @@ require_once('forms.inc.php');
 require_once('crud.inc.php');
 
 
-/*
-define('FORM',1);
-define('SANITIZE',2);
-define('VALIDATE',3);
-define('DISPLAY',4);
-define('ADD_FIELD',6);
-define('VALUES',7);
-*/
+define('PRE_CREATE',13);
+define('POST_CREATE',14);
 
-define('CREATE',8);
-define('READ',9);
-define('UPDATE',10);
-define('DELETE',11);
-define('CREATE_FORM',12);
-define('READ_FORM',13);
-define('UPDATE_FORM',14);
-define('DELETE_FORM',15);
-define('DISPLAY_TABLE',16);
+define('PRE_READ',15);
+define('POST_READ',16);
+
+define('PRE_UPDATE',17);
+define('POST_UPDATE',18);
+
+define('PRE_DELETE',19);
+define('POST_DELETE',20);
+
+define('PRE_CREATE_FORM',21);
+define('POST_CREATE_FORM',22);
+
+define('PRE_READ_FORM',23);
+define('POST_READ_FORM',24);
+
+define('PRE_UPDATE_FORM',25);
+define('POST_UPDATE_FORM',26);
+
+define('PRE_DELETE_FORM',27);
+define('POST_DELETE_FORM',28);
+
+define('PRE_DISPLAY_TABLE',29);
+define('POST_DISPLAY_TABLE',30);
 
 /** @class database_form 
  * This class allows the both the structure and the data for this form to be written out to a database.
@@ -41,12 +49,13 @@ class database_form extends forms implements crud
   public function create_form()
   {
     global $db;
+    $this->notify(new event($this,PRE_CREATE_FORM));
     $stmnt = $db->prepare('insert into forms (name,form) values (?,?)');
     $t = serialize($this);
     $stmnt->bind_param('ss',$this->name,$t);
     $stmnt->execute();
     $stmnt->close();
-    $this->notify(new event($this,CREATE_FORM));
+    $this->notify(new event($this,POST_CREATE_FORM));
   }
 
   /** Reads form structure out of database $db table forms.
@@ -56,6 +65,7 @@ class database_form extends forms implements crud
   public function read_form()
   {
     global $db;
+    $this->notify(new event($this,PRE_READ_FORM));
     $stmnt = $db->prepare('select form from forms where name = ?');
     echo $db->error;
     $stmnt->bind_param('s',$this->name);
@@ -74,7 +84,7 @@ class database_form extends forms implements crud
     $this->fields = $theform->fields;
     $this->name = $theform->name;
     $this->id = $theform->id;
-    $this->notify(new event($this,READ_FORM));
+    $this->notify(new event($this,POST_READ_FORM));
   }
 
   /** Writes form structure into database $db to table forms.
@@ -84,12 +94,13 @@ class database_form extends forms implements crud
   public function update_form()
   {
     global $db;
+    $this->notify(new event($this,PRE_UPDATE_FORM));
     $stmnt = $db->prepare('update forms set form = ? where name = ?');
     $t = serialize($this);
     $stmnt->bind_param('ss',$t,$this->name);
     $stmnt->execute();
     $stmnt->close();
-    $this->notify(new event($this,UPDATE_FORM));
+    $this->notify(new event($this,POST_UPDATE_FORM));
   }
 
   /** Delete this form from the database $db table forms
@@ -99,11 +110,12 @@ class database_form extends forms implements crud
   public function delete_form()
   {
     global $db;
+    $this->notify(new event($this,PRE_DELETE_FORM));
     $stmnt = $db->prepare('delete from forms where name = ?');
     $stmnt->bind_param('s',$this->name);
     $stmnt->execute();
     $stmnt->close;
-    $this->notify(new event($this,DELETE_FORM));
+    $this->notify(new event($this,POST_DELETE_FORM));
   }
 
   /** Write the values of this form out to database $db table forms_data.
@@ -113,6 +125,7 @@ class database_form extends forms implements crud
   public function create()
   {
     global $db;
+    $this->notify(new event($this,PRE_CREATE));
 
     // Aquire lock, creating file if it doesn't exist.
     $fp = fopen('/tmp/dblock.txt', 'w');
@@ -139,7 +152,7 @@ class database_form extends forms implements crud
     $stmnt->close();
     flock($fp, LOCK_UN);
     fclose($fp);
-    $this->notify(new event($this,CREATE));
+    $this->notify(new event($this,POST_CREATE));
   }
 
   /** Read the data into this form from database $db table forms_data
@@ -149,6 +162,7 @@ class database_form extends forms implements crud
   public function read()
   {
     global $db;
+    $this->notify(new event($this,PRE_READ));
     $stmnt = $db->prepare('select name, value from forms_data where id = ? and form_name = ?');
     $stmnt->bind_param('is',$this->id,$this->name);
     $stmnt->execute();
@@ -161,7 +175,7 @@ class database_form extends forms implements crud
       }
     }
     $stmnt->close();
-    $this->notify(new event($this,READ));
+    $this->notify(new event($this,POST_READ));
   }
 
   /** Update the data in the database to match the values of this form
@@ -171,6 +185,7 @@ class database_form extends forms implements crud
   public function update()
   {
     global $db;
+    $this->notify(new event($this,PRE_UPDATE));
     $stmnt = $db->prepare('update forms_data set value = ? where name = ? and id = ?');
     $stmnt->bind_param('ssi',$v,$k,$this->id);
     foreach($this->fields as $k => $fv)
@@ -179,7 +194,7 @@ class database_form extends forms implements crud
       $stmnt->execute();
     }
     $stmnt->close();
-    $this->notify(new event($this,UPDATE));
+    $this->notify(new event($this,POST_UPDATE));
   }
 
   /** Deletes the data record for this form.
@@ -189,11 +204,12 @@ class database_form extends forms implements crud
   public function delete()
   {
     global $db;
+    $this->notify(new event($this,PRE_DELETE));
     $stmnt = $db->prepare('delete from forms_data where id = ?');
     $stmnt->bind_param('i',$this->id);
     $stmnt->execute();
     $stmnt->close();
-    $this->notify(new event($this,DELETE));
+    $this->notify(new event($this,POST_DELETE));
   }
 
 
@@ -221,7 +237,14 @@ class database_form extends forms implements crud
       $ret['html'] .= '<td>' . $field->name . '</td>';
       $ret['html'] .= '<td>' . $field->type . '</td>';
       $ret['html'] .= '<td>' . $field->value . '</td>';
-      $ret['html'] .= '<td>' . $field->required . '</td>';
+      if(is_array($field->required))
+      {
+        $ret['html'] .= '<td>' . $field->required[0] . '</td>';
+      }
+      else
+      {
+        $ret['html'] .= '<td>' . $field->required . '</td>';
+      }
       $ret['html'] .= '<td>' . $field->maxlength . '</td>';
       $ret['html'] .= '<td>' . $field->min . '</td>';
       $ret['html'] .= '<td>' . $field->max . '</td>';
@@ -240,6 +263,8 @@ class database_form extends forms implements crud
   public function display_table()
   {
     global $db;
+    $this->notify(new event($this,PRE_DISPLAY_TABLE));
+
     $t_values = array();
     $ret = array();
 
@@ -298,7 +323,7 @@ class database_form extends forms implements crud
       }
       $ret['html'] .= '</tr>';
     }
-    $this->notify(new event($this,DISPLAY_TABLE,$ret));
+    $this->notify(new event($this,POST_DISPLAY_TABLE,$ret));
     return $ret;
   }
 

@@ -15,7 +15,7 @@ if(isset($_GET['form_name']))
   $structs = $form->display_structure();
   echo '<h1>' . htmlentities(trim($_GET['form_name'])) . '</h1>';
   echo '<h2>Form Fields</h2>';
-  echo '<a href="add_field.php">Add Field</a>';
+  echo '<a href="add_field.php?form_name=' . $_GET['form_name'] . '">Add Field</a>';
   echo $structs['html'];
   echo '<a href="add_field.php?form_name=' . $_GET['form_name'] . '">Add Field</a>';
   echo '<h2>Data</h2>';

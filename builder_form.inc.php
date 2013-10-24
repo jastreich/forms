@@ -33,7 +33,9 @@ class builder_form extends forms
 //      'input_group' => 'Input Group (checkboxes/radio buttons)',
       'range_input' => 'Slider',
       'tel_input' => 'Telephone',
-      'zip_input' => 'US Zip Code'
+      'zip_input' => 'US Zip Code',
+      'password_input' => 'Password',
+      'date_input' => 'Date'
     );
 
     $req_opts = array
@@ -142,9 +144,102 @@ class builder_form extends forms
           $this->fields['placeholder']->get_value()
         );
         break;
+      case 'date_input':
+         $imp = new date_input
+         (
+           $this->fields['text_label']->get_value(),
+           $this->fields['name']->get_value(),
+           $this->fields['value']->get_value(),
+           $req[0].
+           $this->fields['min']->get_value(),
+           $this->fields['max']->get_value()
+         );
+         break;
+      case 'password_input':
+        $imp = new password_input
+        (
+          $this->fields['text_label']->get_value(),
+          $this->fields['name']->get_value(),
+          $this->fields['value']->get_value(),
+          $req[0],
+          $this->fields['maxlength']->get_value(),
+          $this->fields['pattern']->get_value(),
+          $this->fields['placeholder']->get_value()
+        );
     }
     return $imp;
   }
+
+  /** Returns the HTML for this builder_form
+   * @see forms::form()
+   **/
+  public function form($errors)
+  {
+    $ret = parent::form($errors);
+    $ret[jquery] = true;
+/*
+    $ret['js'] .= '
+
+    if(
+        "test_input" == $("[name=type]:selected").val() ||
+        "texteditor"  == $("[name=type]:selected").val() ||
+        "textarea" == $("[name=type]:selected").val()
+      )
+    {
+      $("[name=min]").hide();
+      $("[name=max]").hide();
+      $("[name=max_length]").show();
+    }
+
+    if(
+        "tel_input" == $("[name=type]:selected").val() ||
+        "zip_input" == $("[name=type]:selected").val() ||
+        "date_input" == $("[name=type]:selected").val() ||
+        "range_input" == $("[name=type]:selected").val() ||
+        "number_input" == $("[name=type]:selected").val()
+      )
+    {
+      $("[name=max_length]").hide();
+    }
+
+    if(
+        "date_input" == $("[name=type]:selected").val() ||
+        "range_input" == $("[name=type]:selected").val() ||
+        "number_input" == $("[name=type]:selected").val()
+      )
+    {
+      $("[name=min]").show();
+      $("[name=max]").show();
+
+      $("[name=min]").attr('type','number');
+      $("[name=max]").attr('type','number');
+
+    }
+
+    if(
+        "tel_input" == $("[name=type]:selected").val() ||
+        "zip_input" == $("[name=type]:selected").val() ||
+      )
+    {
+      $("[name=min]").hide();
+      $("[name=max]").hide();
+    }
+
+    if(
+        "tel_input" == $("[name=type]:selected").val() ||
+        "zip_input" == $("[name=type]:selected").val() ||
+      )
+    {
+      $("[name=min]").hide();
+      $("[name=max]").hide();
+    }
+
+
+';
+*/
+    return $ret;
+  }
+
 
 }
 

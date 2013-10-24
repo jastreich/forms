@@ -9,6 +9,12 @@
  **/
 interface field
 {
+
+  /** Takes an assoicated array of values and assigns the values to input fileds, and the id of this form.
+   * @param array $values an associated array of values. Ignores values of keys that aren't fields in this form.
+   **/
+  public function values($values);
+
   /** Creates HTML output of a form or form part (input) from this field
    * @param array $errors The errors that have been found, should be used to add error styles or display error messages.
    * @return an associated array with two element 'html' => the HTML of this object 'js' => the Javascript of this object

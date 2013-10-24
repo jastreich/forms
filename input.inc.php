@@ -368,6 +368,17 @@ class input implements field
     $this->value = $v;
   }
 
+  /** Takes an assoicated array of values and assigns the values to input fileds, and the id of this form.
+   * @param array $values an associated array of values. Ignores values of keys that aren't fields in this form.
+   **/
+  public function values($values)
+  {
+    if(isset($values[$this->name]))
+    {
+      $this->value = $values[$this->name];
+    }
+  }
+
 };
 
 ?>
