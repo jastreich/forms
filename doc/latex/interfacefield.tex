@@ -19,7 +19,9 @@ Inheritance diagram for field\-:\begin{figure}[H]
 \hyperlink{interfacefield_a3ed132df10731b5ebe33acc44ac03c85}{sanitize} ()
 \begin{DoxyCompactList}\small\item\em This function should sanitize the form for display and/or storage into a database. \end{DoxyCompactList}\item 
 \hyperlink{interfacefield_a6a8bbd656a0e7cab2604f6df859bb60a}{display} ()
-\begin{DoxyCompactList}\small\item\em Display the key value pairing for this object as a table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Display the key value pairing for this object as a table. \end{DoxyCompactList}\item 
+\hyperlink{interfacefield_a5e8d3e49ab5fba3956b7a297535806dc}{display\-\_\-text} ()
+\begin{DoxyCompactList}\small\item\em Display the key value pairing for this object int text format. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsubsection{Member Function Documentation}
@@ -35,11 +37,29 @@ Inheritance diagram for field\-:\begin{figure}[H]
 Display the key value pairing for this object as a table. 
 
 \begin{DoxyReturn}{Returns}
-an associated array with two element 'html' =$>$ the H\-T\-M\-L of this object 'js' =$>$ the Javascript of this object. 
+the H\-T\-M\-L representation of the field 
 \end{DoxyReturn}
 
 
 Implemented in \hyperlink{classdatalist__input_a6f94bf1247bd5da6f79c864b18073ed5}{datalist\-\_\-input}, \hyperlink{classinput_a993053ef011cade1db0ceaccb1f4da53}{input}, \hyperlink{classforms_abbb54cc0731f483777e6baa39f9fe494}{forms}, \hyperlink{classinput__group_a91e1b3cab54b81c21ab5f88a2f4f5c6a}{input\-\_\-group}, and \hyperlink{classhidden__input_a069e47104ea4bd965718c114013fa96f}{hidden\-\_\-input}.
+
+\hypertarget{interfacefield_a5e8d3e49ab5fba3956b7a297535806dc}{\index{field@{field}!display\-\_\-text@{display\-\_\-text}}
+\index{display\-\_\-text@{display\-\_\-text}!field@{field}}
+\paragraph[{display\-\_\-text}]{\setlength{\rightskip}{0pt plus 5cm}field\-::display\-\_\-text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfacefield_a5e8d3e49ab5fba3956b7a297535806dc}
+
+
+Display the key value pairing for this object int text format. 
+
+\begin{DoxyReturn}{Returns}
+the text representation of the field 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classinput_a344058a20cc48c9fe170b3b59905a53b}{input}, \hyperlink{classforms_ad78a6f47ecded8987dda90468dbb8f77}{forms}, and \hyperlink{classinput__group_aac74288da2e6c962dc507ccaa1f8f450}{input\-\_\-group}.
 
 \hypertarget{interfacefield_a1b51c4b8b01f77a26eda359e1fc0fb4c}{\index{field@{field}!form@{form}}
 \index{form@{form}!field@{field}}
@@ -62,7 +82,7 @@ an associated array with two element 'html' =$>$ the H\-T\-M\-L of this object '
 \end{DoxyReturn}
 
 
-Implemented in \hyperlink{classdatalist__input_aba53bff8ed66c85b97ce1ff23bfc15ec}{datalist\-\_\-input}, \hyperlink{classbuilder__form_a250c986a9670cfe69371d854209991ba}{builder\-\_\-form}, \hyperlink{classrange__input_a84223d881e2c9279e6ca69c4957bf53e}{range\-\_\-input}, \hyperlink{classinput_a83b663057f1d0f61768bc12c5a55f25c}{input}, \hyperlink{classforms_aca4fdeecf56bc5796f628a477f9ce629}{forms}, \hyperlink{classinput__group_a67f5d8e4ac86e75313e8d0d8696b7b35}{input\-\_\-group}, \hyperlink{classtextarea_a3e3d02a7c0ff76c86f6b987e1193ca6a}{textarea}, \hyperlink{classhidden__input_ab20546aae2284c4b1475854d0326e2e3}{hidden\-\_\-input}, and \hyperlink{classtexteditor_a129b929db008ec11f4a683f542787c74}{texteditor}.
+Implemented in \hyperlink{classdatalist__input_aba53bff8ed66c85b97ce1ff23bfc15ec}{datalist\-\_\-input}, \hyperlink{classbuilder__form_a13989dd465615470a1145b401c672fcb}{builder\-\_\-form}, \hyperlink{classrange__input_a84223d881e2c9279e6ca69c4957bf53e}{range\-\_\-input}, \hyperlink{classinput_a83b663057f1d0f61768bc12c5a55f25c}{input}, \hyperlink{classforms_aca4fdeecf56bc5796f628a477f9ce629}{forms}, \hyperlink{classinput__group_a67f5d8e4ac86e75313e8d0d8696b7b35}{input\-\_\-group}, \hyperlink{classtextarea_a3e3d02a7c0ff76c86f6b987e1193ca6a}{textarea}, \hyperlink{classhidden__input_ab20546aae2284c4b1475854d0326e2e3}{hidden\-\_\-input}, and \hyperlink{classtexteditor_a129b929db008ec11f4a683f542787c74}{texteditor}.
 
 \hypertarget{interfacefield_a3ed132df10731b5ebe33acc44ac03c85}{\index{field@{field}!sanitize@{sanitize}}
 \index{sanitize@{sanitize}!field@{field}}

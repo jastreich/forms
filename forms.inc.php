@@ -37,7 +37,7 @@ class forms implements field, observable
   public $id;
   public $pre;
   public $fields;
-  private $observers;
+  public $observers;
 
   /** Constructor for form class
    * @param string $name The name of form.
@@ -59,7 +59,7 @@ class forms implements field, observable
    **/
   public function form($errors = array())
   {
-    $this->notify(new event($this,PRE_FORM,array($errors)));
+    $this->notify(new event($this,PRE_FORM,$errors));
     $ret = array();
     $ret['html'] = '';
     $ret['js'] = '';
@@ -84,7 +84,8 @@ class forms implements field, observable
         $ret['tinymce'] = true;
       }
     }
-    $this->notify(new event($this,POST_FORM,array($errors,$ret)));
+    $params = array($errors,$ret);
+    $this->notify(new event($this,POST_FORM,$params));
     return $ret;
   }
 
@@ -93,16 +94,17 @@ class forms implements field, observable
    **/
   public function sanitize()
   {
-    $this->notify(new event($this,PRE_SANITIZE,true));
+    $this->notify(new event($this,PRE_SANITIZE));
     foreach($this->fields as $field)
     {
       if(false === $field->sanitize())
       {
-        $this->notify(new event($this,SANITIZE,false));
-       	return false;
+        $ret = false;
+        $this->notify(new event($this,POST_SANITIZE,$ret));
+       	return $ret;
       }
     }
-    $this->notify(new event($this,POST_SANITIZE,true));
+    $this->notify(new event($this,POST_SANITIZE));
     return true;
   }
 
@@ -112,7 +114,7 @@ class forms implements field, observable
   public function display()
   {
     $this->notify(new event($this,PRE_DISPLAY));
-    $ret = '<table><tbody>';
+    $ret = '<table class="table"><tbody>';
     foreach($this->fields as $field)
     {
       $ret .= $field->display();
@@ -123,18 +125,34 @@ class forms implements field, observable
   }
 
 
+  /** Display this form's name values pairs.
+   * @return string containing an txt table of values.
+   **/
+  public function display_text()
+  {
+    $ret = $this->name . "\n";
+    foreach($this->fields as $field)
+    {
+      $ret .= $field->display_text();
+    }
+    return $ret;
+  }
+
+
+
+
   /** Validates the values of the input of the form.
    * @param $errors an optional array to chain form validation with other inputs and forms.
    * @return $errors the passed array with new errors encountered.
    */
   public function validate($errors = array())
   {
-    $this->notify(new event($this,PRE_VALIDATE, 0 == count($errors) ));
+    $this->notify(new event($this,PRE_VALIDATE, $errors ));
     foreach($this->fields as $field)
     {
       $errors = $field->validate($errors);
     }
-    $this->notify(new event($this,POST_VALIDATE, 0 == count($errors) ));
+    $this->notify(new event($this,POST_VALIDATE,$errors ));
     return $errors;
   }
 
@@ -181,6 +199,10 @@ class forms implements field, observable
     {
       $this->observers = array();
     }
+    if(isset($_GET['dev']))
+    {
+      echo '<br/>Notifying (' . count($this->observers). ') observers of event ' . $event->event_type . '.<br/><br/>';
+    }
     foreach($this->observers as $ob)
     {
       $ob->notify($event);
@@ -193,10 +215,12 @@ class forms implements field, observable
   public function add_observer($ob)
   {
     if(!isset($this->observers))
+//                     observers
     {
       $this->observers = array();
     }
     $this->observers[] = $ob;
+//           observers
   }
 
   /** Remove an observer of $this object.

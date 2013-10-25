@@ -1,6 +1,7 @@
 var classinput =
 [
     [ "display", "classinput.html#a993053ef011cade1db0ceaccb1f4da53", null ],
+    [ "display_text", "classinput.html#a344058a20cc48c9fe170b3b59905a53b", null ],
     [ "form", "classinput.html#a83b663057f1d0f61768bc12c5a55f25c", null ],
     [ "get_value", "classinput.html#a1b3bcdbb596a1154a944a169ac67f547", null ],
     [ "input", "classinput.html#a13d088ddc4014c18efd350940632ecc0", null ],

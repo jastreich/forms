@@ -33,10 +33,17 @@ $stmnt->bind_result($name);
 
 echo '<h2>Existing Forms</h2>
 <table class="table">';
-echo '<thead><tr><th>Select</th><th class="text-left">Form Name</th></tr></thead><tbody>';
+echo '<thead><tr><th>Select</th><th class="text-left">Form Name</th><th>Actions</th></tr></thead><tbody>';
 while($stmnt->fetch())
 {
-  echo '<tr><td class="text-center"><input type="checkbox" name="select" value="' . $name . '" /></td><td><a href="form_data_crud.php?form_name=' . $name . '">' . $name . '</td></tr>';
+  echo '<tr><td class="text-center"><input type="checkbox" name="select" value="' . $name . '" /></td>'
+     . '<td><a href="form_data_crud.php?form_name=' . $name . '">' . $name . '</td>'
+     . '<td>'
+       . '<a href="form_data_crud.php?form_name=' . $name . '">Data</a> | '
+       . '<a href="form_fields.php?form_name=' . $name . '">Fields</a> | '
+       . '<a href="add_field.php?form_name=' . $name . '">Add Field</a> | '
+       . '<a href="add_action.php?form_name=' . $name . '">Add Action</a> | '
+       . '<a href="form.php?form_name=' . $name . '">Form</a></td></tr>';
 }
 echo '<tbody></table>';
 

@@ -28,6 +28,7 @@ if( isset($_GET['form_name']) )
 {
   require_once('database_form.inc.php');
   require_once('builder_form.inc.php');
+  require_once('actions.inc.php');
   $form = new database_form($_GET['form_name'],array());
   $form->read_form();
   if(isset($_POST) && 0 != count($_POST))
@@ -48,7 +49,7 @@ if( isset($_GET['form_name']) )
       }
       echo '</ol>';
       $dis = $form->form();
-      echo '<form action="form.php?form_name=' . $$_GET['form_name'] . '" method="post">';
+      echo '<form action="form.php?form_name=' . $_GET['form_name'] . (isset($_GET['dev']) ? '&dev' : '') . '" method="post">';
       echo $dis['html'];
       echo '<input type="submit" />';
       echo '</form>';
@@ -75,7 +76,7 @@ if( isset($_GET['form_name']) )
   else
   {
     $dis = $form->form();
-    echo '<form action="form.php?form_name=' . $_GET['form_name'] . '" method="post">';
+    echo '<form action="form.php?form_name=' . $_GET['form_name'] . (isset($_GET['dev']) ? '&dev' : '') . '" method="post">';
     echo $dis['html'];
     echo '<input type="submit" />';
     echo '</form>';

@@ -33,7 +33,7 @@ class textarea extends input
   {
     $this->label_text = $label_text;
     $this->name = $name;
-    $this->value = $value = '';
+    $this->value = $value;
     $this->required = $required;
     $this->maxlength = $maxlength;
     $this->sanity_func = $sanity_func;

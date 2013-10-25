@@ -19,31 +19,31 @@ define('RX_ZIP','([0-9]{5}([-][0-9]{4})?)');
 $state_list = array
 (
     'AL'=>"Alabama",
-    'AK'=>"Alaska", 
-    'AZ'=>"Arizona", 
-    'AR'=>"Arkansas", 
-    'CA'=>"California", 
-    'CO'=>"Colorado", 
-    'CT'=>"Connecticut", 
-    'DE'=>"Delaware", 
-    'DC'=>"District Of Columbia", 
-    'FL'=>"Florida", 
-    'GA'=>"Georgia", 
-    'HI'=>"Hawaii", 
-    'ID'=>"Idaho", 
-    'IL'=>"Illinois", 
-    'IN'=>"Indiana", 
-    'IA'=>"Iowa", 
-    'KS'=>"Kansas", 
-    'KY'=>"Kentucky", 
-    'LA'=>"Louisiana", 
-    'ME'=>"Maine", 
-    'MD'=>"Maryland", 
-    'MA'=>"Massachusetts", 
-    'MI'=>"Michigan", 
-    'MN'=>"Minnesota", 
-    'MS'=>"Mississippi", 
-    'MO'=>"Missouri", 
+    'AK'=>"Alaska",
+    'AZ'=>"Arizona",
+    'AR'=>"Arkansas",
+    'CA'=>"California",
+    'CO'=>"Colorado",
+    'CT'=>"Connecticut",
+    'DE'=>"Delaware",
+    'DC'=>"District Of Columbia",
+    'FL'=>"Florida",
+    'GA'=>"Georgia",
+    'HI'=>"Hawaii",
+    'ID'=>"Idaho",
+    'IL'=>"Illinois",
+    'IN'=>"Indiana",
+    'IA'=>"Iowa",
+    'KS'=>"Kansas",
+    'KY'=>"Kentucky",
+    'LA'=>"Louisiana",
+    'ME'=>"Maine",
+    'MD'=>"Maryland",
+    'MA'=>"Massachusetts",
+    'MI'=>"Michigan",
+    'MN'=>"Minnesota",
+    'MS'=>"Mississippi",
+    'MO'=>"Missouri",
     'MT'=>"Montana",
     'NE'=>"Nebraska",
     'NV'=>"Nevada",
@@ -53,21 +53,21 @@ $state_list = array
     'NY'=>"New York",
     'NC'=>"North Carolina",
     'ND'=>"North Dakota",
-    'OH'=>"Ohio", 
-    'OK'=>"Oklahoma", 
-    'OR'=>"Oregon", 
-    'PA'=>"Pennsylvania", 
-    'RI'=>"Rhode Island", 
-    'SC'=>"South Carolina", 
+    'OH'=>"Ohio",
+    'OK'=>"Oklahoma",
+    'OR'=>"Oregon",
+    'PA'=>"Pennsylvania",
+    'RI'=>"Rhode Island",
+    'SC'=>"South Carolina",
     'SD'=>"South Dakota",
-    'TN'=>"Tennessee", 
-    'TX'=>"Texas", 
-    'UT'=>"Utah", 
-    'VT'=>"Vermont", 
-    'VA'=>"Virginia", 
-    'WA'=>"Washington", 
-    'WV'=>"West Virginia", 
-    'WI'=>"Wisconsin", 
+    'TN'=>"Tennessee",
+    'TX'=>"Texas",
+    'UT'=>"Utah",
+    'VT'=>"Vermont",
+    'VA'=>"Virginia",
+    'WA'=>"Washington",
+    'WV'=>"West Virginia",
+    'WI'=>"Wisconsin",
     'WY'=>"Wyoming"
 );
 
@@ -149,8 +149,8 @@ class input implements field
     $ret['html'] = '<label';
     if(array_key_exists($this->name,$errors) || $this->required)
     {
-      $ret['html'] .= ' class="' 
-                   .  ($this->required ? 'required' . (array_key_exists($this->name,$errors) ? ' ' : '') : '') 
+      $ret['html'] .= ' class="'
+                   .  ($this->required ? 'required' . (array_key_exists($this->name,$errors) ? ' ' : '') : '')
                    .  (array_key_exists($this->name,$errors) ? 'error' : '') . '"';
     }
 
@@ -167,12 +167,25 @@ class input implements field
   }
 
   /** Display the name value pair
-   * @return A string containing the formated name value pair for this input.
+   * @return A string containing the HTML formated name value pair for this input.
    **/
   public function display()
   {
     return '<tr><td class="field_name">' . $this->name . '</td><td class="field_value">' . htmlentities(trim($this->value)) . '</td></tr>';
   }
+
+
+
+  /** Display the name value pair
+   * @return A string containing the TEXT formated name value pair for this input.
+   **/
+  public function display_text()
+  {
+    return $this->name . ':' . trim($this->value) . "\n";
+  }
+
+
+
 
   /** Sanitizes value to help protect against HTML, SQL, PHP or other injections. Returns false if the value can't be cleaned in a sensible way.
    * @return mixed often the value of the field or true if sanitization occured properly, but false if we are unable to sanitize.

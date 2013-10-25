@@ -32,9 +32,12 @@ var hierarchy =
     ] ],
     [ "fund_item", "classfund__item.html", null ],
     [ "funding", "classfunding.html", null ],
+    [ "message", "classmessage.html", null ],
     [ "observable", "interfaceobservable.html", [
       [ "forms", "classforms.html", null ]
     ] ],
-    [ "observer", "classobserver.html", null ],
+    [ "observer", "classobserver.html", [
+      [ "email_form_values", "classemail__form__values.html", null ]
+    ] ],
     [ "page", "classpage.html", null ]
 ];

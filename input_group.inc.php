@@ -80,7 +80,7 @@ class input_group extends input
   }
 
   /** Display the name value pair
-   * @return A string containing the formated name value pair for this input.
+   * @return A string containing the HTML formated name value pair for this input.
    **/
   public function display()
   {
@@ -98,6 +98,30 @@ class input_group extends input
     }
     return '<tr><td class="field_name">' . $this->name . '</td><td class="field_value"><ul>' . $list . '</ul></td></tr>';
   }
+
+
+  /** Display the name value pair
+   * @return A string containing the text formated name value pair for this input.
+   **/
+  public function display_text()
+  {
+    $list = '';
+    if(isArray($this->value))
+    {
+      foreach($this->value as $v)
+      {
+        $list .= "\t" . $v . "\n";
+      }
+    }
+    else
+    {
+      parent::display();
+    }
+    return $this->name . ":\n" . $list;
+  }
+
+
+
 
   /** Sanitize this form's values
    * @todo Write this.

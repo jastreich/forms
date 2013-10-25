@@ -1,7 +1,7 @@
 \begin{theindex}
 
   \item {\$state\discretionary {-}{}{}\_\discretionary {-}{}{}abrs}
-    \subitem {input.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{62}
+    \subitem {input.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{61}
 
   \indexspace
 
@@ -12,133 +12,141 @@
   \item {add\discretionary {-}{}{}\_\discretionary {-}{}{}field}
     \subitem {forms}, \hyperpage{31}
   \item {add\discretionary {-}{}{}\_\discretionary {-}{}{}observer}
-    \subitem {forms}, \hyperpage{32}
-    \subitem {observable}, \hyperpage{45}
+    \subitem {forms}, \hyperpage{31}
+    \subitem {observable}, \hyperpage{44}
   \item {add\discretionary {-}{}{}\_\discretionary {-}{}{}script}
     \subitem {page}, \hyperpage{48}
   \item {append\discretionary {-}{}{}\_\discretionary {-}{}{}js}
-    \subitem {page}, \hyperpage{48}
+    \subitem {page}, \hyperpage{49}
 
   \indexspace
 
-  \item {builder\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{10}
-    \subitem {form}, \hyperpage{11}
-    \subitem {make\discretionary {-}{}{}\_\discretionary {-}{}{}field}, \hyperpage{11}
+  \item {builder\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{12}
+    \subitem {form}, \hyperpage{13}
+    \subitem {make\discretionary {-}{}{}\_\discretionary {-}{}{}field}, \hyperpage{13}
 
   \indexspace
 
-  \item {color\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{11}
+  \item {color\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{13}
   \item {create}
-    \subitem {crud}, \hyperpage{12}
-    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{14}
-    \subitem {db\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{22}
-    \subitem {file\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{27}
+    \subitem {crud}, \hyperpage{14}
+    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{16}
+    \subitem {db\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{24}
+    \subitem {file\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{29}
   \item {create\discretionary {-}{}{}\_\discretionary {-}{}{}form}
-    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{14}
+    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{16}
   \item {create\discretionary {-}{}{}\_\discretionary {-}{}{}sql}
-    \subitem {db\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{22}
-  \item {crud}, \hyperpage{12}
-    \subitem {create}, \hyperpage{12}
-    \subitem {delete}, \hyperpage{12}
-    \subitem {read}, \hyperpage{13}
-    \subitem {update}, \hyperpage{13}
-  \item {crud.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{58}
+    \subitem {db\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{24}
+  \item {crud}, \hyperpage{14}
+    \subitem {create}, \hyperpage{14}
+    \subitem {delete}, \hyperpage{14}
+    \subitem {read}, \hyperpage{15}
+    \subitem {update}, \hyperpage{15}
+  \item {crud.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{57}
 
   \indexspace
 
-  \item {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{13}
-    \subitem {create}, \hyperpage{14}
-    \subitem {create\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{14}
-    \subitem {delete}, \hyperpage{14}
-    \subitem {delete\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{14}
-    \subitem {display\discretionary {-}{}{}\_\discretionary {-}{}{}table}, \hyperpage{15}
-    \subitem {read}, \hyperpage{15}
-    \subitem {read\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{15}
-    \subitem {update}, \hyperpage{15}
-    \subitem {update\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{15}
-  \item {database\discretionary {-}{}{}\_\discretionary {-}{}{}form.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{58}
-  \item {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{16}
-    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{17}
-    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{17}
-    \subitem {display}, \hyperpage{18}
-    \subitem {form}, \hyperpage{18}
-    \subitem {get\discretionary {-}{}{}\_\discretionary {-}{}{}value}, \hyperpage{18}
-    \subitem {sanitize}, \hyperpage{18}
-    \subitem {set\discretionary {-}{}{}\_\discretionary {-}{}{}value}, \hyperpage{18}
-    \subitem {validate}, \hyperpage{19}
-  \item {date\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{19}
-    \subitem {date\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{19}
-    \subitem {date\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{19}
-  \item {db\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{21}
-    \subitem {create}, \hyperpage{22}
-    \subitem {create\discretionary {-}{}{}\_\discretionary {-}{}{}sql}, \hyperpage{22}
-    \subitem {delete}, \hyperpage{22}
-    \subitem {read}, \hyperpage{22}
-    \subitem {update}, \hyperpage{22}
-  \item {db\discretionary {-}{}{}\_\discretionary {-}{}{}form.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{59}
+  \item {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{15}
+    \subitem {create}, \hyperpage{16}
+    \subitem {create\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{16}
+    \subitem {delete}, \hyperpage{16}
+    \subitem {delete\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{16}
+    \subitem {display\discretionary {-}{}{}\_\discretionary {-}{}{}table}, \hyperpage{17}
+    \subitem {read}, \hyperpage{17}
+    \subitem {read\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{17}
+    \subitem {update}, \hyperpage{17}
+    \subitem {update\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{17}
+  \item {database\discretionary {-}{}{}\_\discretionary {-}{}{}form.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{57}
+  \item {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{18}
+    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{19}
+    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{19}
+    \subitem {display}, \hyperpage{20}
+    \subitem {form}, \hyperpage{20}
+    \subitem {get\discretionary {-}{}{}\_\discretionary {-}{}{}value}, \hyperpage{20}
+    \subitem {sanitize}, \hyperpage{20}
+    \subitem {set\discretionary {-}{}{}\_\discretionary {-}{}{}value}, \hyperpage{20}
+    \subitem {validate}, \hyperpage{21}
+  \item {date\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{21}
+    \subitem {date\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{21}
+    \subitem {date\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{21}
+  \item {db\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{23}
+    \subitem {create}, \hyperpage{24}
+    \subitem {create\discretionary {-}{}{}\_\discretionary {-}{}{}sql}, \hyperpage{24}
+    \subitem {delete}, \hyperpage{24}
+    \subitem {read}, \hyperpage{24}
+    \subitem {update}, \hyperpage{24}
+  \item {db\discretionary {-}{}{}\_\discretionary {-}{}{}form.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{58}
   \item {delete}
-    \subitem {crud}, \hyperpage{12}
-    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{14}
-    \subitem {db\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{22}
-    \subitem {file\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{27}
+    \subitem {crud}, \hyperpage{14}
+    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{16}
+    \subitem {db\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{24}
+    \subitem {file\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{29}
   \item {delete\discretionary {-}{}{}\_\discretionary {-}{}{}form}
-    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{14}
+    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{16}
   \item {deserialize\discretionary {-}{}{}\_\discretionary {-}{}{}data}
-    \subitem {file\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{27}
+    \subitem {file\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{29}
   \item {display}
-    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{18}
-    \subitem {field}, \hyperpage{24}
+    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{20}
+    \subitem {field}, \hyperpage{27}
     \subitem {forms}, \hyperpage{32}
     \subitem {hidden\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{35}
     \subitem {input}, \hyperpage{38}
     \subitem {input\discretionary {-}{}{}\_\discretionary {-}{}{}group}, \hyperpage{41}
   \item {display\discretionary {-}{}{}\_\discretionary {-}{}{}table}
-    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{15}
+    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{17}
+  \item {display\discretionary {-}{}{}\_\discretionary {-}{}{}text}
+    \subitem {field}, \hyperpage{27}
+    \subitem {forms}, \hyperpage{32}
+    \subitem {input}, \hyperpage{38}
+    \subitem {input\discretionary {-}{}{}\_\discretionary {-}{}{}group}, \hyperpage{41}
 
   \indexspace
 
-  \item {email\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{22}
-  \item {event}, \hyperpage{23}
-  \item {event.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{59}
+  \item {email\discretionary {-}{}{}\_\discretionary {-}{}{}form\discretionary {-}{}{}\_\discretionary {-}{}{}values}, \hyperpage{24}
+  \item {email\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{25}
+  \item {event}, \hyperpage{25}
+  \item {event.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{58}
   \item {extended\discretionary {-}{}{}\_\discretionary {-}{}{}inputs.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{59}
 
   \indexspace
 
   \item {F\discretionary {-}{}{}A\discretionary {-}{}{}N\discretionary {-}{}{}C\discretionary {-}{}{}Y\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}B\discretionary {-}{}{}O\discretionary {-}{}{}X}
-    \subitem {page.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{64}
+    \subitem {page.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{63}
   \item {F\discretionary {-}{}{}O\discretionary {-}{}{}R\discretionary {-}{}{}M\discretionary {-}{}{}S}
-    \subitem {page.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{64}
-  \item {field}, \hyperpage{23}
-    \subitem {display}, \hyperpage{24}
-    \subitem {form}, \hyperpage{24}
-    \subitem {sanitize}, \hyperpage{26}
-    \subitem {validate}, \hyperpage{26}
-    \subitem {values}, \hyperpage{26}
-  \item {field.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{60}
-  \item {file\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{26}
-    \subitem {create}, \hyperpage{27}
-    \subitem {delete}, \hyperpage{27}
-    \subitem {deserialize\discretionary {-}{}{}\_\discretionary {-}{}{}data}, \hyperpage{27}
+    \subitem {page.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{63}
+  \item {field}, \hyperpage{26}
+    \subitem {display}, \hyperpage{27}
+    \subitem {display\discretionary {-}{}{}\_\discretionary {-}{}{}text}, \hyperpage{27}
+    \subitem {form}, \hyperpage{27}
+    \subitem {sanitize}, \hyperpage{27}
+    \subitem {validate}, \hyperpage{27}
+    \subitem {values}, \hyperpage{28}
+  \item {field.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{59}
+  \item {file\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{28}
+    \subitem {create}, \hyperpage{29}
+    \subitem {delete}, \hyperpage{29}
+    \subitem {deserialize\discretionary {-}{}{}\_\discretionary {-}{}{}data}, \hyperpage{29}
     \subitem {read}, \hyperpage{29}
     \subitem {save}, \hyperpage{29}
-    \subitem {serialize\discretionary {-}{}{}\_\discretionary {-}{}{}data}, \hyperpage{29}
-    \subitem {update}, \hyperpage{29}
-  \item {file\discretionary {-}{}{}\_\discretionary {-}{}{}form.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{60}
+    \subitem {serialize\discretionary {-}{}{}\_\discretionary {-}{}{}data}, \hyperpage{30}
+    \subitem {update}, \hyperpage{30}
+  \item {file\discretionary {-}{}{}\_\discretionary {-}{}{}form.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{59}
   \item {form}
-    \subitem {builder\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{11}
-    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{18}
-    \subitem {field}, \hyperpage{24}
+    \subitem {builder\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{13}
+    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{20}
+    \subitem {field}, \hyperpage{27}
     \subitem {forms}, \hyperpage{32}
     \subitem {hidden\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{35}
     \subitem {input}, \hyperpage{38}
     \subitem {input\discretionary {-}{}{}\_\discretionary {-}{}{}group}, \hyperpage{41}
     \subitem {range\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{52}
-    \subitem {textarea}, \hyperpage{54}
+    \subitem {textarea}, \hyperpage{55}
     \subitem {texteditor}, \hyperpage{56}
   \item {forms}, \hyperpage{30}
     \subitem {add\discretionary {-}{}{}\_\discretionary {-}{}{}field}, \hyperpage{31}
-    \subitem {add\discretionary {-}{}{}\_\discretionary {-}{}{}observer}, \hyperpage{32}
+    \subitem {add\discretionary {-}{}{}\_\discretionary {-}{}{}observer}, \hyperpage{31}
     \subitem {display}, \hyperpage{32}
+    \subitem {display\discretionary {-}{}{}\_\discretionary {-}{}{}text}, \hyperpage{32}
     \subitem {form}, \hyperpage{32}
     \subitem {forms}, \hyperpage{32}
     \subitem {notify}, \hyperpage{32}
@@ -153,10 +161,10 @@
   \indexspace
 
   \item {G\discretionary {-}{}{}O\discretionary {-}{}{}O\discretionary {-}{}{}G\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}A\discretionary {-}{}{}N\discretionary {-}{}{}A\discretionary {-}{}{}L\discretionary {-}{}{}Y\discretionary {-}{}{}T\discretionary {-}{}{}I\discretionary {-}{}{}C\discretionary {-}{}{}S}
-    \subitem {page.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{64}
+    \subitem {page.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{63}
   \item {get\discretionary {-}{}{}\_\discretionary {-}{}{}value}
-    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{18}
-    \subitem {number\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{42}
+    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{20}
+    \subitem {number\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{43}
 
   \indexspace
 
@@ -165,60 +173,63 @@
     \subitem {form}, \hyperpage{35}
     \subitem {hidden\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{35}
     \subitem {hidden\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{35}
-  \item {hidden\discretionary {-}{}{}\_\discretionary {-}{}{}input.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{61}
+  \item {hidden\discretionary {-}{}{}\_\discretionary {-}{}{}input.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{60}
 
   \indexspace
 
   \item {input}, \hyperpage{37}
     \subitem {display}, \hyperpage{38}
+    \subitem {display\discretionary {-}{}{}\_\discretionary {-}{}{}text}, \hyperpage{38}
     \subitem {form}, \hyperpage{38}
     \subitem {input}, \hyperpage{39}
     \subitem {sanitize}, \hyperpage{39}
     \subitem {set\discretionary {-}{}{}\_\discretionary {-}{}{}value}, \hyperpage{39}
-    \subitem {validate}, \hyperpage{39}
+    \subitem {validate}, \hyperpage{40}
     \subitem {values}, \hyperpage{40}
   \item {input.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{61}
-    \subitem {\$state\discretionary {-}{}{}\_\discretionary {-}{}{}abrs}, \hyperpage{62}
+    \subitem {\$state\discretionary {-}{}{}\_\discretionary {-}{}{}abrs}, \hyperpage{61}
   \item {input\discretionary {-}{}{}\_\discretionary {-}{}{}group}, \hyperpage{40}
     \subitem {display}, \hyperpage{41}
+    \subitem {display\discretionary {-}{}{}\_\discretionary {-}{}{}text}, \hyperpage{41}
     \subitem {form}, \hyperpage{41}
     \subitem {input\discretionary {-}{}{}\_\discretionary {-}{}{}group}, \hyperpage{41}
     \subitem {input\discretionary {-}{}{}\_\discretionary {-}{}{}group}, \hyperpage{41}
-    \subitem {sanitize}, \hyperpage{41}
-    \subitem {validate}, \hyperpage{41}
-  \item {input\discretionary {-}{}{}\_\discretionary {-}{}{}group.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{62}
+    \subitem {sanitize}, \hyperpage{42}
+    \subitem {validate}, \hyperpage{42}
+  \item {input\discretionary {-}{}{}\_\discretionary {-}{}{}group.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{61}
 
   \indexspace
 
   \item {M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}F\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}U\discretionary {-}{}{}R\discretionary {-}{}{}E\discretionary {-}{}{}S}
-    \subitem {page.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{64}
+    \subitem {page.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{63}
   \item {make\discretionary {-}{}{}\_\discretionary {-}{}{}field}
-    \subitem {builder\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{11}
+    \subitem {builder\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{13}
+  \item {message}, \hyperpage{42}
 
   \indexspace
 
   \item {notify}
     \subitem {forms}, \hyperpage{32}
-    \subitem {observable}, \hyperpage{45}
-    \subitem {observer}, \hyperpage{45}
-  \item {number\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{42}
-    \subitem {get\discretionary {-}{}{}\_\discretionary {-}{}{}value}, \hyperpage{42}
-    \subitem {number\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{42}
-    \subitem {number\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{42}
+    \subitem {observable}, \hyperpage{46}
+    \subitem {observer}, \hyperpage{47}
+  \item {number\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{43}
+    \subitem {get\discretionary {-}{}{}\_\discretionary {-}{}{}value}, \hyperpage{43}
+    \subitem {number\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{43}
+    \subitem {number\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{43}
     \subitem {set\discretionary {-}{}{}\_\discretionary {-}{}{}value}, \hyperpage{44}
 
   \indexspace
 
   \item {observable}, \hyperpage{44}
-    \subitem {add\discretionary {-}{}{}\_\discretionary {-}{}{}observer}, \hyperpage{45}
-    \subitem {notify}, \hyperpage{45}
-    \subitem {remove\discretionary {-}{}{}\_\discretionary {-}{}{}observer}, \hyperpage{45}
+    \subitem {add\discretionary {-}{}{}\_\discretionary {-}{}{}observer}, \hyperpage{44}
+    \subitem {notify}, \hyperpage{46}
+    \subitem {remove\discretionary {-}{}{}\_\discretionary {-}{}{}observer}, \hyperpage{46}
   \item {observable.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{62}
-  \item {observer}, \hyperpage{45}
-    \subitem {notify}, \hyperpage{45}
+  \item {observer}, \hyperpage{46}
+    \subitem {notify}, \hyperpage{47}
     \subitem {observer}, \hyperpage{47}
     \subitem {set\discretionary {-}{}{}\_\discretionary {-}{}{}func}, \hyperpage{47}
-  \item {observer.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{63}
+  \item {observer.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{62}
 
   \indexspace
 
@@ -228,20 +239,20 @@
     \subitem {add\discretionary {-}{}{}\_\discretionary {-}{}{}css}, \hyperpage{48}
     \subitem {add\discretionary {-}{}{}\_\discretionary {-}{}{}feature}, \hyperpage{48}
     \subitem {add\discretionary {-}{}{}\_\discretionary {-}{}{}script}, \hyperpage{48}
-    \subitem {append\discretionary {-}{}{}\_\discretionary {-}{}{}js}, \hyperpage{48}
+    \subitem {append\discretionary {-}{}{}\_\discretionary {-}{}{}js}, \hyperpage{49}
     \subitem {page}, \hyperpage{49}
     \subitem {set\discretionary {-}{}{}\_\discretionary {-}{}{}content}, \hyperpage{49}
     \subitem {set\discretionary {-}{}{}\_\discretionary {-}{}{}css}, \hyperpage{49}
     \subitem {set\discretionary {-}{}{}\_\discretionary {-}{}{}features}, \hyperpage{49}
-    \subitem {set\discretionary {-}{}{}\_\discretionary {-}{}{}google\discretionary {-}{}{}\_\discretionary {-}{}{}analytics}, \hyperpage{49}
+    \subitem {set\discretionary {-}{}{}\_\discretionary {-}{}{}google\discretionary {-}{}{}\_\discretionary {-}{}{}analytics}, \hyperpage{50}
     \subitem {set\discretionary {-}{}{}\_\discretionary {-}{}{}js}, \hyperpage{50}
     \subitem {set\discretionary {-}{}{}\_\discretionary {-}{}{}scripts}, \hyperpage{50}
     \subitem {set\discretionary {-}{}{}\_\discretionary {-}{}{}site\discretionary {-}{}{}\_\discretionary {-}{}{}id}, \hyperpage{50}
-  \item {page.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{63}
-    \subitem {F\discretionary {-}{}{}A\discretionary {-}{}{}N\discretionary {-}{}{}C\discretionary {-}{}{}Y\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}B\discretionary {-}{}{}O\discretionary {-}{}{}X}, \hyperpage{64}
-    \subitem {F\discretionary {-}{}{}O\discretionary {-}{}{}R\discretionary {-}{}{}M\discretionary {-}{}{}S}, \hyperpage{64}
-    \subitem {G\discretionary {-}{}{}O\discretionary {-}{}{}O\discretionary {-}{}{}G\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}A\discretionary {-}{}{}N\discretionary {-}{}{}A\discretionary {-}{}{}L\discretionary {-}{}{}Y\discretionary {-}{}{}T\discretionary {-}{}{}I\discretionary {-}{}{}C\discretionary {-}{}{}S}, \hyperpage{64}
-    \subitem {M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}F\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}U\discretionary {-}{}{}R\discretionary {-}{}{}E\discretionary {-}{}{}S}, \hyperpage{64}
+  \item {page.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{62}
+    \subitem {F\discretionary {-}{}{}A\discretionary {-}{}{}N\discretionary {-}{}{}C\discretionary {-}{}{}Y\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}B\discretionary {-}{}{}O\discretionary {-}{}{}X}, \hyperpage{63}
+    \subitem {F\discretionary {-}{}{}O\discretionary {-}{}{}R\discretionary {-}{}{}M\discretionary {-}{}{}S}, \hyperpage{63}
+    \subitem {G\discretionary {-}{}{}O\discretionary {-}{}{}O\discretionary {-}{}{}G\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}A\discretionary {-}{}{}N\discretionary {-}{}{}A\discretionary {-}{}{}L\discretionary {-}{}{}Y\discretionary {-}{}{}T\discretionary {-}{}{}I\discretionary {-}{}{}C\discretionary {-}{}{}S}, \hyperpage{63}
+    \subitem {M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}F\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}U\discretionary {-}{}{}R\discretionary {-}{}{}E\discretionary {-}{}{}S}, \hyperpage{63}
     \subitem {P\discretionary {-}{}{}I\discretionary {-}{}{}W\discretionary {-}{}{}I\discretionary {-}{}{}K}, \hyperpage{64}
   \item {password\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{51}
 
@@ -252,28 +263,28 @@
     \subitem {range\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{52}
     \subitem {range\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{52}
   \item {read}
-    \subitem {crud}, \hyperpage{13}
-    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{15}
-    \subitem {db\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{22}
+    \subitem {crud}, \hyperpage{15}
+    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{17}
+    \subitem {db\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{24}
     \subitem {file\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{29}
   \item {read\discretionary {-}{}{}\_\discretionary {-}{}{}form}
-    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{15}
+    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{17}
   \item {remove\discretionary {-}{}{}\_\discretionary {-}{}{}observer}
     \subitem {forms}, \hyperpage{33}
-    \subitem {observable}, \hyperpage{45}
+    \subitem {observable}, \hyperpage{46}
 
   \indexspace
 
   \item {sanitize}
-    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{18}
-    \subitem {field}, \hyperpage{26}
+    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{20}
+    \subitem {field}, \hyperpage{27}
     \subitem {forms}, \hyperpage{33}
     \subitem {input}, \hyperpage{39}
-    \subitem {input\discretionary {-}{}{}\_\discretionary {-}{}{}group}, \hyperpage{41}
+    \subitem {input\discretionary {-}{}{}\_\discretionary {-}{}{}group}, \hyperpage{42}
   \item {save}
     \subitem {file\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{29}
   \item {serialize\discretionary {-}{}{}\_\discretionary {-}{}{}data}
-    \subitem {file\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{29}
+    \subitem {file\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{30}
   \item {set\discretionary {-}{}{}\_\discretionary {-}{}{}content}
     \subitem {page}, \hyperpage{49}
   \item {set\discretionary {-}{}{}\_\discretionary {-}{}{}css}
@@ -283,7 +294,7 @@
   \item {set\discretionary {-}{}{}\_\discretionary {-}{}{}func}
     \subitem {observer}, \hyperpage{47}
   \item {set\discretionary {-}{}{}\_\discretionary {-}{}{}google\discretionary {-}{}{}\_\discretionary {-}{}{}analytics}
-    \subitem {page}, \hyperpage{49}
+    \subitem {page}, \hyperpage{50}
   \item {set\discretionary {-}{}{}\_\discretionary {-}{}{}js}
     \subitem {page}, \hyperpage{50}
   \item {set\discretionary {-}{}{}\_\discretionary {-}{}{}scripts}
@@ -291,7 +302,7 @@
   \item {set\discretionary {-}{}{}\_\discretionary {-}{}{}site\discretionary {-}{}{}\_\discretionary {-}{}{}id}
     \subitem {page}, \hyperpage{50}
   \item {set\discretionary {-}{}{}\_\discretionary {-}{}{}value}
-    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{18}
+    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{20}
     \subitem {input}, \hyperpage{39}
     \subitem {number\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{44}
 
@@ -302,39 +313,39 @@
     \subitem {tel\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{53}
   \item {text\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{53}
   \item {textarea}, \hyperpage{54}
-    \subitem {form}, \hyperpage{54}
-    \subitem {textarea}, \hyperpage{54}
+    \subitem {form}, \hyperpage{55}
+    \subitem {textarea}, \hyperpage{55}
   \item {textarea.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{64}
-  \item {texteditor}, \hyperpage{56}
+  \item {texteditor}, \hyperpage{55}
     \subitem {form}, \hyperpage{56}
-  \item {texteditor.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{65}
+  \item {texteditor.\discretionary {-}{}{}inc.\discretionary {-}{}{}php}, \hyperpage{64}
 
   \indexspace
 
   \item {update}
-    \subitem {crud}, \hyperpage{13}
-    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{15}
-    \subitem {db\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{22}
-    \subitem {file\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{29}
+    \subitem {crud}, \hyperpage{15}
+    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{17}
+    \subitem {db\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{24}
+    \subitem {file\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{30}
   \item {update\discretionary {-}{}{}\_\discretionary {-}{}{}form}
-    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{15}
+    \subitem {database\discretionary {-}{}{}\_\discretionary {-}{}{}form}, \hyperpage{17}
 
   \indexspace
 
   \item {validate}
-    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{19}
-    \subitem {field}, \hyperpage{26}
+    \subitem {datalist\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{21}
+    \subitem {field}, \hyperpage{27}
     \subitem {forms}, \hyperpage{33}
-    \subitem {input}, \hyperpage{39}
-    \subitem {input\discretionary {-}{}{}\_\discretionary {-}{}{}group}, \hyperpage{41}
+    \subitem {input}, \hyperpage{40}
+    \subitem {input\discretionary {-}{}{}\_\discretionary {-}{}{}group}, \hyperpage{42}
   \item {values}
-    \subitem {field}, \hyperpage{26}
+    \subitem {field}, \hyperpage{28}
     \subitem {forms}, \hyperpage{33}
     \subitem {input}, \hyperpage{40}
 
   \indexspace
 
-  \item {zip\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{57}
+  \item {zip\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{56}
     \subitem {zip\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{57}
     \subitem {zip\discretionary {-}{}{}\_\discretionary {-}{}{}input}, \hyperpage{57}
 

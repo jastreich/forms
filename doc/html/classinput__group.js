@@ -1,6 +1,7 @@
 var classinput__group =
 [
     [ "display", "classinput__group.html#a91e1b3cab54b81c21ab5f88a2f4f5c6a", null ],
+    [ "display_text", "classinput__group.html#aac74288da2e6c962dc507ccaa1f8f450", null ],
     [ "form", "classinput__group.html#a67f5d8e4ac86e75313e8d0d8696b7b35", null ],
     [ "input_group", "classinput__group.html#aef532e921771fbfccacbdefba1db7dce", null ],
     [ "sanitize", "classinput__group.html#a4f0f7f8aeb74550c99114f28dca449cb", null ],

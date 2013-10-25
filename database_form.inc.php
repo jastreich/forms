@@ -6,7 +6,7 @@
 require_once('/var/www/dbinfo/travel/connection.php');
 require_once('forms.inc.php');
 require_once('crud.inc.php');
-
+require_once('actions.inc.php');
 
 define('PRE_CREATE',13);
 define('POST_CREATE',14);
@@ -78,12 +78,19 @@ class database_form extends forms implements crud
     echo $stmnt->error;
     $stmnt->fetch();
     echo $stmnt->error;
-    $stmnt->close();
-//    echo $stmnt->error;
     $theform = unserialize($t);
+    if(isset($_GET['dev']))
+    {
+    echo $stmnt->error;
+
+      var_dump($t);
+    }
+    $stmnt->close();
     $this->fields = $theform->fields;
     $this->name = $theform->name;
     $this->id = $theform->id;
+    $this->observers = $theform->observers;
+//           observers             observers
     $this->notify(new event($this,POST_READ_FORM));
   }
 
@@ -216,7 +223,7 @@ class database_form extends forms implements crud
   public function display_structure()
   {
     $ret = array();
-    $ret['html']  = '<table><thead>';
+    $ret['html']  = '<table class="table"><thead>';
     $ret['html'] .= '<tr>';
     $ret['html'] .= '<th>Label</th>';
     $ret['html'] .= '<th>Name</th>';
@@ -282,7 +289,7 @@ class database_form extends forms implements crud
     }
     $stmnt->close();
 
-    $ret['html'] = '<table><thead><tr><td>&nbsp;</td>';
+    $ret['html'] = '<table class="table"><thead><tr><td>&nbsp;</td>';
     foreach($this->fields as $k => $v)
     {
       $ret['html'] .= '<th>' . $v->label_text . '</th>';
@@ -323,6 +330,7 @@ class database_form extends forms implements crud
       }
       $ret['html'] .= '</tr>';
     }
+    $ret['html'] .= '</tbody></table>';
     $this->notify(new event($this,POST_DISPLAY_TABLE,$ret));
     return $ret;
   }

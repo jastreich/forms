@@ -173,10 +173,10 @@ class builder_form extends forms
   /** Returns the HTML for this builder_form
    * @see forms::form()
    **/
-  public function form($errors)
+  public function form($errors = array())
   {
     $ret = parent::form($errors);
-    $ret[jquery] = true;
+    $ret['jquery'] = true;
 /*
     $ret['js'] .= '
 

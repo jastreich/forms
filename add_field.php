@@ -52,7 +52,9 @@ if(isset($_POST['form_name']))
     echo '<h1>Field added Successfully</h1>';
     echo '<ul>';
     echo '<li><a href="add_field.php?form_name=' . $_POST['form_name'] . '">Add another field to this form</a></li>';
-    echo '<li><a href="crud.php">Go to builder</a></li>';
+    echo '<li><a href="form_fields.php?form_name=' . $_POST['form_name'] . '">View all fields in this form</a></li>';
+    echo '<li><a href="form_data_crud.php?form_name=' . $_POST['form_name'] . '">View data collected with this form</a></li>';
+    echo '<li><a href="crud.php">All forms</a></li>';
     echo '</ul>';
   }
   else

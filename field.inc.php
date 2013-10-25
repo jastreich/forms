@@ -33,9 +33,16 @@ interface field
   public function sanitize();
 
   /** Display the key value pairing for this object as a table.
-   * @return an associated array with two element 'html' => the HTML of this object 'js' => the Javascript of this object.
+   * @return the HTML representation of the field
    **/
   public function display();
+
+  /** Display the key value pairing for this object int text format.
+   * @return the text representation of the field
+   **/
+  public function display_text();
+
+
 };
 
 ?>

@@ -3,6 +3,7 @@ var classforms =
     [ "add_field", "classforms.html#ad85afb257cfdcf8834590774fd9ef357", null ],
     [ "add_observer", "classforms.html#a6c88ab2728699cc06ba8110b1f5aacbc", null ],
     [ "display", "classforms.html#abbb54cc0731f483777e6baa39f9fe494", null ],
+    [ "display_text", "classforms.html#ad78a6f47ecded8987dda90468dbb8f77", null ],
     [ "form", "classforms.html#aca4fdeecf56bc5796f628a477f9ce629", null ],
     [ "forms", "classforms.html#a89ff17c0b763f0fd16abbe6ebd2dbe96", null ],
     [ "notify", "classforms.html#a82bc2b5e603ecd535f362c3dfdcae96e", null ],
@@ -13,5 +14,6 @@ var classforms =
     [ "$fields", "classforms.html#a4df40ac2adbfb971665ab358fc8954b5", null ],
     [ "$id", "classforms.html#a43144384180122ef4434845671a45e4c", null ],
     [ "$name", "classforms.html#aa84609327e0f9bdf2ba799c8cd2268fd", null ],
+    [ "$observers", "classforms.html#aebf137dbe732b7eee3786e3b1ec24535", null ],
     [ "$pre", "classforms.html#a55665dfe896e78efdfd33a650f6e2d7c", null ]
 ];
