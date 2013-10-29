@@ -107,12 +107,12 @@ class email_form_values extends observer
     if(isset($_SERVER['eppn']))
     {
       $user_email = strstr($_SERVER['eppn'], '@', true) . '@uwm.edu';
-      $emial_fields[$user_email] = $user_email;
+      $email_fields[$user_email] = $user_email;
     }
 
     foreach($fields as $k => $v)
     {
-      if($v->type == 'email')
+      if(trim($v->type) == 'email' || trim($v->type) == 'email_input')
       {
         $email_fields[$k] = $k;
       }
@@ -125,12 +125,12 @@ class email_form_values extends observer
       (
         new datalist_input
         (
-          new email_input('To','email_to',$this->email_to,true),
+          new text_input('To','email_to',$this->email_to,true),
           $email_fields
         ),
         new datalist_input
         (
-          new email_input('From','email_from',$this->email_from,true),
+          new text_input('From','email_from',$this->email_from,true),
           $email_fields
         ),
         new text_input('Subject','email_subject',$this->email_subject,true)

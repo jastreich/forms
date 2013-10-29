@@ -171,7 +171,7 @@ class input implements field
    **/
   public function display()
   {
-    return '<tr><td class="field_name">' . $this->name . '</td><td class="field_value">' . htmlentities(trim($this->value)) . '</td></tr>';
+    return '<tr><td class="field_name">' . $this->label_text . '</td><td class="field_value">' . htmlentities(trim($this->value)) . '</td></tr>';
   }
 
 
@@ -181,7 +181,7 @@ class input implements field
    **/
   public function display_text()
   {
-    return $this->name . ':' . trim($this->value) . "\n";
+    return $this->label_text . ':' . trim($this->value) . "\n";
   }
 
 

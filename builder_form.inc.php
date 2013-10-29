@@ -32,8 +32,10 @@ class builder_form extends forms
       'texteditor' => 'Rich Text Editor',
 //      'input_group' => 'Input Group (checkboxes/radio buttons)',
       'range_input' => 'Slider',
+      'email_input' => 'Email',
       'tel_input' => 'Telephone',
       'zip_input' => 'US Zip Code',
+
       'password_input' => 'Password',
       'date_input' => 'Date'
     );
@@ -100,6 +102,19 @@ class builder_form extends forms
           $this->fields['placeholder']->get_value()
         );
         break;
+      case 'email_input':
+        $imp = new email_input
+        (
+          $this->fields['text_label']->get_value(),
+          $this->fields['name']->get_value(),
+          $this->fields['value']->get_value(),
+          $req[0],
+          $this->fields['maxlength']->get_value(),
+          $this->fields['pattern']->get_value(),
+          $this->fields['placeholder']->get_value()
+        );
+        break;
+
       case 'number_input':
         $imp = new number_input
         (

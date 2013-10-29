@@ -4,7 +4,15 @@
 
 ## Development
 
-* eeeddaa 2013-10-25 | Fix a few problems with a single include. (HEAD, master) [Jeremy Streich]
+* 55b9826 2013-10-28 | Prettification of some other files. (HEAD, master) [Jeremy Streich]
+* c51e018 2013-10-28 | Prettified the add field form. [Jeremy Streich]
+* 051c299 2013-10-28 | Growl. [Jeremy Streich]
+* d679960 2013-10-28 | Some polish. [Jeremy Streich]
+* c6b686d 2013-10-28 | hmmm? [Jeremy Streich]
+* fd48a8e 2013-10-28 | Another minor change. [Jeremy Streich]
+* ac7d00d 2013-10-28 | Small fix.... spelling... sheesh. [Jeremy Streich]
+* e415301 2013-10-28 | Exposing email form. [Jeremy Streich]
+* eeeddaa 2013-10-25 | Fix a few problems with a single include. [Jeremy Streich]
 * 852eeff 2013-10-25 | Object operator would help. [Jeremy Streich]
 * 3dbb163 2013-10-25 | One of these days I'll get it on the first try. :( [Jeremy Streich]
 * cab83d6 2013-10-25 | Opps. [Jeremy Streich]
