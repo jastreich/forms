@@ -15,6 +15,7 @@ var annotated =
     [ "forms", "classforms.html", "classforms" ],
     [ "fund_item", "classfund__item.html", "classfund__item" ],
     [ "funding", "classfunding.html", "classfunding" ],
+    [ "get_input", "classget__input.html", "classget__input" ],
     [ "hidden_input", "classhidden__input.html", "classhidden__input" ],
     [ "input", "classinput.html", "classinput" ],
     [ "input_group", "classinput__group.html", "classinput__group" ],

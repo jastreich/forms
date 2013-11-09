@@ -17,7 +17,9 @@ var hierarchy =
         [ "datalist_input", "classdatalist__input.html", null ],
         [ "date_input", "classdate__input.html", null ],
         [ "email_input", "classemail__input.html", null ],
-        [ "hidden_input", "classhidden__input.html", null ],
+        [ "hidden_input", "classhidden__input.html", [
+          [ "get_input", "classget__input.html", null ]
+        ] ],
         [ "input_group", "classinput__group.html", null ],
         [ "number_input", "classnumber__input.html", null ],
         [ "password_input", "classpassword__input.html", null ],

@@ -29,6 +29,9 @@ var files =
       [ "file_form", "classfile__form.html", "classfile__form" ]
     ] ],
     [ "forms.inc.php", "forms_8inc_8php.html", "forms_8inc_8php" ],
+    [ "get_input.inc.php", "get__input_8inc_8php.html", [
+      [ "get_input", "classget__input.html", "classget__input" ]
+    ] ],
     [ "hidden_input.inc.php", "hidden__input_8inc_8php.html", [
       [ "hidden_input", "classhidden__input.html", "classhidden__input" ]
     ] ],

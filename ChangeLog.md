@@ -4,7 +4,8 @@
 
 ## Development
 
-* 55b9826 2013-10-28 | Prettification of some other files. (HEAD, master) [Jeremy Streich]
+* 20d355c 2013-11-09 | added get_input started report. (HEAD, master) [Jeremy Streich]
+* 55b9826 2013-10-28 | Prettification of some other files. [Jeremy Streich]
 * c51e018 2013-10-28 | Prettified the add field form. [Jeremy Streich]
 * 051c299 2013-10-28 | Growl. [Jeremy Streich]
 * d679960 2013-10-28 | Some polish. [Jeremy Streich]

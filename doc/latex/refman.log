@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2013.6.20)  28 OCT 2013 15:56
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2013.6.20)  9 NOV 2013 00:45
 entering extended mode
  %&-line parsing enabled.
 **refman
@@ -917,15 +917,15 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.29996pt on input line 64.
  [2] [3] [4]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 224.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 230.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 224.
+(Font)              scaled to size 10.79993pt on input line 230.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 224.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 230.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 224.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 230.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 224.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 230.
 )
 \tf@toc=\write5
 \openout5 = `refman.toc'.
@@ -952,13 +952,13 @@ File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 7.
  [1] [2]
-[3] [4]
+[3] [4] [5]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 159.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 160.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 159.
- [5]
-Underfull \hbox (badness 10000) detected at line 162
+(Font)              scaled to size 8.99994pt on input line 160.
+
+Underfull \hbox (badness 10000) detected at line 163
 [][][]
  []
 
@@ -977,15 +977,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--23
 
  []
 
-) (./bug.tex [8]) (./hierarchy.tex
+[8]) (./bug.tex) (./hierarchy.tex
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 10.79993pt on input line 1.
- [9]) (./annotated.tex [10]) (./files.tex
-[11]) (./classbuilder__form.tex
-<classbuilder__form.pdf, id=947, 501.875pt x 330.90628pt>
+ [9]) (./annotated.tex [10] [11]) (./files.tex [12]) (./classbuilder__form.tex
+<classbuilder__form.pdf, id=998, 501.875pt x 330.90628pt>
 File: classbuilder__form.pdf Graphic file (type pdf)
 
-<use classbuilder__form.pdf> [12]
+<use classbuilder__form.pdf>
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 20.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
@@ -1004,7 +1003,7 @@ Underfull \hbox (badness 10000) detected at line 45
 [][][]
  []
 
-
+[13 <./classbuilder__form.pdf>]
 Underfull \hbox (badness 10000) detected at line 63
 [][][]
  []
@@ -1015,14 +1014,14 @@ Underfull \hbox (badness 10000) detected at line 66
  []
 
 ) (./classcolor__input.tex
-<classcolor__input.pdf, id=975, 501.875pt x 725.60085pt>
+<classcolor__input.pdf, id=1026, 501.875pt x 725.60085pt>
 File: classcolor__input.pdf Graphic file (type pdf)
 
-<use classcolor__input.pdf> [13 <./classbuilder__form.pdf>])
-(./interfacecrud.tex <interfacecrud.pdf, id=996, 501.875pt x 389.80632pt>
+<use classcolor__input.pdf>) (./interfacecrud.tex
+<interfacecrud.pdf, id=1028, 501.875pt x 389.80632pt>
 File: interfacecrud.pdf Graphic file (type pdf)
-
-<use interfacecrud.pdf> [14 <./classcolor__input.pdf> <./interfacecrud.pdf>]
+ <use interfacecrud.pdf>
+[14 <./classcolor__input.pdf> <./interfacecrud.pdf>]
 Underfull \hbox (badness 10000) detected at line 43
 [][][]
  []
@@ -1042,11 +1041,11 @@ Underfull \hbox (badness 10000) detected at line 97
 [][][]
  []
 
-) (./classdatabase__form.tex
-<classdatabase__form.pdf, id=1026, 501.875pt x 194.89813pt>
+) (./classdatabase__form.tex [15]
+<classdatabase__form.pdf, id=1073, 501.875pt x 194.89813pt>
 File: classdatabase__form.pdf Graphic file (type pdf)
 
-<use classdatabase__form.pdf> [15 <./classdatabase__form.pdf>]
+<use classdatabase__form.pdf>
 Underfull \hbox (badness 10000) detected at line 57
 [][][]
  []
@@ -1056,7 +1055,7 @@ Underfull \hbox (badness 10000) detected at line 60
 [][][]
  []
 
-
+[16 <./classdatabase__form.pdf>]
 Underfull \hbox (badness 10000) detected at line 78
 [][][]
  []
@@ -1066,7 +1065,7 @@ Underfull \hbox (badness 10000) detected at line 81
 [][][]
  []
 
-[16]
+
 Underfull \hbox (badness 10000) detected at line 95
 [][][]
  []
@@ -1101,7 +1100,7 @@ Underfull \hbox (badness 10000) detected at line 150
 [][][]
  []
 
-
+[17]
 Underfull \hbox (badness 10000) detected at line 153
 [][][]
  []
@@ -1116,7 +1115,7 @@ Underfull \hbox (badness 10000) detected at line 174
 [][][]
  []
 
-[17]
+
 Underfull \hbox (badness 10000) detected at line 188
 [][][]
  []
@@ -1137,15 +1136,15 @@ Underfull \hbox (badness 10000) detected at line 212
  []
 
 ) (./classdatalist__input.tex
-<classdatalist__input.pdf, id=1079, 501.875pt x 323.78966pt>
+<classdatalist__input.pdf, id=1112, 501.875pt x 323.78966pt>
 File: classdatalist__input.pdf Graphic file (type pdf)
 
-<use classdatalist__input.pdf> [18 <./classdatalist__input.pdf>]
+<use classdatalist__input.pdf> [18]
 Underfull \hbox (badness 10000) detected at line 69
 [][][]
  []
 
-
+[19 <./classdatalist__input.pdf>]
 Underfull \hbox (badness 10000) detected at line 72
 [][][]
  []
@@ -1155,7 +1154,7 @@ Underfull \hbox (badness 10000) detected at line 95
 [][][]
  []
 
-[19]
+
 Underfull \hbox (badness 10000) detected at line 115
 [][][]
  []
@@ -1165,23 +1164,23 @@ Underfull \hbox (badness 10000) detected at line 129
 [][][]
  []
 
-
+[20]
 Underfull \hbox (badness 10000) detected at line 168
 [][][]
  []
 
 ) (./classdate__input.tex
-<classdate__input.pdf, id=1133, 501.875pt x 772.1146pt>
+<classdate__input.pdf, id=1177, 501.875pt x 772.1146pt>
 File: classdate__input.pdf Graphic file (type pdf)
 
-<use classdate__input.pdf> [20 <./classdate__input.pdf>]) (./classdb__form.tex
-<classdb__form.pdf, id=1155, 501.875pt x 362.80545pt>
+<use classdate__input.pdf> [21 <./classdate__input.pdf>]) (./classdb__form.tex
+<classdb__form.pdf, id=1199, 501.875pt x 362.80545pt>
 File: classdb__form.pdf Graphic file (type pdf)
  <use classdb__form.pdf>
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
 
-[21 <./classdb__form.pdf>]
+[22 <./classdb__form.pdf>]
 Underfull \hbox (badness 10000) detected at line 50
 [][][]
  []
@@ -1196,33 +1195,30 @@ Underfull \hbox (badness 10000) detected at line 93
 [][][]
  []
 
-[22]
+
 Underfull \hbox (badness 10000) detected at line 107
 [][][]
  []
 
 ) (./classemail__form__values.tex
-<classemail__form__values.pdf, id=1191, 501.875pt x 321.2pt>
+<classemail__form__values.pdf, id=1222, 501.875pt x 321.2pt>
 File: classemail__form__values.pdf Graphic file (type pdf)
 
-<use classemail__form__values.pdf>) (./classemail__input.tex
-<classemail__input.pdf, id=1193, 501.875pt x 725.60085pt>
+<use classemail__form__values.pdf> [23 <./classemail__form__values.pdf>])
+(./classemail__input.tex
+<classemail__input.pdf, id=1237, 501.875pt x 725.60085pt>
 File: classemail__input.pdf Graphic file (type pdf)
 
-<use classemail__input.pdf> [23 <./classemail__form__values.pdf> <./classemail_
-_input.pdf>]) (./classevent.tex) (./interfacefield.tex
-<interfacefield.pdf, id=1219, 501.875pt x 743.51776pt>
+<use classemail__input.pdf>) (./classevent.tex [24 <./classemail__input.pdf>])
+(./interfacefield.tex <interfacefield.pdf, id=1263, 501.875pt x 743.51776pt>
 File: interfacefield.pdf Graphic file (type pdf)
 
-<use interfacefield.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [24]
+<use interfacefield.pdf> [25 <./interfacefield.pdf>]
 Underfull \hbox (badness 10000) detected at line 39
 [][][]
  []
 
-[25 <./interfacefield.pdf>]
+
 Underfull \hbox (badness 10000) detected at line 57
 [][][]
  []
@@ -1237,21 +1233,21 @@ Underfull \hbox (badness 10000) detected at line 98
 [][][]
  []
 
-
+[26]
 Underfull \hbox (badness 10000) detected at line 121
 [][][]
  []
 
-) (./classfile__form.tex [26]
-<classfile__form.pdf, id=1299, 501.875pt x 362.80545pt>
+) (./classfile__form.tex
+<classfile__form.pdf, id=1332, 501.875pt x 362.80545pt>
 File: classfile__form.pdf Graphic file (type pdf)
 
-<use classfile__form.pdf>
+<use classfile__form.pdf> [27 <./classfile__form.pdf>]
 Underfull \hbox (badness 10000) detected at line 50
 [][][]
  []
 
-[27 <./classfile__form.pdf>]
+
 Underfull \hbox (badness 10000) detected at line 68
 [][][]
  []
@@ -1266,7 +1262,7 @@ Underfull \hbox (badness 10000) detected at line 105
 [][][]
  []
 
-
+[28]
 Underfull \hbox (badness 10000) detected at line 121
 [][][]
  []
@@ -1286,7 +1282,7 @@ Underfull \hbox (badness 10000) detected at line 152
 [][][]
  []
 
-[28]) (./classforms.tex <classforms.pdf, id=1343, 501.875pt x 146.17612pt>
+) (./classforms.tex <classforms.pdf, id=1376, 501.875pt x 146.17612pt>
 File: classforms.pdf Graphic file (type pdf)
 
 <use classforms.pdf> [29 <./classforms.pdf>]
@@ -1294,7 +1290,7 @@ Underfull \hbox (badness 10000) detected at line 80
 [][][]
  []
 
-
+[30]
 Underfull \hbox (badness 10000) detected at line 114
 [][][]
  []
@@ -1304,7 +1300,7 @@ Underfull \hbox (badness 10000) detected at line 132
 [][][]
  []
 
-[30]
+
 Underfull \hbox (badness 10000) detected at line 155
 [][][]
  []
@@ -1314,7 +1310,7 @@ Underfull \hbox (badness 10000) detected at line 158
 [][][]
  []
 
-
+[31]
 Underfull \hbox (badness 10000) detected at line 222
 [][][]
  []
@@ -1324,16 +1320,23 @@ Underfull \hbox (badness 10000) detected at line 240
 [][][]
  []
 
-[31]
+
 Underfull \hbox (badness 10000) detected at line 263
 [][][]
  []
 
-) (./classfund__item.tex) (./classfunding.tex [32]) (./classhidden__input.tex
-<classhidden__input.pdf, id=1434, 501.875pt x 654.61562pt>
+) (./classfund__item.tex [32]) (./classfunding.tex) (./classget__input.tex
+<classget__input.pdf, id=1451, 501.875pt x 872.8309pt>
+File: classget__input.pdf Graphic file (type pdf)
+
+<use classget__input.pdf> [33]) (./classhidden__input.tex
+<classhidden__input.pdf, id=1493, 501.875pt x 872.8309pt>
 File: classhidden__input.pdf Graphic file (type pdf)
 
-<use classhidden__input.pdf> [33 <./classhidden__input.pdf>]
+<use classhidden__input.pdf>
+Underfull \vbox (badness 2020) has occurred while \output is active []
+
+ [34 <./classget__input.pdf>]
 Underfull \hbox (badness 10000) detected at line 44
 [][][]
  []
@@ -1343,14 +1346,11 @@ Underfull \hbox (badness 10000) detected at line 67
 [][][]
  []
 
-) (./classinput.tex <classinput.pdf, id=1475, 501.875pt x 1487.03554pt>
+[35 <./classhidden__input.pdf>] [36]) (./classinput.tex
+<classinput.pdf, id=1538, 501.875pt x 1487.03554pt>
 File: classinput.pdf Graphic file (type pdf)
-
-<use classinput.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34]
-[35 <./classinput.pdf>]
+ <use classinput.pdf>
+[37 <./classinput.pdf>]
 Underfull \hbox (badness 10000) detected at line 95
 [][][]
  []
@@ -1360,26 +1360,26 @@ Underfull \hbox (badness 10000) detected at line 113
 [][][]
  []
 
-
+[38]
 Underfull \hbox (badness 10000) detected at line 136
 [][][]
  []
 
-[36] [37]
+
 Underfull \hbox (badness 10000) detected at line 201
 [][][]
  []
 
-
+[39]
 Underfull \hbox (badness 10000) detected at line 240
 [][][]
  []
 
-[38]) (./classinput__group.tex
-<classinput__group.pdf, id=1542, 501.875pt x 692.2462pt>
+) (./classinput__group.tex
+<classinput__group.pdf, id=1593, 501.875pt x 692.2462pt>
 File: classinput__group.pdf Graphic file (type pdf)
 
-<use classinput__group.pdf> [39 <./classinput__group.pdf>]
+<use classinput__group.pdf> [40 <./classinput__group.pdf>]
 Underfull \hbox (badness 10000) detected at line 53
 [][][]
  []
@@ -1394,24 +1394,24 @@ Underfull \hbox (badness 10000) detected at line 94
 [][][]
  []
 
-[40]) (./classmessage.tex) (./classnumber__input.tex
-<classnumber__input.pdf, id=1583, 501.875pt x 627.34375pt>
+[41]) (./classmessage.tex) (./classnumber__input.tex [42]
+<classnumber__input.pdf, id=1649, 501.875pt x 627.34375pt>
 File: classnumber__input.pdf Graphic file (type pdf)
 
-<use classnumber__input.pdf> [41 <./classnumber__input.pdf>]
+<use classnumber__input.pdf>
 Underfull \hbox (badness 10000) detected at line 44
 [][][]
  []
 
-[42]) (./interfaceobservable.tex
-<interfaceobservable.pdf, id=1623, 501.875pt x 146.17612pt>
+[43 <./classnumber__input.pdf>]) (./interfaceobservable.tex
+<interfaceobservable.pdf, id=1674, 501.875pt x 146.17612pt>
 File: interfaceobservable.pdf Graphic file (type pdf)
 
-<use interfaceobservable.pdf> [43 <./interfaceobservable.pdf>])
-(./classobserver.tex <classobserver.pdf, id=1643, 501.875pt x 321.2pt>
+<use interfaceobservable.pdf> [44 <./interfaceobservable.pdf>] [45])
+(./classobserver.tex <classobserver.pdf, id=1699, 501.875pt x 321.2pt>
 File: classobserver.pdf Graphic file (type pdf)
 
-<use classobserver.pdf> [44 <./classobserver.pdf>]) (./classpage.tex [45]
+<use classobserver.pdf> [46 <./classobserver.pdf>]) (./classpage.tex [47]
 Underfull \hbox (badness 10000) detected at line 75
 [][][]
  []
@@ -1426,12 +1426,12 @@ Underfull \hbox (badness 10000) detected at line 97
 [][][]
  []
 
-
+[48]
 Underfull \hbox (badness 10000) detected at line 116
 [][][]
  []
 
-[46]
+
 Underfull \hbox (badness 10000) detected at line 135
 [][][]
  []
@@ -1446,7 +1446,7 @@ Underfull \hbox (badness 10000) detected at line 191
 [][][]
  []
 
-
+[49]
 Underfull \hbox (badness 10000) detected at line 210
 [][][]
  []
@@ -1456,7 +1456,7 @@ Underfull \hbox (badness 10000) detected at line 213
 [][][]
  []
 
-[47]
+
 Underfull \hbox (badness 10000) detected at line 227
 [][][]
  []
@@ -1476,51 +1476,55 @@ Underfull \hbox (badness 10000) detected at line 286
 [][][]
  []
 
-) (./classpassword__input.tex
-<classpassword__input.pdf, id=1726, 501.875pt x 557.64334pt>
+[50]) (./classpassword__input.tex
+<classpassword__input.pdf, id=1791, 501.875pt x 557.64334pt>
 File: classpassword__input.pdf Graphic file (type pdf)
 
-<use classpassword__input.pdf> [48]) (./classrange__input.tex
-<classrange__input.pdf, id=1737, 501.875pt x 692.2462pt>
+<use classpassword__input.pdf>) (./classrange__input.tex
+<classrange__input.pdf, id=1793, 501.875pt x 692.2462pt>
 File: classrange__input.pdf Graphic file (type pdf)
 
-<use classrange__input.pdf> [49 <./classpassword__input.pdf> <./classrange__inp
+<use classrange__input.pdf> [51 <./classpassword__input.pdf> <./classrange__inp
 ut.pdf>]
 Underfull \hbox (badness 10000) detected at line 52
 [][][]
  []
 
 ) (./classtel__input.tex
-<classtel__input.pdf, id=1765, 501.875pt x 898.87822pt>
+<classtel__input.pdf, id=1820, 501.875pt x 898.87822pt>
 File: classtel__input.pdf Graphic file (type pdf)
 
-<use classtel__input.pdf> [50 <./classtel__input.pdf>]) (./classtext__input.tex
-<classtext__input.pdf, id=1781, 501.875pt x 825.00218pt>
+<use classtel__input.pdf> [52]) (./classtext__input.tex
+<classtext__input.pdf, id=1834, 501.875pt x 825.00218pt>
 File: classtext__input.pdf Graphic file (type pdf)
 
-<use classtext__input.pdf> [51 <./classtext__input.pdf>]) (./classtextarea.tex
-<classtextarea.pdf, id=1798, 501.875pt x 1130.98537pt>
+<use classtext__input.pdf>
+Underfull \vbox (badness 1509) has occurred while \output is active []
+
+ [53 <./classtel__input.pdf>]) (./classtextarea.tex
+<classtextarea.pdf, id=1848, 501.875pt x 1130.98537pt>
 File: classtextarea.pdf Graphic file (type pdf)
  <use classtextarea.pdf>
+[54 <./classtext__input.pdf> <./classtextarea.pdf>]
 Underfull \hbox (badness 10000) detected at line 45
 [][][]
  []
 
-[52 <./classtextarea.pdf>] [53]) (./classtexteditor.tex
-<classtexteditor.pdf, id=1821, 501.875pt x 1130.98537pt>
+) (./classtexteditor.tex
+<classtexteditor.pdf, id=1871, 501.875pt x 1130.98537pt>
 File: classtexteditor.pdf Graphic file (type pdf)
 
-<use classtexteditor.pdf> [54 <./classtexteditor.pdf>]
+<use classtexteditor.pdf> [55 <./classtexteditor.pdf>]
 Underfull \hbox (badness 10000) detected at line 46
 [][][]
  []
 
 ) (./classzip__input.tex
-<classzip__input.pdf, id=1837, 501.875pt x 860.3543pt>
+<classzip__input.pdf, id=1885, 501.875pt x 860.3543pt>
 File: classzip__input.pdf Graphic file (type pdf)
 
-<use classzip__input.pdf> [55 <./classzip__input.pdf>]) (./crud_8inc_8php.tex)
-(./database__form_8inc_8php.tex [56]
+<use classzip__input.pdf> [56 <./classzip__input.pdf>]) (./crud_8inc_8php.tex)
+(./database__form_8inc_8php.tex [57]
 Underfull \hbox (badness 10000) detected at line 69
 [][][]
  []
@@ -1530,31 +1534,32 @@ Underfull \hbox (badness 10000) detected at line 17
 [][][]
  []
 
-) (./event_8inc_8php.tex) (./extended__inputs_8inc_8php.tex [57]
+) (./event_8inc_8php.tex) (./extended__inputs_8inc_8php.tex [58]
 Underfull \hbox (badness 10000) detected at line 30
 [][][]
  []
 
-) (./field_8inc_8php.tex) (./file__form_8inc_8php.tex
+) (./field_8inc_8php.tex) (./file__form_8inc_8php.tex [59]
 Underfull \hbox (badness 10000) detected at line 17
 [][][]
  []
 
-) (./forms_8inc_8php.tex [58]
+) (./forms_8inc_8php.tex
 Underfull \hbox (badness 10000) detected at line 56
 [][][]
  []
 
-) (./hidden__input_8inc_8php.tex
+) (./get__input_8inc_8php.tex [60]) (./hidden__input_8inc_8php.tex
 Underfull \hbox (badness 10000) detected at line 17
 [][][]
  []
 
-) (./input_8inc_8php.tex [59]
+) (./input_8inc_8php.tex
 Underfull \hbox (badness 10000) detected at line 31
 [][][]
  []
 
+[61]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 6.29996pt on input line 41.
 ) (./input__group_8inc_8php.tex
@@ -1562,12 +1567,12 @@ Underfull \hbox (badness 10000) detected at line 17
 [][][]
  []
 
-) (./observable_8inc_8php.tex [60]
+) (./observable_8inc_8php.tex
 Underfull \hbox (badness 10000) detected at line 17
 [][][]
  []
 
-) (./observer_8inc_8php.tex
+) (./observer_8inc_8php.tex [62]
 Underfull \hbox (badness 10000) detected at line 17
 [][][]
  []
@@ -1577,12 +1582,12 @@ Underfull \hbox (badness 10000) detected at line 30
 [][][]
  []
 
-[61]
+
 Underfull \hbox (badness 10000) detected at line 43
 [][][]
  []
 
-
+[63]
 Underfull \hbox (badness 10000) detected at line 55
 [][][]
  []
@@ -1597,28 +1602,28 @@ Underfull \hbox (badness 10000) detected at line 86
 [][][]
  []
 
-) (./textarea_8inc_8php.tex [62]
+) (./textarea_8inc_8php.tex
 Underfull \hbox (badness 10000) detected at line 17
 [][][]
  []
 
-) (./texteditor_8inc_8php.tex
+) (./texteditor_8inc_8php.tex [64]
 Underfull \hbox (badness 10000) detected at line 17
 [][][]
  []
 
-) [63] (./refman.ind [64
+) [65] (./refman.ind [66
 
-] [65] [66]) (./refman.aux)
+] [67] [68]) (./refman.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 7463 strings out of 256216
- 116029 string characters out of 1917072
- 166012 words of memory out of 1500000
- 9829 multiletter control sequences out of 10000+200000
+ 7494 strings out of 256216
+ 116655 string characters out of 1917072
+ 166196 words of memory out of 1500000
+ 9842 multiletter control sequences out of 10000+200000
  72927 words of font info for 112 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  48i,13n,44p,769b,571s stack positions out of 5000i,500n,6000p,200000b,15000s
@@ -1629,9 +1634,9 @@ w/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8ac.pfb></
 usr/share/texmf/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/share/texmf/fonts/t
 ype1/urw/helvetic/uhvr8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvro8a
 .pfb>
-Output written on refman.pdf (70 pages, 536242 bytes).
+Output written on refman.pdf (72 pages, 548518 bytes).
 PDF statistics:
- 2427 PDF objects out of 2487 (max. 8388607)
- 650 named destinations out of 1000 (max. 131072)
- 1110 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2494 PDF objects out of 2984 (max. 8388607)
+ 664 named destinations out of 1000 (max. 131072)
+ 1155 words of extra memory for PDF output out of 10000 (max. 10000000)
 
