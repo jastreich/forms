@@ -4,7 +4,17 @@
 
 ## Development
 
-* 20d355c 2013-11-09 | added get_input started report. (HEAD, master) [Jeremy Streich]
+* 7382d9e 2014-01-09 | Stray $ fixed. (HEAD, master) [Jeremy Streich]
+* 0fa59db 2014-01-09 | nonce requires sessions. [Jeremy Streich]
+* 0659fd5 2014-01-09 | Debugging. [Jeremy Streich]
+* 28bbf81 2014-01-09 | Grr... [Jeremy Streich]
+* f413ef0 2014-01-09 | Fixed another typo. [Jeremy Streich]
+* 1584f2a 2014-01-09 | Fixed typo. [Jeremy Streich]
+* 1f25340 2014-01-09 | Added nonce to forms::form() [Jeremy Streich]
+* a6c91d8 2014-01-09 | Grrr...  Another typo. [Jeremy Streich]
+* af3d571 2014-01-09 | Fixed typo. [Jeremy Streich]
+* 9e1729b 2014-01-09 | Added Nonce. [Jeremy Streich]
+* 20d355c 2013-11-09 | added get_input started report. [Jeremy Streich]
 * 55b9826 2013-10-28 | Prettification of some other files. [Jeremy Streich]
 * c51e018 2013-10-28 | Prettified the add field form. [Jeremy Streich]
 * 051c299 2013-10-28 | Growl. [Jeremy Streich]

@@ -14,6 +14,7 @@ var classforms =
     [ "$fields", "classforms.html#a4df40ac2adbfb971665ab358fc8954b5", null ],
     [ "$id", "classforms.html#a43144384180122ef4434845671a45e4c", null ],
     [ "$name", "classforms.html#aa84609327e0f9bdf2ba799c8cd2268fd", null ],
+    [ "$nonce", "classforms.html#a6d215f823bedee39a37a80d1bd8a16f5", null ],
     [ "$observers", "classforms.html#aebf137dbe732b7eee3786e3b1ec24535", null ],
     [ "$pre", "classforms.html#a55665dfe896e78efdfd33a650f6e2d7c", null ]
 ];

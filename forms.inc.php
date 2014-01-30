@@ -1,4 +1,5 @@
 <?php
+require_once('sessions.inc.php');
 /** @file forms.inc.php
  * Contains the forms class.
  * @author Jeremy Streich
@@ -38,6 +39,7 @@ class forms implements field, observable
   public $pre;
   public $fields;
   public $observers;
+  public $nonce;
 
   /** Constructor for form class
    * @param string $name The name of form.
@@ -67,6 +69,7 @@ class forms implements field, observable
     {
       $ret['html'] .= '<input type="hidden" name="' . $this->pre. 'id" value="' . $this->id . '" />';
     }
+    $ret['html'] .= '<input type="hidden" name="' . $this->pre . 'nonce" value="' . $this->generate_nonce() . '" />';
     foreach($this->fields as $field)
     {
 
@@ -138,9 +141,6 @@ class forms implements field, observable
     return $ret;
   }
 
-
-
-
   /** Validates the values of the input of the form.
    * @param $errors an optional array to chain form validation with other inputs and forms.
    * @return $errors the passed array with new errors encountered.
@@ -153,6 +153,14 @@ class forms implements field, observable
       $errors = $field->validate($errors);
     }
     $this->notify(new event($this,POST_VALIDATE,$errors ));
+    if(!$this->use_nonce())
+    {
+      $errors['nonce'] = 'There was a problem with the nonce. Please, try again.';
+      echo('<pre>');
+      var_dump($this->nonce);
+      var_dump($_SESSION['nonce']);
+      echo('</pre>');
+    }
     return $errors;
   }
 
@@ -183,9 +191,13 @@ class forms implements field, observable
     {
       $field->values($values);
     }
-    if(isset($values[$this->pre + 'id']))
+    if(isset($values[$this->pre . 'id']))
     {
-      $this->id = $values[$this->pre + 'id'];
+      $this->id = $values[$this->pre . 'id'];
+    }
+    if(isset($values[$this->pre . 'nonce']))
+    {
+      $this->nonce = $values[$this->pre . 'nonce'];
     }
     $this->notify(new event($this,POST_VALUES,$values));
   }
@@ -244,6 +256,39 @@ class forms implements field, observable
     return false;
   }
 
+  private function expire_nonce()
+  {
+    for($i = 0; isset($_SESSION['nonce']) && count($_SESSION['nonce']) > $i; ++$i)
+    {
+      if($_SESSION['nonce'][$i]['expire'] < time())
+      {
+        $_SESSION['nonce'] = array_splice($_SESSION['nonce'],$i,1);
+      }
+    }
+  }
+
+  private function use_nonce()
+  {
+    $this->expire_nonce();
+    for($i = 0; isset($_SESSION['nonce']) && count($_SESSION['nonce']) > $i; ++$i)
+    {
+      if($_SESSION['nonce'][$i]['val'] == $this->nonce)
+      {
+        $_SESSION['nonce'] = array_splice($_SESSION['nonce'],$i,1);
+        return true;
+      }
+    }
+    return false;
+  }
+
+  private function generate_nonce()
+  {
+    $this->expire_nonce();
+    $bits = 256;
+    $this->nonce = uniqid('', true);
+    $_SESSION['nonce'][] = array('val' => $this->nonce,'expire' => (time()+18000));
+    return $this->nonce;
+  }
 
 };
 
