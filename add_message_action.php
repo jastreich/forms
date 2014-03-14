@@ -13,7 +13,10 @@ echo $page->head();
   <section id="hero">
     <div class="container cf">
       <h1>
-<?php echo (isset($_GET['form_name']) ? 'Add Message Action to ' . $_GET['form_name'] : 'Error: No form selected');?>
+<?php
+  $_GET['form_name'] = htmlentities($_GET['form_name']);
+  echo (isset($_GET['form_name']) ? 'Add Message Action to ' . $_GET['form_name'] : 'Error: No form selected');
+?>
       </h1>
     </div>
   </section>

@@ -13,7 +13,10 @@ echo $page->head();
   <section id="hero">
     <div class="container cf">
       <h1>
-<?php echo (isset($_GET['form_name']) ? $_GET['form_name'] : 'Error: No form selected');?>
+<?php
+  $_GET['form_name'] = htmlentites($_GET['form_name']);
+  echo (isset($_GET['form_name']) ? $_GET['form_name'] : 'Error: No form selected');
+?>
       </h1>
     </div>
   </section>

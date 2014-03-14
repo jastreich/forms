@@ -19,13 +19,13 @@ if(isset($_POST['new_name']) && '' != $_POST['new_name'])
 {
   require_once('database_form.inc.php');
   require_once('builder_form.inc.php');
-  $form = new database_form($_POST['new_name'],array());
+  $form = new database_form(htmlentities($_POST['new_name']),array());
   $form->create_form();
   echo '<h1>Form Creator</h1>';
   echo 'Form: <b>' . $_POST['new_name'] . '</b><br/>';
   echo '<h2>Add a Field</h2>';
   echo '<form action="add_field.php" method="post">';
-  echo '<input type="hidden" name="form_name" value="' .  $_POST['new_name'] . '" />';
+  echo '<input type="hidden" name="form_name" value="' .  htmlentities($_POST['new_name']) . '" />';
   $builder_form = new builder_form();
   $dis = $builder_form->form();
   echo $dis['html'];
