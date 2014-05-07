@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['event_2einc_2ephp',['event.inc.php',['../event_8inc_8php.html',1,'']]],
-  ['extended_5finputs_2einc_2ephp',['extended_inputs.inc.php',['../extended__inputs_8inc_8php.html',1,'']]]
+  ['database_5fform_2einc_2ephp',['database_form.inc.php',['../database__form_8inc_8php.html',1,'']]],
+  ['db_5fform_2einc_2ephp',['db_form.inc.php',['../db__form_8inc_8php.html',1,'']]]
 ];

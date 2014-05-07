@@ -1,9 +1,4 @@
 var searchData=
 [
-  ['add_5fcss',['add_css',['../classpage.html#aa03ff10ebee5c14921287921ed1b1bb9',1,'page']]],
-  ['add_5ffeature',['add_feature',['../classpage.html#a417d01aff00de8193f7f9f6a9eac8635',1,'page']]],
-  ['add_5ffield',['add_field',['../classforms.html#ad85afb257cfdcf8834590774fd9ef357',1,'forms']]],
-  ['add_5fobserver',['add_observer',['../classforms.html#a6c88ab2728699cc06ba8110b1f5aacbc',1,'forms\add_observer()'],['../interfaceobservable.html#aa4c1e85f5ec861411aa1d99ee0471082',1,'observable\add_observer()']]],
-  ['add_5fscript',['add_script',['../classpage.html#acbf2e50910fbabc4af83701b87064476',1,'page']]],
-  ['append_5fjs',['append_js',['../classpage.html#a438a833a311c04927ababd5a632d83a7',1,'page']]]
+  ['_5f_5fconstruct',['__construct',['../classbuilder__form.html#ade3d134c630ac6d5b81378c5f4f48eb5',1,'builder_form\__construct()'],['../classdatabase__form.html#acb8c232d66d7b129168622c5d76b777f',1,'database_form\__construct()'],['../classnumber__input.html#a6850b71ee7cf3f7733bf84fe7dd085bb',1,'number_input\__construct()'],['../classrange__input.html#a0d8240e99521fbde9c3dcd95da8aea1c',1,'range_input\__construct()'],['../classtel__input.html#aac420f3bfa98941083dbb0e2c54b19ab',1,'tel_input\__construct()'],['../classzip__input.html#a1e3ec25aa5cac0d6da454409efbceb9b',1,'zip_input\__construct()'],['../classdate__input.html#a7fd4d2eb1d2bc73c5a1ffa16d1b98e7c',1,'date_input\__construct()'],['../classdatalist__input.html#a7549bdcd2d6100834cf256e5fdd68d2d',1,'datalist_input\__construct()'],['../classforms.html#aa6f51d92d0245300fccd3539816c5bf2',1,'forms\__construct()'],['../classget__input.html#a224eae2e04191f906878a494f4413916',1,'get_input\__construct()'],['../classinput.html#a0dc76f4753726b777552524a8847f51f',1,'input\__construct()']]]
 ];

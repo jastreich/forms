@@ -1,5 +1,6 @@
 var classdatabase__form =
 [
+    [ "__construct", "classdatabase__form.html#acb8c232d66d7b129168622c5d76b777f", null ],
     [ "create", "classdatabase__form.html#a2f217d182a55038d501b66f2a2d51abc", null ],
     [ "create_form", "classdatabase__form.html#a1d3ac5bd74951304e9be88700ac0dcda", null ],
     [ "delete", "classdatabase__form.html#ac65c871bc6d3a45319bbb3f20901cc56", null ],

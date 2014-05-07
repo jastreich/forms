@@ -42,6 +42,16 @@ define('POST_DISPLAY_TABLE',30);
 class database_form extends forms implements crud
 {
 
+  /** Constructor
+   * @see forms::__construct
+   **/
+  public function __construct($name,$fields,$id='',$pre='')
+  {
+    parent::__construct($name,$fields,$id,$pre);
+  }
+
+
+
   /** Writes form structure into database $db to table forms.
    * @pre Must have mysqli database connection object in scope named '$db'.
    * @post The form in serialized form will be written to the database.
@@ -121,7 +131,7 @@ class database_form extends forms implements crud
     $stmnt = $db->prepare('delete from forms where name = ?');
     $stmnt->bind_param('s',$this->name);
     $stmnt->execute();
-    $stmnt->close;
+    $stmnt->close();
     $this->notify(new event($this,POST_DELETE_FORM));
   }
 
@@ -152,7 +162,14 @@ class database_form extends forms implements crud
     $stmnt->bind_param('isss',$this->id,$this->name,$k,$v);
     foreach($this->fields as $k => $fv)
     {
-      $v = $fv->get_value();
+      if(is_array($fv->get_value()))
+      {
+        $v = implode($fv->get_value(),',');
+      }
+      else
+      {
+        $v = $fv->get_value();
+      }
       $stmnt->execute();
     }
 
@@ -178,7 +195,14 @@ class database_form extends forms implements crud
     {
       if(isset($this->fields[$k]))
       {
-        $this->fields[$k]->set_value($v);
+        if($this->fields[$k]->type == 'radio' || $this->fields[$k]->type == 'checkbox')
+        {
+          $this->fields[$k]->set_value(explode(',',$v));
+        }
+        else
+        {
+          $this->fields[$k]->set_value($v);
+        }
       }
     }
     $stmnt->close();

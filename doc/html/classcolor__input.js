@@ -1,4 +1,4 @@
 var classcolor__input =
 [
-    [ "color_input", "classcolor__input.html#a224f6d27ca95b30d5122b9360a0064c6", null ]
+    [ "__construct", "classcolor__input.html#ae7453daef5e053547d9ddb3c55ad4e1d", null ]
 ];

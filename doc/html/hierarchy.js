@@ -41,5 +41,6 @@ var hierarchy =
     [ "observer", "classobserver.html", [
       [ "email_form_values", "classemail__form__values.html", null ]
     ] ],
-    [ "page", "classpage.html", null ]
+    [ "page", "classpage.html", null ],
+    [ "private_get_input", "classprivate__get__input.html", null ]
 ];

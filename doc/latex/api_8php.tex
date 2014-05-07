@@ -1,0 +1,88 @@
+\hypertarget{api_8php}{\subsection{api.\-php File Reference}
+\label{api_8php}\index{api.\-php@{api.\-php}}
+}
+
+
+This file defines the api for form building.  
+
+
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{api_8php_a03b3894f94a4a13f6de58cc6150584f3}{{\bfseries \$builder} = new \hyperlink{classbuilder__form}{builder\-\_\-form}()}\label{api_8php_a03b3894f94a4a13f6de58cc6150584f3}
+
+\item 
+{\bfseries \$input\-\_\-whitelist}
+\item 
+{\bfseries \$required\-\_\-values}
+\item 
+\hypertarget{api_8php_a48d91bd968259d1544bb78a8b0ffe541}{{\bfseries \$form\-\_\-names} = array()}\label{api_8php_a48d91bd968259d1544bb78a8b0ffe541}
+
+\item 
+\hypertarget{api_8php_a172a3ce731ebb53eb004cf719f977d6d}{{\bfseries \$stmnt} = \$db-\/$>$prepare('select distinct name from \hyperlink{classforms}{forms}')}\label{api_8php_a172a3ce731ebb53eb004cf719f977d6d}
+
+\item 
+if(isset(\$\-\_\-\-R\-E\-Q\-U\-E\-S\-T\mbox{[}'type'\mbox{]})\&\&in\-\_\-array(\$\-\_\-\-R\-E\-Q\-U\-E\-S\-T\mbox{[}'type'\mbox{]}, \\*
+\$input\-\_\-whitelist)) else if(!isset(\$\-\_\-\-R\-E\-Q\-U\-E\-S\-T\mbox{[}'type'\mbox{]})) {\bfseries else}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+This file defines the api for form building. \begin{DoxyAuthor}{Author}
+Jeremy Streich 
+\end{DoxyAuthor}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{api_8php_a8f899b4769ac4dac9b39bf08a09320bb}{\index{api.\-php@{api.\-php}!\$input\-\_\-whitelist@{\$input\-\_\-whitelist}}
+\index{\$input\-\_\-whitelist@{\$input\-\_\-whitelist}!api.php@{api.\-php}}
+\paragraph[{\$input\-\_\-whitelist}]{\setlength{\rightskip}{0pt plus 5cm}\$input\-\_\-whitelist}}\label{api_8php_a8f899b4769ac4dac9b39bf08a09320bb}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= array
+  (
+    \textcolor{stringliteral}{'input'},
+    \textcolor{stringliteral}{'color\_input'},
+    \textcolor{stringliteral}{'datalist\_input'},
+    \textcolor{stringliteral}{'date\_input'},
+    \textcolor{stringliteral}{'email\_input'},
+    \textcolor{stringliteral}{'hidden\_input'},
+    \textcolor{stringliteral}{'input\_group'},
+    \textcolor{stringliteral}{'number\_input'},
+    \textcolor{stringliteral}{'password\_input'},
+    \textcolor{stringliteral}{'range\_input'},
+    \textcolor{stringliteral}{'tel\_input'},
+    \textcolor{stringliteral}{'text\_input'},
+    \textcolor{stringliteral}{'textarea'},
+    \textcolor{stringliteral}{'zip\_input'},
+    \textcolor{stringliteral}{'get\_input'},
+    \textcolor{stringliteral}{'texteditor'}
+  )
+\end{DoxyCode}
+\hypertarget{api_8php_af377fd4ccbb6ba49860aaed32716e805}{\index{api.\-php@{api.\-php}!\$required\-\_\-values@{\$required\-\_\-values}}
+\index{\$required\-\_\-values@{\$required\-\_\-values}!api.php@{api.\-php}}
+\paragraph[{\$required\-\_\-values}]{\setlength{\rightskip}{0pt plus 5cm}\$required\-\_\-values}}\label{api_8php_af377fd4ccbb6ba49860aaed32716e805}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= array
+  (
+    \textcolor{stringliteral}{'yes'} => \textcolor{keyword}{true},
+    \textcolor{stringliteral}{'no'} => \textcolor{keyword}{false},
+    \textcolor{charliteral}{'y'} => \textcolor{keyword}{true},
+    \textcolor{charliteral}{'n'} => \textcolor{keyword}{false},
+    \textcolor{charliteral}{'1'} => \textcolor{keyword}{true},
+    \textcolor{charliteral}{'0'} => \textcolor{keyword}{false},
+    \textcolor{stringliteral}{'on'} => \textcolor{keyword}{true},
+    \textcolor{stringliteral}{'off'} => \textcolor{keyword}{false},
+    \textcolor{keyword}{true} => \textcolor{keyword}{true},
+    \textcolor{keyword}{false} => \textcolor{keyword}{false}
+  )
+\end{DoxyCode}
+\hypertarget{api_8php_a67ca52de78eee3b8906311c86f3d8a7e}{\index{api.\-php@{api.\-php}!else@{else}}
+\index{else@{else}!api.php@{api.\-php}}
+\paragraph[{else}]{\setlength{\rightskip}{0pt plus 5cm}if (!isset(\$\-\_\-\-R\-E\-Q\-U\-E\-S\-T\mbox{[}'required'\mbox{]})) else if (array\-\_\-key\-\_\-exists(\$\-\_\-\-R\-E\-Q\-U\-E\-S\-T\mbox{[}'required'\mbox{]}, \$required\-\_\-values)) else}}\label{api_8php_a67ca52de78eee3b8906311c86f3d8a7e}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+\{
+    http\_response\_code(201)
+\end{DoxyCode}

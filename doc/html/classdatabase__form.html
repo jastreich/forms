@@ -129,6 +129,9 @@ Inheritance diagram for database_form:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:acb8c232d66d7b129168622c5d76b777f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdatabase__form.html#acb8c232d66d7b129168622c5d76b777f">__construct</a> ($name, $fields, $id='', $pre='')</td></tr>
+<tr class="memdesc:acb8c232d66d7b129168622c5d76b777f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#acb8c232d66d7b129168622c5d76b777f">More...</a><br/></td></tr>
+<tr class="separator:acb8c232d66d7b129168622c5d76b777f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d3ac5bd74951304e9be88700ac0dcda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdatabase__form.html#a1d3ac5bd74951304e9be88700ac0dcda">create_form</a> ()</td></tr>
 <tr class="memdesc:a1d3ac5bd74951304e9be88700ac0dcda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes form structure into database $db to table forms.  <a href="#a1d3ac5bd74951304e9be88700ac0dcda">More...</a><br/></td></tr>
 <tr class="separator:a1d3ac5bd74951304e9be88700ac0dcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,9 +163,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a73106bec9001ca0fe255e74a37982072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns HTML for all form data for this specific form.  <a href="#a73106bec9001ca0fe255e74a37982072">More...</a><br/></td></tr>
 <tr class="separator:a73106bec9001ca0fe255e74a37982072"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classforms"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classforms')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classforms.html">forms</a></td></tr>
-<tr class="memitem:a89ff17c0b763f0fd16abbe6ebd2dbe96 inherit pub_methods_classforms"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforms.html#a89ff17c0b763f0fd16abbe6ebd2dbe96">forms</a> ($name, $fields, $id='', $pre='')</td></tr>
-<tr class="memdesc:a89ff17c0b763f0fd16abbe6ebd2dbe96 inherit pub_methods_classforms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for form class.  <a href="#a89ff17c0b763f0fd16abbe6ebd2dbe96">More...</a><br/></td></tr>
-<tr class="separator:a89ff17c0b763f0fd16abbe6ebd2dbe96 inherit pub_methods_classforms"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f51d92d0245300fccd3539816c5bf2 inherit pub_methods_classforms"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforms.html#aa6f51d92d0245300fccd3539816c5bf2">__construct</a> ($name, $fields, $id='', $pre='')</td></tr>
+<tr class="memdesc:aa6f51d92d0245300fccd3539816c5bf2 inherit pub_methods_classforms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for form class.  <a href="#aa6f51d92d0245300fccd3539816c5bf2">More...</a><br/></td></tr>
+<tr class="separator:aa6f51d92d0245300fccd3539816c5bf2 inherit pub_methods_classforms"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca4fdeecf56bc5796f628a477f9ce629 inherit pub_methods_classforms"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforms.html#aca4fdeecf56bc5796f628a477f9ce629">form</a> ($errors=array())</td></tr>
 <tr class="memdesc:aca4fdeecf56bc5796f628a477f9ce629 inherit pub_methods_classforms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the HTML and JavaScript for this form.  <a href="#aca4fdeecf56bc5796f628a477f9ce629">More...</a><br/></td></tr>
 <tr class="separator:aca4fdeecf56bc5796f628a477f9ce629 inherit pub_methods_classforms"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,7 +221,49 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class allows the both the structure and the data for this form to be written out to a database. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="acb8c232d66d7b129168622c5d76b777f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">database_form::__construct </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$fields</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$id</em> = <code>''</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$pre</em> = <code>''</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classforms.html#aa6f51d92d0245300fccd3539816c5bf2" title="Constructor for form class. ">forms::__construct</a> </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a2f217d182a55038d501b66f2a2d51abc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -407,7 +452,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classdatabase__form.html">database_form</a></li>
-    <li class="footer">Generated on Fri Mar 14 2014 16:14:34 for Frame Work Page by
+    <li class="footer">Generated on Wed May 7 2014 13:20:06 for Frame Work Page by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

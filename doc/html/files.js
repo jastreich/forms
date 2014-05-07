@@ -1,5 +1,6 @@
 var files =
 [
+    [ "api.php", "api_8php.html", "api_8php" ],
     [ "crud.inc.php", "crud_8inc_8php.html", [
       [ "crud", "interfacecrud.html", "interfacecrud" ]
     ] ],
@@ -46,6 +47,7 @@ var files =
       [ "observer", "classobserver.html", "classobserver" ]
     ] ],
     [ "page.inc.php", "page_8inc_8php.html", "page_8inc_8php" ],
+    [ "private_get_input.inc.php", "private__get__input_8inc_8php.html", null ],
     [ "textarea.inc.php", "textarea_8inc_8php.html", [
       [ "textarea", "classtextarea.html", "classtextarea" ]
     ] ],

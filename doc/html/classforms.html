@@ -123,7 +123,7 @@ Inheritance diagram for forms:</div>
   <map id="forms_map" name="forms_map">
 <area href="interfacefield.html" alt="field" shape="rect" coords="105,0,200,24"/>
 <area href="interfaceobservable.html" title="Describes objects that are able to be observed by observer objects. " alt="observable" shape="rect" coords="210,0,305,24"/>
-<area href="classbuilder__form.html" title="This file defines the builder forms, which builds other forms. " alt="builder_form" shape="rect" coords="0,112,95,136"/>
+<area href="classbuilder__form.html" title="This form build up a form by creating fields. " alt="builder_form" shape="rect" coords="0,112,95,136"/>
 <area href="classdatabase__form.html" title="This class allows the both the structure and the data for this form to be written out to a database..." alt="database_form" shape="rect" coords="105,112,200,136"/>
 <area href="classdb__form.html" title="Represents an HTML form, and saves form data in $db table named by the name attribue of this object..." alt="db_form" shape="rect" coords="210,112,305,136"/>
 <area href="classfile__form.html" title="This class represents an HTML form, it&#39;s values, how it is validated and allows to read/write form da..." alt="file_form" shape="rect" coords="315,112,410,136"/>
@@ -132,9 +132,9 @@ Inheritance diagram for forms:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a89ff17c0b763f0fd16abbe6ebd2dbe96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforms.html#a89ff17c0b763f0fd16abbe6ebd2dbe96">forms</a> ($name, $fields, $id='', $pre='')</td></tr>
-<tr class="memdesc:a89ff17c0b763f0fd16abbe6ebd2dbe96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for form class.  <a href="#a89ff17c0b763f0fd16abbe6ebd2dbe96">More...</a><br/></td></tr>
-<tr class="separator:a89ff17c0b763f0fd16abbe6ebd2dbe96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f51d92d0245300fccd3539816c5bf2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforms.html#aa6f51d92d0245300fccd3539816c5bf2">__construct</a> ($name, $fields, $id='', $pre='')</td></tr>
+<tr class="memdesc:aa6f51d92d0245300fccd3539816c5bf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for form class.  <a href="#aa6f51d92d0245300fccd3539816c5bf2">More...</a><br/></td></tr>
+<tr class="separator:aa6f51d92d0245300fccd3539816c5bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca4fdeecf56bc5796f628a477f9ce629"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classforms.html#aca4fdeecf56bc5796f628a477f9ce629">form</a> ($errors=array())</td></tr>
 <tr class="memdesc:aca4fdeecf56bc5796f628a477f9ce629"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the HTML and JavaScript for this form.  <a href="#aca4fdeecf56bc5796f628a477f9ce629">More...</a><br/></td></tr>
 <tr class="separator:aca4fdeecf56bc5796f628a477f9ce629"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,7 +189,55 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class describes an HTML form, containing a collection of inputs, and does mass validation and sanitization on them. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aa6f51d92d0245300fccd3539816c5bf2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">forms::__construct </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$fields</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$id</em> = <code>''</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$pre</em> = <code>''</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for form class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$name</td><td>The name of form. </td></tr>
+    <tr><td class="paramtype">array</td><td class="paramname">$fields</td><td>The fields of the form, as an array of input objects. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ad85afb257cfdcf8834590774fd9ef357"></a>
 <div class="memitem">
 <div class="memproto">
@@ -306,53 +354,6 @@ Public Attributes</h2></td></tr>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classinput.html#a83b663057f1d0f61768bc12c5a55f25c" title="Generates the html for the input for inclusion in a form. ">input::form()</a> </dd></dl>
 
 <p>Implements <a class="el" href="interfacefield.html#a1b51c4b8b01f77a26eda359e1fc0fb4c">field</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a89ff17c0b763f0fd16abbe6ebd2dbe96"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">forms::forms </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$fields</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$id</em> = <code>''</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$pre</em> = <code>''</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructor for form class. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramtype">string</td><td class="paramname">$name</td><td>The name of form. </td></tr>
-    <tr><td class="paramtype">array</td><td class="paramname">$fields</td><td>The fields of the form, as an array of input objects. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -491,7 +492,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classforms.html">forms</a></li>
-    <li class="footer">Generated on Fri Mar 14 2014 16:14:34 for Frame Work Page by
+    <li class="footer">Generated on Wed May 7 2014 13:20:06 for Frame Work Page by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

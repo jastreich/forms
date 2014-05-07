@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['notify',['notify',['../classforms.html#a82bc2b5e603ecd535f362c3dfdcae96e',1,'forms\notify()'],['../interfaceobservable.html#aa4d6d161d4154a3525e93f6c051e1914',1,'observable\notify()'],['../classobserver.html#a25402348675892e90bb91b5ffd764e54',1,'observer\notify()']]],
-  ['number_5finput',['number_input',['../classnumber__input.html',1,'number_input'],['../classnumber__input.html#a9d23bb31aa8b5bdd4ff7aa5cb2220235',1,'number_input\number_input()']]]
+  ['make_5ffield',['make_field',['../classbuilder__form.html#a6408926fe73438032738d8a0095acf8d',1,'builder_form']]],
+  ['max_5ffeatures',['MAX_FEATURES',['../page_8inc_8php.html#a15133b567c1ea5426e5e374d7bf82373',1,'page.inc.php']]],
+  ['message',['message',['../classmessage.html',1,'']]]
 ];

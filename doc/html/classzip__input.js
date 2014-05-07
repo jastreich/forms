@@ -1,4 +1,4 @@
 var classzip__input =
 [
-    [ "zip_input", "classzip__input.html#ab83f0958692bf5ff823d4889a5a4375a", null ]
+    [ "__construct", "classzip__input.html#a1e3ec25aa5cac0d6da454409efbceb9b", null ]
 ];

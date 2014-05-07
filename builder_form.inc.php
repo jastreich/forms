@@ -1,6 +1,7 @@
 <?php
-/** This file defines the builder forms, which builds other forms
- *
+/** @file builder_form
+ * This file defines the builder forms, which builds other forms
+ * @author Jeremy Streich
  **/
 
 require_once('forms.inc.php');
@@ -21,7 +22,7 @@ class builder_form extends forms
   /** Constructor for the builder form.
    *
    **/
-  public function builder_form()
+  public function __construct()
   {
 
     $type_opts = array
@@ -35,7 +36,6 @@ class builder_form extends forms
       'email_input' => 'Email',
       'tel_input' => 'Telephone',
       'zip_input' => 'US Zip Code',
-
       'password_input' => 'Password',
       'date_input' => 'Date'
     );

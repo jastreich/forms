@@ -11,7 +11,7 @@ require_once('input.inc.php');
  **/
 class text_input extends input
 {
-  public function text_input
+  public function __construct
   (
     $label_text,
     $name,
@@ -25,7 +25,7 @@ class text_input extends input
 
   )
   {
-    parent::input($label_text,$name,'text',$value,$required,$maxlength,'','',$pattern,$placeholder,$sanity_func,$valid_func);
+    parent::__construct($label_text,$name,'text',$value,$required,$maxlength,'','',$pattern,$placeholder,$sanity_func,$valid_func);
   }
 };
 
@@ -36,7 +36,7 @@ class text_input extends input
  **/
 class password_input extends input
 {
-  public function password_input
+  public function __construct
   (
     $label_text,
     $name,
@@ -50,7 +50,7 @@ class password_input extends input
 
   )
   {
-    parent::input($label_text,$name,'password',$value,$required,$maxlength,'','',$pattern,$placeholder,$sanity_func,$valid_func);
+    parent::__construct($label_text,$name,'password',$value,$required,$maxlength,'','',$pattern,$placeholder,$sanity_func,$valid_func);
   }
 };
 
@@ -60,7 +60,7 @@ class password_input extends input
  **/
 class email_input extends input
 {
-  public function email_input
+  public function __construct
   (
     $label_text,
     $name,
@@ -74,7 +74,7 @@ class email_input extends input
 
   )
   {
-    parent::input($label_text,$name,'email',$value,$required,$maxlength,'','',$pattern,$placeholder,$sanity_func,$valid_func);
+    parent::__construct($label_text,$name,'email',$value,$required,$maxlength,'','',$pattern,$placeholder,$sanity_func,$valid_func);
   }
 };
 
@@ -97,8 +97,7 @@ class number_input extends input
    * @param $sanity_func Optional function for sanitization. Defualt is null.
    * @param $valid_func Optional function for validation. Default is null.
    **/
-
-  public function number_input
+  public function __construct
   (
     $label_text,
     $name,
@@ -111,7 +110,7 @@ class number_input extends input
     $valid_func = null
   )
   {
-    parent::input($label_text,$name,'number',$value,$required,'',$min,$max,'',$placeholder,$sanity_func,$valid_func);
+    parent::__construct($label_text,$name,'number',$value,$required,'',$min,$max,'',$placeholder,$sanity_func,$valid_func);
   }
 
   /** Inspector for the value of this input.
@@ -151,7 +150,7 @@ class range_input extends input
    * @param $sanity_func Optional function for sanitization. Defualt is null.
    * @param $valid_func Optional function for validation. Default is null.
    **/
-  public function range_input
+  public function __construct
   (
     $label_text,
     $name,
@@ -166,7 +165,7 @@ class range_input extends input
   )
   {
     $this->step = $step;
-    parent::input($label_text,$name,'range',$value,true,'',$min,$max,'',$placeholder,$sanity_func,$valid_func);
+    parent::__construct($label_text,$name,'range',$value,true,'',$min,$max,'',$placeholder,$sanity_func,$valid_func);
   }
   
   public function form($errors = array())
@@ -212,7 +211,7 @@ class tel_input extends input
    * @param $sanity_func Optional function for sanitization. Defualt is null.
    * @param $valid_func Optional function for validation. Default is null.
    **/
-  public function tel_input
+  public function __construct
   (
     $label_text,
     $name,
@@ -224,7 +223,7 @@ class tel_input extends input
   )
   {
     //global RX_PHONE;
-    parent::input($label_text,$name,'tel',$value,$required,'','','',RX_PHONE,$placeholder,$sanity_func,$valid_func);
+    parent::__construct($label_text,$name,'tel',$value,$required,'','','',RX_PHONE,$placeholder,$sanity_func,$valid_func);
   }
 };
 
@@ -243,7 +242,7 @@ class zip_input extends input
    * @param $sanity_func Optional function for sanitization. Defualt is null.
    * @param $valid_func Optional function for validation. Default is null.
    **/
-  public function zip_input
+  public function __construct
   (
     $label_text,
     $name,
@@ -255,7 +254,7 @@ class zip_input extends input
   )
   {
     //global $RX_ZIP;
-    parent::input($label_text,$name,'text',$value,$required,'','','',RX_ZIP,$placeholder,$sanity_func,$valid_func);
+    parent::__construct($label_text,$name,'text',$value,$required,'','','',RX_ZIP,$placeholder,$sanity_func,$valid_func);
   }
 };
 
@@ -265,7 +264,7 @@ class zip_input extends input
  **/
 class color_input extends input
 {
-  public function color_input
+  public function __construct
   (
     $label_text,
     $name,
@@ -275,7 +274,7 @@ class color_input extends input
     $valid_func = null
   )
   {
-     parent::input($label_text,$name,'color',$value,$required,'','','','','#fffffff',$sanity_func,$valid_func);
+     parent::__construct($label_text,$name,'color',$value,$required,'','','','','#fffffff',$sanity_func,$valid_func);
   }
 };
 
@@ -296,7 +295,7 @@ class date_input extends input
    * @param $sanity_func Optional function for sanitization. Defualt is null.
    * @param $valid_func Optional function for validation. Default is null.
    **/
-  public function date_input
+  public function __construct
   (
     $label_text,
     $name,
@@ -309,7 +308,7 @@ class date_input extends input
   )
   {
     date_default_timezone_set('America/Chicago');
-    parent::input($label_text,$name,'date',$value,$required,'','','','',date('Y-m-j'),$sanity_func,$valid_func);
+    parent::__construct($label_text,$name,'date',$value,$required,'','','','',date('Y-m-j'),$sanity_func,$valid_func);
   }
 
 }
@@ -345,7 +344,7 @@ class datalist_input extends input
    * @param input $input The input we are wrapping
    * @param array $datalist The list of values we want in the datalist
    **/
-  public function datalist_input($input,$datalist)
+  public function __construct($input,$datalist)
   {
     $this->input = $input;
     $this->datalist=$datalist;

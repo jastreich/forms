@@ -1,0 +1,133 @@
+<?php
+
+  require_once('builder_form.inc.php');
+  $builder = new builder_form();
+
+  $input_whitelist = array
+  (
+    'input',
+    'color_input',
+    'datalist_input',
+    'date_input',
+    'email_input',
+    'hidden_input',
+    'input_group',
+    'number_input',
+    'password_input',
+    'range_input',
+    'tel_input',
+    'text_input',
+    'textarea',
+    'zip_input',
+    'get_input',
+    'texteditor'
+  );
+
+  $required_values = array
+  (
+    'yes' => true,
+    'no' => false,
+    'y' => true,
+    'n' => false,
+    '1' => true,
+    '0' => false,
+    'on' => true,
+    'off' => false,
+    true => true,
+    false => false
+  );
+
+  $form_names = array();
+  $stmnt = $db->prepare('select distinct name from forms');
+  $stmnt->bind_result($v);
+  $stmnt->execute();
+  while($stmnt->fetch())
+  {
+    $form_names[] = $v;
+  }
+  $stmnt->close();
+
+  // Required fields
+  if(isset($_REQUEST['input']) && in_array($_REQUEST['input'],$input_whitelist))
+  {
+    $_SAFE['input'] = $_REQUEST['input'];
+  }
+  else
+  {
+    die('Invalid input value');
+  }
+
+  if(isset($_REQUEST['name']) && ctype_alnum($_REQUEST['name'])) )
+  {
+    $_SAFE['input'] = $_REQUEST['input'];
+  }
+  else
+  {
+    die('Invalid value for name.');
+  }
+
+
+  // Optional fields
+
+  if(!isset('required'))
+  {
+    $_SAFE['required'] = false;
+  }
+  else if(array_key_exists($_REQUEST['required'],$required_values))
+  {
+    $_SAFE['required'] = $required_values[ $_REQUEST['request'] ];
+  }
+  else
+  {
+    die('Invalued value for required.');
+  }
+
+  if( isset($_REQUEST['value']) && $_SAFE['input'] != 'texteditor')
+  {
+    $_SAFE['value'] = htmlspecialchars($_REQUEST['value']);
+  }
+  else if( isset($_REQUEST['value']) )
+  {
+    // Pass sanitization off on texteditor class...
+    $_SAFE['value'] = $_REQUEST['value'];
+  }
+
+  if(isset($_REQUEST['form']))
+  {
+    $_SAFE['form'] = '';
+  }
+  else if(isset($_REQUEST['form']))
+  {
+    die('Invalud value for form');
+  }
+
+  if(!isset($_REQUEST['action']))
+  {
+    $_REQUEST['action'] = 'form';
+  }
+
+  switch($_REQUEST['action'])
+  {
+    case make:
+
+      break;
+    case form:
+
+      break;
+    case add:
+      if(!isset($_SAFE['form']))
+      {
+        die('The form must be specified to add.');
+      }
+      break;
+    case delete:
+      if(!isset($_SAFE['form']))
+      {
+        die('The form must be specified to add.');
+      }
+      break;
+  }
+
+
+
+?>

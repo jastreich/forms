@@ -69,7 +69,7 @@ class input_group extends input
       $ret['html'] .= '>';
       $ret['html'] .= '<input type="' . $this->type . '" name="' . $this->name . '[]" value="' . $k . '"';
 
-      $ret['html'] .= (isset($this->value) && '' != $this->value && in_array($v,$this->value)? ' checked' : '');
+      $ret['html'] .= (isset($this->value) && '' != $this->value && in_array($k,$this->value)? ' checked' : '');
 
       $ret['html'] .= ($this->required ? ' required' : '');
       $ret['html'] .= '/>';
@@ -106,7 +106,7 @@ class input_group extends input
   public function display_text()
   {
     $list = '';
-    if(isArray($this->value))
+    if(is_array($this->value))
     {
       foreach($this->value as $v)
       {
@@ -117,7 +117,7 @@ class input_group extends input
     {
       parent::display();
     }
-    return $this->name . ":\n" . $list;
+    return $this->label_text . ":\n" . $list;
   }
 
 
@@ -138,6 +138,20 @@ class input_group extends input
    **/
   public function validate($errors = array())
   {
+    if($this->valid_func != null)
+    {
+if(isset($_GET['dev']))
+{
+  echo('Trying to validate group using passed validate function');
+}
+      $ret = call_user_func($this->valid_func,$this->value);
+      if($ret != '')
+      {
+        $errors[$this->name] = $ret;
+        return $errors;
+      }
+    }
+
     return $errors;
   }
 };

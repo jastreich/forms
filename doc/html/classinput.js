@@ -1,10 +1,10 @@
 var classinput =
 [
+    [ "__construct", "classinput.html#a0dc76f4753726b777552524a8847f51f", null ],
     [ "display", "classinput.html#a993053ef011cade1db0ceaccb1f4da53", null ],
     [ "display_text", "classinput.html#a344058a20cc48c9fe170b3b59905a53b", null ],
     [ "form", "classinput.html#a83b663057f1d0f61768bc12c5a55f25c", null ],
     [ "get_value", "classinput.html#a1b3bcdbb596a1154a944a169ac67f547", null ],
-    [ "input", "classinput.html#a13d088ddc4014c18efd350940632ecc0", null ],
     [ "sanitize", "classinput.html#ab8456d2b5a929801af6fe0b36afd458c", null ],
     [ "set_value", "classinput.html#a2383e00d55bf3dbcc7071b2fe1336aec", null ],
     [ "validate", "classinput.html#aaf4ed91e7abbc20e2396a4b07dbd031a", null ],

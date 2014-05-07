@@ -1,15 +1,9 @@
 var searchData=
 [
-  ['sanitize',['sanitize',['../classdatalist__input.html#a52e50cc544ff141a03c2fc65bfdaf9ea',1,'datalist_input\sanitize()'],['../interfacefield.html#a3ed132df10731b5ebe33acc44ac03c85',1,'field\sanitize()'],['../classforms.html#a2494aca1309491b0ba423e233f4210b3',1,'forms\sanitize()'],['../classinput.html#ab8456d2b5a929801af6fe0b36afd458c',1,'input\sanitize()'],['../classinput__group.html#a4f0f7f8aeb74550c99114f28dca449cb',1,'input_group\sanitize()']]],
-  ['save',['save',['../classfile__form.html#a29009ed5d4695a9298f167b17641ae1f',1,'file_form']]],
-  ['serialize_5fdata',['serialize_data',['../classfile__form.html#a242c4711e97a3a9062ecbc4dfce8d2e0',1,'file_form']]],
-  ['set_5fcontent',['set_content',['../classpage.html#aeab45580b69b8dc485402dd01694303d',1,'page']]],
-  ['set_5fcss',['set_css',['../classpage.html#af4c12b3536455dadfd585eb1b1373e09',1,'page']]],
-  ['set_5ffeatures',['set_features',['../classpage.html#a17f91936047fb8ba40b8dff21d5b2f55',1,'page']]],
-  ['set_5ffunc',['set_func',['../classobserver.html#a55ce655640d0e55b80b7e3becdb60000',1,'observer']]],
-  ['set_5fgoogle_5fanalytics',['set_google_analytics',['../classpage.html#ab0afa0eb524cf4c4cb00aafab2912564',1,'page']]],
-  ['set_5fjs',['set_js',['../classpage.html#a7b3ad75f4c2f61b55ec27aff1a41ca93',1,'page']]],
-  ['set_5fscripts',['set_scripts',['../classpage.html#a75526b06ca1a417bab2473740f80808e',1,'page']]],
-  ['set_5fsite_5fid',['set_site_id',['../classpage.html#a7a090c44f986e6bc76eb5e2e1442aef8',1,'page']]],
-  ['set_5fvalue',['set_value',['../classnumber__input.html#a8026b12c0bf4c8ea0ad303a532ed7230',1,'number_input\set_value()'],['../classdatalist__input.html#a73b5d2cfe2f300a62a39f5dfd5a18e70',1,'datalist_input\set_value()'],['../classinput.html#a2383e00d55bf3dbcc7071b2fe1336aec',1,'input\set_value()']]]
+  ['range_5finput',['range_input',['../classrange__input.html',1,'']]],
+  ['read',['read',['../interfacecrud.html#a9cbe80658a42208cee8825ad2a0db457',1,'crud\read()'],['../classdatabase__form.html#aff5e2b2b523b84443a34bc37472d5c8a',1,'database_form\read()'],['../classdb__form.html#aa77f60c8ca3cd52f28ea455eaa2f633d',1,'db_form\read()'],['../classfile__form.html#ab7dce3d792551f836f20948fa9c8ef13',1,'file_form\read()']]],
+  ['read_5fform',['read_form',['../classdatabase__form.html#adb7962f1e12276e5d5d35d9bb43db0d6',1,'database_form']]],
+  ['remove_5fobserver',['remove_observer',['../classforms.html#af5c72c905909819f8824958c2faa015d',1,'forms\remove_observer()'],['../interfaceobservable.html#aea49f4e7d1c3181031e50c15e0bfd9d4',1,'observable\remove_observer()']]],
+  ['rx_5fphone',['RX_PHONE',['../input_8inc_8php.html#a28a895521a5452ff587c2433af17a5f6',1,'input.inc.php']]],
+  ['rx_5fzip',['RX_ZIP',['../input_8inc_8php.html#a4dc6cafe7e22d63d07d3f9227d01fb07',1,'input.inc.php']]]
 ];

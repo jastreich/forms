@@ -1,11 +1,11 @@
 var classforms =
 [
+    [ "__construct", "classforms.html#aa6f51d92d0245300fccd3539816c5bf2", null ],
     [ "add_field", "classforms.html#ad85afb257cfdcf8834590774fd9ef357", null ],
     [ "add_observer", "classforms.html#a6c88ab2728699cc06ba8110b1f5aacbc", null ],
     [ "display", "classforms.html#abbb54cc0731f483777e6baa39f9fe494", null ],
     [ "display_text", "classforms.html#ad78a6f47ecded8987dda90468dbb8f77", null ],
     [ "form", "classforms.html#aca4fdeecf56bc5796f628a477f9ce629", null ],
-    [ "forms", "classforms.html#a89ff17c0b763f0fd16abbe6ebd2dbe96", null ],
     [ "notify", "classforms.html#a82bc2b5e603ecd535f362c3dfdcae96e", null ],
     [ "remove_observer", "classforms.html#af5c72c905909819f8824958c2faa015d", null ],
     [ "sanitize", "classforms.html#a2494aca1309491b0ba423e233f4210b3", null ],

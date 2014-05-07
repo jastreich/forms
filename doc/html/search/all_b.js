@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['observable',['observable',['../interfaceobservable.html',1,'']]],
-  ['observable_2einc_2ephp',['observable.inc.php',['../observable_8inc_8php.html',1,'']]],
-  ['observer',['observer',['../classobserver.html',1,'observer'],['../classobserver.html#a5efcb5a637012ce3f79747afd4d82d45',1,'observer\observer()']]],
-  ['observer_2einc_2ephp',['observer.inc.php',['../observer_8inc_8php.html',1,'']]]
+  ['notify',['notify',['../classforms.html#a82bc2b5e603ecd535f362c3dfdcae96e',1,'forms\notify()'],['../interfaceobservable.html#aa4d6d161d4154a3525e93f6c051e1914',1,'observable\notify()'],['../classobserver.html#a25402348675892e90bb91b5ffd764e54',1,'observer\notify()']]],
+  ['number_5finput',['number_input',['../classnumber__input.html',1,'']]]
 ];

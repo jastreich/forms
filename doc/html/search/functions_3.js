@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['datalist_5finput',['datalist_input',['../classdatalist__input.html#a5d082a8f7ebee9b5835490d75128c7e1',1,'datalist_input']]],
-  ['date_5finput',['date_input',['../classdate__input.html#a492b84dcbc8228427c6e5b0c415ad7ed',1,'date_input']]],
   ['delete',['delete',['../interfacecrud.html#a1e74e05aa1d6785caadb51164df38f3b',1,'crud\delete()'],['../classdatabase__form.html#ac65c871bc6d3a45319bbb3f20901cc56',1,'database_form\delete()'],['../classdb__form.html#a09bce6f14faa4db14589a8627c782b4c',1,'db_form\delete()'],['../classfile__form.html#aacbb6b50c48c05a74dd26e8abaee749a',1,'file_form\delete()']]],
   ['delete_5fform',['delete_form',['../classdatabase__form.html#a34c12094e361bdb922a5131a55826d28',1,'database_form']]],
   ['deserialize_5fdata',['deserialize_data',['../classfile__form.html#a8b8ee5ff11a467aa1411355604c40904',1,'file_form']]],

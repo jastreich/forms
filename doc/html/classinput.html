@@ -141,9 +141,9 @@ Inheritance diagram for input:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a13d088ddc4014c18efd350940632ecc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinput.html#a13d088ddc4014c18efd350940632ecc0">input</a> ($label_text, $name, $type= 'text', $value= '', $required=false, $maxlength= '', $min= '', $max= '', $pattern= '', $placeholder= '', $sanity_func=null, $valid_func=null)</td></tr>
-<tr class="memdesc:a13d088ddc4014c18efd350940632ecc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, creates an input object.  <a href="#a13d088ddc4014c18efd350940632ecc0">More...</a><br/></td></tr>
-<tr class="separator:a13d088ddc4014c18efd350940632ecc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dc76f4753726b777552524a8847f51f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinput.html#a0dc76f4753726b777552524a8847f51f">__construct</a> ($label_text, $name, $type= 'text', $value= '', $required=false, $maxlength= '', $min= '', $max= '', $pattern= '', $placeholder= '', $sanity_func=null, $valid_func=null)</td></tr>
+<tr class="memdesc:a0dc76f4753726b777552524a8847f51f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, creates an input object.  <a href="#a0dc76f4753726b777552524a8847f51f">More...</a><br/></td></tr>
+<tr class="separator:a0dc76f4753726b777552524a8847f51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83b663057f1d0f61768bc12c5a55f25c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinput.html#a83b663057f1d0f61768bc12c5a55f25c">form</a> ($errors=array())</td></tr>
 <tr class="memdesc:a83b663057f1d0f61768bc12c5a55f25c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates the html for the input for inclusion in a form.  <a href="#a83b663057f1d0f61768bc12c5a55f25c">More...</a><br/></td></tr>
 <tr class="separator:a83b663057f1d0f61768bc12c5a55f25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,80 +212,13 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The class input describes a form element, it's attributes and how it is validated and sanitized. </p>
 <p>Meant to be used with the class forms or it's dervative classes. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a993053ef011cade1db0ceaccb1f4da53"></a>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a0dc76f4753726b777552524a8847f51f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">input::display </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Display the name value pair. </p>
-<dl class="section return"><dt>Returns</dt><dd>A string containing the HTML formated name value pair for this input. </dd></dl>
-
-<p>Implements <a class="el" href="interfacefield.html#a6a8bbd656a0e7cab2604f6df859bb60a">field</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a344058a20cc48c9fe170b3b59905a53b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">input::display_text </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Display the name value pair. </p>
-<dl class="section return"><dt>Returns</dt><dd>A string containing the TEXT formated name value pair for this input. </dd></dl>
-
-<p>Implements <a class="el" href="interfacefield.html#a5e8d3e49ab5fba3956b7a297535806dc">field</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a83b663057f1d0f61768bc12c5a55f25c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">input::form </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$errors</em> = <code>array()</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Generates the html for the input for inclusion in a form. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramtype">array</td><td class="paramname">$errors</td><td>an accoiated array errors. If the field name appears in errors, the field's label will be a class of error. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>array with two elements 'html' the HTML of the input field and 'js' any JavaScript that would assoicated with it (empty for basic input types at this time). </dd></dl>
-
-<p>Implements <a class="el" href="interfacefield.html#a1b51c4b8b01f77a26eda359e1fc0fb4c">field</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a13d088ddc4014c18efd350940632ecc0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">input::input </td>
+          <td class="memname">input::__construct </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>$label_text</em>, </td>
@@ -381,6 +314,74 @@ Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a993053ef011cade1db0ceaccb1f4da53"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">input::display </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Display the name value pair. </p>
+<dl class="section return"><dt>Returns</dt><dd>A string containing the HTML formated name value pair for this input. </dd></dl>
+
+<p>Implements <a class="el" href="interfacefield.html#a6a8bbd656a0e7cab2604f6df859bb60a">field</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a344058a20cc48c9fe170b3b59905a53b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">input::display_text </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Display the name value pair. </p>
+<dl class="section return"><dt>Returns</dt><dd>A string containing the TEXT formated name value pair for this input. </dd></dl>
+
+<p>Implements <a class="el" href="interfacefield.html#a5e8d3e49ab5fba3956b7a297535806dc">field</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a83b663057f1d0f61768bc12c5a55f25c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">input::form </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$errors</em> = <code>array()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates the html for the input for inclusion in a form. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">array</td><td class="paramname">$errors</td><td>an accoiated array errors. If the field name appears in errors, the field's label will be a class of error. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>array with two elements 'html' the HTML of the input field and 'js' any JavaScript that would assoicated with it (empty for basic input types at this time). </dd></dl>
+
+<p>Implements <a class="el" href="interfacefield.html#a1b51c4b8b01f77a26eda359e1fc0fb4c">field</a>.</p>
 
 </div>
 </div>
@@ -491,7 +492,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classinput.html">input</a></li>
-    <li class="footer">Generated on Fri Mar 14 2014 16:14:34 for Frame Work Page by
+    <li class="footer">Generated on Wed May 7 2014 13:20:06 for Frame Work Page by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

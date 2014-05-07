@@ -1,10 +1,9 @@
 <?php
-require_once('sessions.inc.php');
 /** @file forms.inc.php
  * Contains the forms class.
  * @author Jeremy Streich
  **/
-
+require_once('sessions.inc.php');
 require_once('field.inc.php');
 require_once('observable.inc.php');
 require_once('event.inc.php');
@@ -45,12 +44,11 @@ class forms implements field, observable
    * @param string $name The name of form.
    * @param array $fields The fields of the form, as an array of input objects.
    **/
-  public function forms($name,$fields,$id='',$pre='')
+  public function __construct($name,$fields,$id='',$pre='')
   {
     $this->name = $name;
     $this->fields = $fields;
     $this->id = $id;
-    $this->fields = $fields;
     $this->observers = array();
   }
 
@@ -152,15 +150,24 @@ class forms implements field, observable
     {
       $errors = $field->validate($errors);
     }
-    $this->notify(new event($this,POST_VALIDATE,$errors ));
+
     if(!$this->use_nonce())
     {
-      $errors['nonce'] = 'There was a problem with the nonce. Please, try again.';
+      $errors['nonce'] = 'The nouce was already used.  Do not resubmit the form.';
+if(isset($_GET['dev']))
+{
       echo('<pre>');
       var_dump($this->nonce);
       var_dump($_SESSION['nonce']);
+      echo('----' . "\n");
+      var_dump($_SESSION);
       echo('</pre>');
+}
     }
+
+    $this->notify(new event($this,POST_VALIDATE,$errors ));
+
+
     return $errors;
   }
 
@@ -270,11 +277,22 @@ class forms implements field, observable
   private function use_nonce()
   {
     $this->expire_nonce();
+    if(count($_SESSION) === 0 || !isset($_SESSION['nounce']))
+    {
+      return true; //reluctantly....
+    }
+
     for($i = 0; isset($_SESSION['nonce']) && count($_SESSION['nonce']) > $i; ++$i)
     {
-      if($_SESSION['nonce'][$i]['val'] == $this->nonce)
+      if(isset($_SESSION['nonce'][$i]) && $_SESSION['nonce'][$i]['val'] == $this->nonce || $_SESSION['nounce'] == $this->nonce)
       {
         $_SESSION['nonce'] = array_splice($_SESSION['nonce'],$i,1);
+
+if(isset($_GET['dev']))
+{
+  echo('nouce found.');
+}
+
         return true;
       }
     }

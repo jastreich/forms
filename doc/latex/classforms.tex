@@ -15,7 +15,7 @@ Inheritance diagram for forms\-:\begin{figure}[H]
 \subsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classforms_a89ff17c0b763f0fd16abbe6ebd2dbe96}{forms} (\$name, \$fields, \$id='', \$pre='')
+\hyperlink{classforms_aa6f51d92d0245300fccd3539816c5bf2}{\-\_\-\-\_\-construct} (\$name, \$fields, \$id='', \$pre='')
 \begin{DoxyCompactList}\small\item\em Constructor for form class. \end{DoxyCompactList}\item 
 \hyperlink{classforms_aca4fdeecf56bc5796f628a477f9ce629}{form} (\$errors=array())
 \begin{DoxyCompactList}\small\item\em Returns the H\-T\-M\-L and Java\-Script for this form. \end{DoxyCompactList}\item 
@@ -62,6 +62,30 @@ Inheritance diagram for forms\-:\begin{figure}[H]
 
 \subsubsection{Detailed Description}
 This class describes an H\-T\-M\-L form, containing a collection of inputs, and does mass validation and sanitization on them. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classforms_aa6f51d92d0245300fccd3539816c5bf2}{\index{forms@{forms}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!forms@{forms}}
+\paragraph[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}forms\-::\-\_\-\-\_\-construct (
+\begin{DoxyParamCaption}
+\item[{}]{\$name, }
+\item[{}]{\$fields, }
+\item[{}]{\$id = {\ttfamily ''}, }
+\item[{}]{\$pre = {\ttfamily ''}}
+\end{DoxyParamCaption}
+)}}\label{classforms_aa6f51d92d0245300fccd3539816c5bf2}
+
+
+Constructor for form class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The name of form. \\
+\hline
+array & {\em \$fields} & The fields of the form, as an array of input objects. \\
+\hline
+\end{DoxyParams}
+
 
 \subsubsection{Member Function Documentation}
 \hypertarget{classforms_ad85afb257cfdcf8834590774fd9ef357}{\index{forms@{forms}!add\-\_\-field@{add\-\_\-field}}
@@ -165,27 +189,6 @@ array of strings with 'html' =$>$ the H\-T\-M\-L of the form, and 'js' =$>$ any 
 
 Implements \hyperlink{interfacefield_a1b51c4b8b01f77a26eda359e1fc0fb4c}{field}.
 
-\hypertarget{classforms_a89ff17c0b763f0fd16abbe6ebd2dbe96}{\index{forms@{forms}!forms@{forms}}
-\index{forms@{forms}!forms@{forms}}
-\paragraph[{forms}]{\setlength{\rightskip}{0pt plus 5cm}forms\-::forms (
-\begin{DoxyParamCaption}
-\item[{}]{\$name, }
-\item[{}]{\$fields, }
-\item[{}]{\$id = {\ttfamily ''}, }
-\item[{}]{\$pre = {\ttfamily ''}}
-\end{DoxyParamCaption}
-)}}\label{classforms_a89ff17c0b763f0fd16abbe6ebd2dbe96}
-
-
-Constructor for form class. 
-
-
-\begin{DoxyParams}[1]{Parameters}
-string & {\em \$name} & The name of form. \\
-\hline
-array & {\em \$fields} & The fields of the form, as an array of input objects. \\
-\hline
-\end{DoxyParams}
 \hypertarget{classforms_a82bc2b5e603ecd535f362c3dfdcae96e}{\index{forms@{forms}!notify@{notify}}
 \index{notify@{notify}!forms@{forms}}
 \paragraph[{notify}]{\setlength{\rightskip}{0pt plus 5cm}forms\-::notify (

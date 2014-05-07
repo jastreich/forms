@@ -25,6 +25,7 @@ var annotated =
     [ "observer", "classobserver.html", "classobserver" ],
     [ "page", "classpage.html", "classpage" ],
     [ "password_input", "classpassword__input.html", "classpassword__input" ],
+    [ "private_get_input", "classprivate__get__input.html", null ],
     [ "range_input", "classrange__input.html", "classrange__input" ],
     [ "tel_input", "classtel__input.html", "classtel__input" ],
     [ "text_input", "classtext__input.html", "classtext__input" ],

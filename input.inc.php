@@ -9,12 +9,12 @@ require_once('field.inc.php');
 /** Defines the RegEx that a phone number must match to be valid.
  *
  **/
-define('RX_PHONE','((\+?)((1|0)?)([\s-./]?)((\(\d{3}\)?)|(\d{3}))([\s-./]?)(\d{3})([\s-./]?)(\d{4}))');
+define('RX_PHONE','^((\+?)((1|0)?)([\s-./]?)((\(\d{3}\)?)|(\d{3}))([\s-./]?)(\d{3})([\s-./]?)(\d{4}))$');
 
 /** Defines the RegEx a US ZIP code must match to be valid.
  *
  **/
-define('RX_ZIP','([0-9]{5}([-][0-9]{4})?)');
+define('RX_ZIP','^([0-9]{5}([-][0-9]{4})?)$');
 
 $state_list = array
 (
@@ -109,7 +109,7 @@ class input implements field
    * @param mixed $sanity_func A function run on this element to sanitize it, if null will use default sanitation and validation using attributes above.
    * @param mixed $valid_func A function run on this element to validate it, if null will use default sanitation and validation using attributes above.
    **/
-  public function input
+  public function __construct
   (
     $label_text,
     $name,
@@ -314,7 +314,7 @@ class input implements field
         break;
 
       case 'url':
-        if(!filter_var($$this->value, FILTER_VALIDATE_URL))
+        if(!filter_var($this->value, FILTER_VALIDATE_URL))
         {
           $errors[$this->name] = '<b>' . $this->label_text . '</b> must	be a valid URL.';
         }

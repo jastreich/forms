@@ -15,7 +15,7 @@ Inheritance diagram for input\-:\begin{figure}[H]
 \subsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classinput_a13d088ddc4014c18efd350940632ecc0}{input} (\$label\-\_\-text, \$name, \$type= 'text', \$value= '', \$required=false, \$maxlength= '', \$min= '', \$max= '', \$pattern= '', \$placeholder= '', \$sanity\-\_\-func=null, \$valid\-\_\-func=null)
+\hyperlink{classinput_a0dc76f4753726b777552524a8847f51f}{\-\_\-\-\_\-construct} (\$label\-\_\-text, \$name, \$type= 'text', \$value= '', \$required=false, \$maxlength= '', \$min= '', \$max= '', \$pattern= '', \$placeholder= '', \$sanity\-\_\-func=null, \$valid\-\_\-func=null)
 \begin{DoxyCompactList}\small\item\em Constructor, creates an input object. \end{DoxyCompactList}\item 
 \hyperlink{classinput_a83b663057f1d0f61768bc12c5a55f25c}{form} (\$errors=array())
 \begin{DoxyCompactList}\small\item\em Generates the html for the input for inclusion in a form. \end{DoxyCompactList}\item 
@@ -80,6 +80,56 @@ The class input describes a form element, it's attributes and how it is validate
 
 Meant to be used with the class forms or it's dervative classes. 
 
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classinput_a0dc76f4753726b777552524a8847f51f}{\index{input@{input}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!input@{input}}
+\paragraph[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}input\-::\-\_\-\-\_\-construct (
+\begin{DoxyParamCaption}
+\item[{}]{\$label\-\_\-text, }
+\item[{}]{\$name, }
+\item[{}]{\$type = {\ttfamily 'text'}, }
+\item[{}]{\$value = {\ttfamily ''}, }
+\item[{}]{\$required = {\ttfamily false}, }
+\item[{}]{\$maxlength = {\ttfamily ''}, }
+\item[{}]{\$min = {\ttfamily ''}, }
+\item[{}]{\$max = {\ttfamily ''}, }
+\item[{}]{\$pattern = {\ttfamily ''}, }
+\item[{}]{\$placeholder = {\ttfamily ''}, }
+\item[{}]{\$sanity\-\_\-func = {\ttfamily null}, }
+\item[{}]{\$valid\-\_\-func = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}}\label{classinput_a0dc76f4753726b777552524a8847f51f}
+
+
+Constructor, creates an input object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$label\-\_\-text} & The text label on the form field. \\
+\hline
+string & {\em \$name} & The name of the field used to identify this field in the database, and in the form. \\
+\hline
+string & {\em \$type} & The type of input, should be a valid H\-T\-M\-L type. \\
+\hline
+mixed & {\em \$value} & The current value of the field. \\
+\hline
+bool & {\em \$required} & Boolean value, weather or not the user is required to enter a value for the field. \\
+\hline
+mixed & {\em \$maxlength} & The maximum characters this field's value can have, and still be valid. null or empty string will make this be ignored. \\
+\hline
+mixes & {\em \$min} & The minimum value allowed for this imput, when type is date, time or some type that has a numberic value. null or empty string willl make this be ignored. \\
+\hline
+string & {\em \$pattern} & The regex pattern that this field's value must match to be valid. null or empty string will make this ignored. \\
+\hline
+string & {\em \$placeholder} & The placeholder text for this item. null or empty string will suppress this attribute from being printed. \\
+\hline
+mixed & {\em \$sanity\-\_\-func} & A function run on this element to sanitize it, if null will use default sanitation and validation using attributes above. \\
+\hline
+mixed & {\em \$valid\-\_\-func} & A function run on this element to validate it, if null will use default sanitation and validation using attributes above. \\
+\hline
+\end{DoxyParams}
+
+
 \subsubsection{Member Function Documentation}
 \hypertarget{classinput_a993053ef011cade1db0ceaccb1f4da53}{\index{input@{input}!display@{display}}
 \index{display@{display}!input@{input}}
@@ -140,53 +190,6 @@ array with two elements 'html' the H\-T\-M\-L of the input field and 'js' any Ja
 
 Implements \hyperlink{interfacefield_a1b51c4b8b01f77a26eda359e1fc0fb4c}{field}.
 
-\hypertarget{classinput_a13d088ddc4014c18efd350940632ecc0}{\index{input@{input}!input@{input}}
-\index{input@{input}!input@{input}}
-\paragraph[{input}]{\setlength{\rightskip}{0pt plus 5cm}input\-::input (
-\begin{DoxyParamCaption}
-\item[{}]{\$label\-\_\-text, }
-\item[{}]{\$name, }
-\item[{}]{\$type = {\ttfamily 'text'}, }
-\item[{}]{\$value = {\ttfamily ''}, }
-\item[{}]{\$required = {\ttfamily false}, }
-\item[{}]{\$maxlength = {\ttfamily ''}, }
-\item[{}]{\$min = {\ttfamily ''}, }
-\item[{}]{\$max = {\ttfamily ''}, }
-\item[{}]{\$pattern = {\ttfamily ''}, }
-\item[{}]{\$placeholder = {\ttfamily ''}, }
-\item[{}]{\$sanity\-\_\-func = {\ttfamily null}, }
-\item[{}]{\$valid\-\_\-func = {\ttfamily null}}
-\end{DoxyParamCaption}
-)}}\label{classinput_a13d088ddc4014c18efd350940632ecc0}
-
-
-Constructor, creates an input object. 
-
-
-\begin{DoxyParams}[1]{Parameters}
-string & {\em \$label\-\_\-text} & The text label on the form field. \\
-\hline
-string & {\em \$name} & The name of the field used to identify this field in the database, and in the form. \\
-\hline
-string & {\em \$type} & The type of input, should be a valid H\-T\-M\-L type. \\
-\hline
-mixed & {\em \$value} & The current value of the field. \\
-\hline
-bool & {\em \$required} & Boolean value, weather or not the user is required to enter a value for the field. \\
-\hline
-mixed & {\em \$maxlength} & The maximum characters this field's value can have, and still be valid. null or empty string will make this be ignored. \\
-\hline
-mixes & {\em \$min} & The minimum value allowed for this imput, when type is date, time or some type that has a numberic value. null or empty string willl make this be ignored. \\
-\hline
-string & {\em \$pattern} & The regex pattern that this field's value must match to be valid. null or empty string will make this ignored. \\
-\hline
-string & {\em \$placeholder} & The placeholder text for this item. null or empty string will suppress this attribute from being printed. \\
-\hline
-mixed & {\em \$sanity\-\_\-func} & A function run on this element to sanitize it, if null will use default sanitation and validation using attributes above. \\
-\hline
-mixed & {\em \$valid\-\_\-func} & A function run on this element to validate it, if null will use default sanitation and validation using attributes above. \\
-\hline
-\end{DoxyParams}
 \hypertarget{classinput_ab8456d2b5a929801af6fe0b36afd458c}{\index{input@{input}!sanitize@{sanitize}}
 \index{sanitize@{sanitize}!input@{input}}
 \paragraph[{sanitize}]{\setlength{\rightskip}{0pt plus 5cm}input\-::sanitize (
