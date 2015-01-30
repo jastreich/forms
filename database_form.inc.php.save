@@ -1,8 +1,0 @@
-<?php
-
-class database_form extends forms
-{
-  create
-}
-
-?>

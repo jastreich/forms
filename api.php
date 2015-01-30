@@ -170,13 +170,6 @@
     $_REQUEST['action'] = 'form';
   }
 
-
-//echo('and bug free.');
-//echo("<pre><b>Request</b>\n");
-//var_dump($_REQUEST);
-//echo("\n<b>Safe</b>\n");
-//var_dump($_SAFE);
-
   switch($_REQUEST['action'])
   {
 
@@ -225,10 +218,20 @@
       {
         $_SAFE['type'] = array($_SAFE['type']);
       }
+
       $builder->values($_SAFE);
-//echo('<pre>');
-//var_dump($builder);
-//echo('</pre>');
+      if(!$builder->sanitize())
+      {
+        http_response_code(201);
+        die('Unrecoverable Errors exist in input.');
+      }
+
+      $errors = $builder->validate();
+      if(count(errors) > 0)
+      {
+        http_response_code(201);
+        die('Unrecoverable Errors exist in input.');
+      }
     
       $field = $builder->make_field();
 
@@ -258,8 +261,6 @@
       }
       else if(!in_array($_SAFE['form'],$form_names)) 
       {
-
-//var_dump($form_names);
         http_response_code(201);
         die('Form does not exists.');
       }
@@ -292,11 +293,6 @@
       $ret['errors'] = $errors;
       header('Content-Type: application/json');
       echo(json_encode($ret));
-//echo('Did I mention. I am supposed to make forms?');
-//echo('<pre>');
-//var_dump($_SAFE);
-//echo('<hr/>');
-//var_dump($_REQUEST);
       break;
       
     case 'update':
@@ -318,7 +314,7 @@
       if(!in_array($_SAFE['form'], $form_names))
       {
         http_response_code(201);
-        die('Add requires a valid existing form.');
+        die('Update requires a valid existing form.');
       }
       $form = new database_form($_SAFE['form'],array());
       $form->read_form();
@@ -329,6 +325,18 @@
       }
 
       $builder->values($_SAFE);
+      if(!$builder->sanitize())
+      {
+        http_response_code(201);
+        die('Unrecoverable Errors exist in input.');
+      }
+
+      $errors = $builder->validate();
+      if(count(errors) > 0)
+      {
+        http_response_code(201);
+        die('Unrecoverable Errors exist in input.');
+      }
 
 
       $field = $builder->make_field();
@@ -398,6 +406,11 @@
       {
         http_response_code(201);
         die('Remove requires a valid existing form.');
+      }
+      if(!isset($_SAFE['name']))
+      {
+        http_response_code(201);
+        die('Remove requires a valid input name.');
       }
       $form = new database_form($_SAFE['form'],array());
       $form->read_form();
