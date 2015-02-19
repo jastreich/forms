@@ -8,34 +8,8 @@ require_once('forms.inc.php');
 require_once('crud.inc.php');
 require_once('actions.inc.php');
 
-define('PRE_CREATE',13);
-define('POST_CREATE',14);
-
-define('PRE_READ',15);
-define('POST_READ',16);
-
-define('PRE_UPDATE',17);
-define('POST_UPDATE',18);
-
-define('PRE_DELETE',19);
-define('POST_DELETE',20);
-
-define('PRE_CREATE_FORM',21);
-define('POST_CREATE_FORM',22);
-
-define('PRE_READ_FORM',23);
-define('POST_READ_FORM',24);
-
-define('PRE_UPDATE_FORM',25);
-define('POST_UPDATE_FORM',26);
-
-define('PRE_DELETE_FORM',27);
-define('POST_DELETE_FORM',28);
-
-define('PRE_DISPLAY_TABLE',29);
-define('POST_DISPLAY_TABLE',30);
-
-/** @class database_form 
+/** 
+ * @class database_form 
  * This class allows the both the structure and the data for this form to be written out to a database.
  *
  **/

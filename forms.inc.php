@@ -1,5 +1,6 @@
 <?php
-/** @file forms.inc.php
+/***
+ * @file forms.inc.php
  * Contains the forms class.
  * @author Jeremy Streich
  **/
@@ -8,28 +9,10 @@ require_once('field.inc.php');
 require_once('observable.inc.php');
 require_once('event.inc.php');
 
-define('PRE_FORM',1);
-define('POST_FORM',2);
 
-define('PRE_SANITIZE',3);
-define('POST_SANITIZE',4);
-
-define('PRE_VALIDATE',5);
-define('POST_VALIDATE',6);
-
-define('PRE_DISPLAY',7);
-define('POST_DISPLAY',8);
-
-define('PRE_ADD_FIELD',9);
-define('POST_ADD_FIELD',10);
-
-define('PRE_VALUES',11);
-define('POST_VALUES',12);
-
-
-/** @class forms
+/**
+ * @class forms
  * This class describes an HTML form, containing a collection of inputs, and does mass validation and sanitization on them.
- *
  **/
 class forms implements field, observable
 {
@@ -40,19 +23,24 @@ class forms implements field, observable
   public $observers;
   public $nonce;
 
-  /** Constructor for form class
+  /**
+   * Constructor for form class
    * @param string $name The name of form.
-   * @param array $fields The fields of the form, as an array of input objects.
+   * @param array $fields The fields of the form, as an array of input objects (optional).
+   * @param int $id The id for this form (optional).
+   * @param string $pre The preface for the fields in the form (useful for including one form inside another form) (optional).
+   * @param array $observers An array of observers for this object (optional).
    **/
-  public function __construct($name,$fields,$id='',$pre='')
+  public function __construct($name,$fields = array(),$id='',$pre='',$observers = array())
   {
     $this->name = $name;
     $this->fields = $fields;
     $this->id = $id;
-    $this->observers = array();
+    $this->observers = $observers;
   }
 
-  /** Returns the HTML and JavaScript for this form.
+  /** 
+   * Returns the HTML and JavaScript for this form.
    * @param $errors an array of errors, used to add class to fields which have an error
    * @return array of strings with 'html' => the HTML of the form, and 'js' => any JS the form elements may need
    * @see input::form()
@@ -90,7 +78,8 @@ class forms implements field, observable
     return $ret;
   }
 
-  /** Sanitize field values to help protect against HTML, SQL, PHP or other injection.
+  /**
+   * Sanitize field values to help protect against HTML, SQL, PHP or other injection.
    * @return bool true if form could be sanitized, returns false if input was too mangled to sanitize.
    **/
   public function sanitize()
@@ -109,7 +98,8 @@ class forms implements field, observable
     return true;
   }
 
-  /** Display this form's name values pairs.
+  /**
+   * Display this form's name values pairs.
    * @return string containing an HTML table of values.
    **/
   public function display()
@@ -126,7 +116,8 @@ class forms implements field, observable
   }
 
 
-  /** Display this form's name values pairs.
+  /**
+   * Display this form's name values pairs.
    * @return string containing an txt table of values.
    **/
   public function display_text()
@@ -139,7 +130,8 @@ class forms implements field, observable
     return $ret;
   }
 
-  /** Validates the values of the input of the form.
+  /**
+   * Validates the values of the input of the form.
    * @param $errors an optional array to chain form validation with other inputs and forms.
    * @return $errors the passed array with new errors encountered.
    */
@@ -171,7 +163,8 @@ if(isset($_GET['dev']))
     return $errors;
   }
 
-  /** Adds a field to this form.
+  /**
+   * Adds a field to this form.
    * @param field input $f The new input, Two fields cannot have the same name.
    * @return true if field is added
    **/
@@ -188,15 +181,19 @@ if(isset($_GET['dev']))
     return false;
   }
 
-  /** Takes an assoicated array of values and assigns the values to input fileds, and the id of this form.
-   * @param array $values an associated array of values. Ignores values of keys that aren't fields in this form.
+  /**
+   * Takes an assoicated array of values and assigns the values to input fileds, and the id of this form.
+   * @param array $values an associated array of values. Ignores values of keys that aren't fields in this form (Optional).
+   * @return array of all the values (post assignment) for this form.
    **/
-  public function values($values)
+  public function values($values = array())
   {
     $this->notify(new event($this,PRE_VALUES,$values));
-    foreach($this->fields as $field)
+    $ret = array();
+    foreach($this->fields as $k => $field)
     {
       $field->values($values);
+      $ret[$k] = $field->get_value();
     }
     if(isset($values[$this->pre . 'id']))
     {
@@ -207,9 +204,11 @@ if(isset($_GET['dev']))
       $this->nonce = $values[$this->pre . 'nonce'];
     }
     $this->notify(new event($this,POST_VALUES,$values));
+    return $ret;
   }
 
-  /** Notify observers an $event has taken place.
+  /** 
+   * Notify observers an $event has taken place.
    * @param $event The event that's occured.
    **/
   public function notify($event)
@@ -228,21 +227,21 @@ if(isset($_GET['dev']))
     }
   }
 
-  /** Add an observer to watch $this object.
+  /** 
+   * Add an observer to watch $this object.
    * @param observer $ob The object waiting for state change.
    **/
   public function add_observer($ob)
   {
     if(!isset($this->observers))
-//                     observers
     {
       $this->observers = array();
     }
     $this->observers[] = $ob;
-//           observers
   }
 
-  /** Remove an observer of $this object.
+  /** 
+   * Remove an observer of $this object.
    * @param observer $ob The oberserver we want to remove.
    * @return True if found and removed, false if not.
    **/

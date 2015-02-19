@@ -12,7 +12,7 @@ class event
   public $event_type;
   public $parameters;
 
-  public function event(&$subject,$event_type,&$parameters = null)
+  public function event(&$subject,$event_type,$parameters = null)
   {
     $this->subject = $subject;
     $this->event_type = $event_type;

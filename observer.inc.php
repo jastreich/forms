@@ -4,6 +4,8 @@
  * @author Jeremy Streich
  **/
 
+require_once('action_definitions.inc.php');
+
 /** @class observer
  * Impliments the observer in the observer patters.
  **/
