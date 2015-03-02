@@ -47,4 +47,7 @@ define('POST_DELETE_FORM',28);
 define('PRE_DISPLAY_TABLE',29);
 define('POST_DISPLAY_TABLE',30);
 
+define('SUCCESSFUL_LOGIN',31);
+
+
 ?>
