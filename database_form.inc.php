@@ -3,7 +3,6 @@
  * @author Jeremy Streich
  **/
 
-require_once('/var/www/dbinfo/travel/connection.php');
 require_once('forms.inc.php');
 require_once('crud.inc.php');
 require_once('actions.inc.php');
