@@ -51,6 +51,7 @@ class password_input extends input
   )
   {
     parent::__construct($label_text,$name,'password',$value,$required,$maxlength,'','',$pattern,$placeholder,$sanity_func,$valid_func);
+    $this->attributes['autocomplete'] = 'off';
   }
 };
 

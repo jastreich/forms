@@ -95,6 +95,7 @@ class input implements field
   public $placeholder;
   public $sanity_func;
   public $valid_func;
+  public $attributes;
 
   /** Constructor, creates an input object.
    * @param string $label_text The text label on the form field.
@@ -136,6 +137,7 @@ class input implements field
     $this->required =	$required;
     $this->placeholder = $placeholder;
     $this->valid_func	= $valid_func;
+    $this->attributes = array();
   }
 
   /** Generates the html for the input for inclusion in a form.
@@ -161,6 +163,10 @@ class input implements field
     $ret['html'] .= ('' !== $this->maxlength ? ' maxlength="' . $this->maxlength . '"' : '');
     $ret['html'] .= ('' !== $this->pattern ? ' pattern="' . $this->pattern . '"' : '');
     $ret['html'] .= ($this->required ? ' required' : '');
+    foreach($this->attributes as $k => $v)
+    {
+      $ret['html'] .= ' ' . $k . '="' . $v . '"';
+    }
     $ret['html'] .= ('' !== $this->value ? ' value="' . htmlentities(trim($this->value)) . '"' : '');
     $ret['html'] .= '/></label>';
     return $ret;
