@@ -4,7 +4,7 @@
  *
  **/
 
-require_once('forms/forms.inc.php');
+require_once('forms.inc.php');
 
 
 /**
