@@ -14,7 +14,7 @@ require_once('forms/forms.inc.php');
  **/
 class crud_form extends forms
 {
-  public function do_form($values = array(),$page = ,$errors = array(),$create = true,$edit = true)
+  public function do_form($values = array(),$page = '',$errors = array(),$create = true,$edit = true)
   {
 
     // If page is empty, resubmit to the page we're on.
