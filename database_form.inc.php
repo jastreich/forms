@@ -116,7 +116,10 @@ class database_form extends forms implements crud
   {
     global $db;
     $this->notify(new event($this,PRE_CREATE));
-
+if(isset($_GET['dev']))
+{
+  echo 'database_form::create()';
+}
     // Aquire lock, creating file if it doesn't exist.
     $fp = fopen('/tmp/dblock.txt', 'w');
     // Wait for lock. This is not fair lock, so I don't know if it is worth it.
@@ -130,7 +133,16 @@ class database_form extends forms implements crud
     $stmnt->execute();
     $stmnt->bind_result($this->id);
     $stmnt->fetch();
+    if(!$stmnt->fetch() || !isset($this->id) || $this->id === null )
+    {
+      $this->id = 1;
+if(isset($_GET['dev']))
+{
+  echo 'Set to 1.';
+}
+    }
     $stmnt->close();
+
     $stmnt = $db->prepare('insert into forms_data (id,form_name,name,value) values (?,?,?,?)');
     $stmnt->bind_param('isss',$this->id,$this->name,$k,$v);
     foreach($this->fields as $k => $fv)
