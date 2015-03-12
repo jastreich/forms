@@ -207,6 +207,15 @@ if(isset($_GET['dev']))
     return $ret;
   }
 
+  /**
+   * Equivalent to calling forms::values() without parameters.
+   * @return array of all the values (post assignment) for this form.
+   **/
+  public function get_value()
+  {
+    return $this->values();
+  }
+
   /** 
    * Notify observers an $event has taken place.
    * @param $event The event that's occured.

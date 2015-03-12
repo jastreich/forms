@@ -23,7 +23,7 @@ class crud_form extends forms
       $page = 'http';
       if ($_SERVER["HTTPS"] == "on")
       {
-        $pageURL .= "s";
+        $page .= "s";
       }
       $page .= "://";
       $page .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
@@ -39,12 +39,12 @@ class crud_form extends forms
       echo '<input type="submit" />';
       echo '</form>';
 
-      if($f['jquery'])
+      if(isset($f['jquery']))
       {
         echo '<script src="/js/jquery.js" type="text/javascript"></script>';
       }
 
-      if($f['tinymce'])
+      if(isset($f['tinymce']))
       {
         echo '<script src="/js/tinymce/jquery.tinymce.min.js" type="text/javascript"></script>';
       }
@@ -61,13 +61,21 @@ class crud_form extends forms
         if(count($errors) == 0)
         {
           // No problems.  Do the stuff.
-          if($edit && isset($this->id))
+          if($edit && isset($this->id) && $this->id !== '')
           {
             $this->update();
+            echo 'Updated.';
           }
           else if($create)
           {
-            $this->create();
+            if($this->create())
+            {
+              echo 'Created.';
+            }
+            else
+            {
+              echo 'Sad Panda. No go.';
+            }
           }
           else
           {

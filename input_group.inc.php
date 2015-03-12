@@ -12,7 +12,8 @@ class input_group extends input
 {
   public $value_list;
 
-  /** Constructor for input_group object.
+  /**
+   * Constructor for input_group object.
    * @param $label_text The label for the group, will be displayed as the legend in the rendered html.
    * @param $name The name of the item in html, and the fields of the form.
    * @param $value_list the values for the input tags.
@@ -47,7 +48,8 @@ class input_group extends input
     $this->valid_func   = $valid_func;
   }
 
-  /** Generates the HTML for this input to be included in a form.
+  /** 
+   * Generates the HTML for this input to be included in a form.
    * @param array $errors an array of accumulated errors.
    * @return array with two elements 'html'=> The HTML for the object, 'js' => Any JS for the element (currently none).
    **/
@@ -79,7 +81,8 @@ class input_group extends input
     return $ret;
   }
 
-  /** Display the name value pair
+  /**
+   * Display the name value pair
    * @return A string containing the HTML formated name value pair for this input.
    **/
   public function display()
@@ -100,7 +103,8 @@ class input_group extends input
   }
 
 
-  /** Display the name value pair
+  /**
+   * Display the name value pair
    * @return A string containing the text formated name value pair for this input.
    **/
   public function display_text()
@@ -123,7 +127,8 @@ class input_group extends input
 
 
 
-  /** Sanitize this form's values
+  /**
+   * Sanitize this form's values
    * @todo Write this.
    * @bug always returns true.
    **/
@@ -132,7 +137,8 @@ class input_group extends input
     return true;
   }
 
-  /** Validate this form's values
+  /**
+   * Validate this form's values
    * @todo Write this.
    * @bug always returns true.
    **/
