@@ -64,8 +64,7 @@ class database_form extends forms implements crud
     $theform = unserialize($t);
     if(isset($_GET['dev']))
     {
-    echo $stmnt->error;
-
+      echo $stmnt->error;
       var_dump($t);
     }
     $stmnt->close();

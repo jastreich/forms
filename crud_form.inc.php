@@ -39,12 +39,12 @@ class crud_form extends forms
       echo '<input type="submit" />';
       echo '</form>';
 
-      if(isset($f['jquery']))
+      if(isset($f['jquery']) && $f['jquery'])
       {
         echo '<script src="/js/jquery.js" type="text/javascript"></script>';
       }
 
-      if(isset($f['tinymce']))
+      if(isset($f['tinymce']) && $f['tinymce'])
       {
         echo '<script src="/js/tinymce/jquery.tinymce.min.js" type="text/javascript"></script>';
       }
@@ -85,7 +85,7 @@ class crud_form extends forms
         else
         {
           // Errors.
-          echo '<ul>';
+          echo '<ul class="errors co co-error">';
           foreach ($errors as $error)
           {
             echo '<li>' . $error . '</li>';
@@ -97,12 +97,12 @@ class crud_form extends forms
           echo '<input type="submit" />';
           echo '</form>';
 
-          if($f['jquery'])
+          if(isset($f['jquery']) && $f['jquery'])
           {
             echo '<script src="/js/jquery.js" type="text/javascript"></script>';
           }
 
-          if($f['tinymce'])
+          if(isset($f['tinymce']) && $f['tinymce'])
           {
             echo '<script src="/js/tinymce/jquery.tinymce.min.js" type="text/javascript"></script>';
           }

@@ -6,16 +6,21 @@
 
 require_once('field.inc.php');
 
-/** Defines the RegEx that a phone number must match to be valid.
+/**
+ * Defines the RegEx that a phone number must match to be valid.
  *
  **/
 define('RX_PHONE','^((\+?)((1|0)?)([\s-./]?)((\(\d{3}\)?)|(\d{3}))([\s-./]?)(\d{3})([\s-./]?)(\d{4}))$');
 
-/** Defines the RegEx a US ZIP code must match to be valid.
+/**
+ * Defines the RegEx a US ZIP code must match to be valid.
  *
  **/
 define('RX_ZIP','^([0-9]{5}([-][0-9]{4})?)$');
 
+/**
+ * Associated Array, where the key is the state abbreviation and the value is name of the full name of the state.
+ **/
 $state_list = array
 (
     'AL'=>"Alabama",
@@ -71,6 +76,9 @@ $state_list = array
     'WY'=>"Wyoming"
 );
 
+/**
+ * State Abbreviations
+ **/
 $state_abrs =array( "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
       "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA",
       "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE",
@@ -83,18 +91,69 @@ $state_abrs =array( "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
  **/
 class input implements field
 {
+  /**
+   * @var string $label_text The label to be displayed with the field.
+   **/
   public $label_text;
+
+  /**
+   * @var string $name The name of the field.
+   **/
   public $name;
+
+  /**
+   * @var string $type The type of input this $input is.
+   **/
   public $type;
+
+  /**
+   * @var mixed $value The value of the input.
+   **/
   public $value;
+
+  /**
+   * @var mixed $min The minimum value of this input.
+   **/
   public $min;
+
+  /**
+   * @var mixed $max The maximum value of this input.
+   **/
   public $max;
+
+  /**
+   * @var int $maxlength The maxlength of the field. The maximum number of characters.
+   **/
   public $maxlength;
+
+  /**
+   * @var string $pattern The pattern is a regular expression that the value must match in order to pass validation.
+   **/
   public $pattern;
+
+  /**
+   * @var boolean $required The boolean value for if this input requires a value to pass validation. 
+   **/
   public $required;
+
+  /**
+   * @var string $placeholder Placehholder text used in the HTML5 placeholder value.
+   **/
   public $placeholder;
+
+  /**
+   * @var string $sanity_func The name of a function to call for sanitization check.
+   **/
   public $sanity_func;
+
+  /**
+   * @var string $valid_func The name of a function to call for validation check.
+   **/
   public $valid_func;
+
+  /**
+   * @var array $attributes An array of attribute names and values.
+   **/
   public $attributes;
 
   /** Constructor, creates an input object.
@@ -152,7 +211,7 @@ class input implements field
     if(array_key_exists($this->name,$errors) || $this->required)
     {
       $ret['html'] .= ' class="'
-                   .  ($this->required ? 'required' . (array_key_exists($this->name,$errors) ? ' ' : '') : '')
+                   .  ($this->required ? ' required ' : ' optional ')
                    .  (array_key_exists($this->name,$errors) ? 'error' : '') . '"';
     }
 

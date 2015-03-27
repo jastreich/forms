@@ -1,17 +1,49 @@
 <?php
+/**
+ * @file actions.inc.php
+ * Contains the classes email_form_values, 
+ * @author Jeremy Streich
+ **/
+
 require_once('observer.inc.php');
 require_once('forms.inc.php');
 require_once('database_form.inc.php');
 
-
+/**
+ * @class email_form_values
+ * This observer object emails the values of a form when the action in condition is performed.
+ **/
 class email_form_values extends observer
 {
+  /**
+   * @var string $email_to The email address to send the values.
+   **/
   public $email_to;
+
+  /**
+   * @var string $email_from The email address the email will appear to be sent from.
+   **/
   public $email_from;
+
+  /**
+   * @var string $email_subject The subject line of the email.
+   **/
   public $email_subject;
+
+  /**
+   * @var int $condition the number of the event action to take.
+   * @see action_definitions.inc.php
+   **/
   public $condition;
 
-  public function email_form_values($email_to = '',$email_from = '',$email_subject = '',$condition = null)
+  /**
+   * constructor
+   * @param string $email_to The email address to send the values.
+   * @param string $email_from The email address the email will appear to be sent from.
+   * @param string $email_subject The subject line of the email.
+   * @param int $condition the number of the event action to take.
+   **/
+  public function __construct($email_to = '',$email_from = '',$email_subject = '',$condition = null)
   {
     $this->email_to = $email_to;
     $this->email_from = $email_from;
@@ -19,12 +51,14 @@ class email_form_values extends observer
     $this->condition = $condition;
   }
 
+
+  /**
+   * Email the values if the passed event type matches email_form_values::$condition
+   * @param event $event The event that has just occured.
+   * @post if $event->event_type === $this->condition, then an email is sent. Otherwise, there is no effect.
+   **/
   public function notify($event)
   {
-    if(isset($_GET['dev']))
-    {
-      echo 'notify called.';
-    }
 
     if($event->event_type === $this->condition || ($this->condition === null && $event->event_type == POST_VALIDATE && count($event->parameters) === 0))
     {
@@ -80,6 +114,10 @@ class email_form_values extends observer
     return false;
   }
 
+  /**
+   * Multi-mutator for the attributes of this object.
+   * @param array $v An associated array with keys matching the attributes of this object, and values of the new values to assign.
+   **/
   public function values($v)
   {
     if(isset($v['email_to']))
@@ -100,9 +138,18 @@ class email_form_values extends observer
     }
   }
 
-  public function form($the_form)
+  /**
+   * Creates a form to collect the vales of this observer. If the user logged using UWM's 1Login, the person's email will be added to the HTML5 datalists on the form fields.
+   * @param forms $the_form If passed, all values of email_inputs are added to a datalist on the form fields (optional).
+   * @return a forms object that captures data to assign to this object using email_form_values::values()
+   **/
+  public function form($the_form = '')
   {
-    $fields = $the_form->fields;
+    $fields = array();
+    if($the_form !== '')
+    {
+      $fields = $the_form->fields;
+    }
     $email_fields = array();
 
     if(isset($_SERVER['eppn']))
@@ -142,46 +189,55 @@ class email_form_values extends observer
 
 }
 
-
-class message
+/**
+ * @class message
+ * Display a message on event. Useful for setting the accknoledgement page.
+ **/
+class message extends observer
 {
+  /**
+   * @var string $msg The message.
+   **/
   public $msg;
+
+  /**
+   * @var int $condition The event code of the event to display the message on.
+   **/
   public $condition;
 
+  /**
+   * Constructor
+   * @param string $msg The message.
+   * @param int $condition The event code of the event to display the message on (optional). Default is successful for validation.
+   **/
   public function message($msg,$condition=null)
   {
     $this->msg = $msg;
     $this->condition = $condition;
   }
 
+  /**
+   * Displays the message if the passed event's type matches message::$condition.
+   * @param event $event The event that just occured.
+   * @post if $this->condition === $event->event_type then the message is displayed, else no effect.
+   **/
   public function notify($event)
   {
-    if(isset($_GET['dev']))
-    {
-      echo 'notify called.';
-    }
-
     if($event->event_type === $this->condition || ($this->condition === null && $event->event_type == POST_VALIDATE && count($event->parameters) === 0))
     {
       echo $this->msg;
     }
   }
 
+  /**
+   * Multi-mutator for the attributes of this object.
+   * @param array $v An associated array, where the keys are name of the attributes you want to set, and the values are the new vales of the attributes.
+   **/
   public function values($v)
   {
-    if(isset($_GET['dev']))
-    {
-      echo 'values called with: <br/>';
-      var_dump($v);
-      echo '<br/>';
-    }
     if(isset($v['msg']))
     {
       $this->msg = $v['msg'];
-      if(isset($_GET['dev']))
-      {
-        echo 'Message set. <br/>';
-      }
     }
     if(isset($v['condition']))
     {
@@ -189,10 +245,12 @@ class message
     }
   }
 
-  public function form($the_form)
+  /** 
+   * Return a forms object that catpures the message you want to display. For use with message::values().
+   * @return a forms object to capture the message for this message object.
+   **/
+  public function form()
   {
-    $fields = $the_form->fields;
-    $email_fields = array();
 
     $form = new forms
     (
@@ -207,16 +265,4 @@ class message
 
 }
 
-
-/*
-class email_message extends email_form_values
-{
-  public $email_msg;
-
-
-  public static function email_message()
-  {
-  }
-}
-*/
 ?>

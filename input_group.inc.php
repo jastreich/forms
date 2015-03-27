@@ -57,17 +57,15 @@ class input_group extends input
   {
     $ret = array();
     $ret['js'] = '';
-    $ret['html'] = '<fieldset><legend>' . $this->label_text . '</legend>';
+    $ret['html'] = '<fieldset><legend';
+    $ret['html'] .= ' class="'
+                 .  ($this->required ? ' required ' : ' optional ')
+                 .  (array_key_exists($this->name,$errors) ? ' error ' : '') . '"';
+    $ret ['html'] .= '>' . $this->label_text . '</legend>';
     foreach($this->value_list as $k => $v)
     {
       $ret['html'] .= '<label';
-      if(array_key_exists($this->name,$errors) || $this->required)
-      {
-        //Think about required display...
-        $ret['html'] .= ' class="'
-                     .  ($this->required ? 'required' . (array_key_exists($this->name,$errors) ? ' ' : '') : '')
-                     .  (array_key_exists($this->name,$errors) ? 'error' : '') . '"';
-      }
+
       $ret['html'] .= '>';
       $ret['html'] .= '<input type="' . $this->type . '" name="' . $this->name . '[]" value="' . $k . '"';
 
