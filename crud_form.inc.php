@@ -63,8 +63,14 @@ class crud_form extends forms
           // No problems.  Do the stuff.
           if($edit && isset($this->id) && $this->id !== '')
           {
-            $this->update();
-            echo 'Updated.';
+            if($this->update())
+            {
+              echo 'Updated.';
+            }
+            else
+            {
+              echo 'Sad Panda. No go.';
+            }
           }
           else if($create)
           {

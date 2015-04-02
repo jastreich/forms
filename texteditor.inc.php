@@ -39,9 +39,9 @@ class texteditor extends textarea
   {
     $ret = parent::form($errors);
 
-    $ret['js'] = '$("textarea[name=' . $this->name . ']").tinymce({script_url : "tinymce/tinymce.min.js",theme : "modern",menubar:false, /* statusbar:false, */
-      plugins: ["advlist autolink lists link image charmap anchor searchreplace table contextmenu paste"],
-      toolbar: "undo redo copy paste | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link anchor image",
+    $ret['js'] = '$("textarea[name=' . $this->name . ']").tinymce({script_url : "tinymce/tinymce.min.js",theme : "modern",menubar:false,  statusbar:false, 
+      plugins: ["advlist autolink lists link charmap anchor searchreplace table contextmenu paste"],
+      toolbar: "undo redo copy paste | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link anchor",
       max_height: 400,
       min_height: 100,
       height : 180

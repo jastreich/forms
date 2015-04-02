@@ -62,11 +62,13 @@ class input_group extends input
                  .  ($this->required ? ' required ' : ' optional ')
                  .  (array_key_exists($this->name,$errors) ? ' error ' : '') . '"';
     $ret ['html'] .= '>' . $this->label_text . '</legend>';
+
     foreach($this->value_list as $k => $v)
     {
       $ret['html'] .= '<label';
 
       $ret['html'] .= '>';
+
       $ret['html'] .= '<input type="' . $this->type . '" name="' . $this->name . '[]" value="' . $k . '"';
 
       $ret['html'] .= (isset($this->value) && '' != $this->value && in_array($k,$this->value)? ' checked' : '');
@@ -127,33 +129,42 @@ class input_group extends input
 
   /**
    * Sanitize this form's values
-   * @todo Write this.
-   * @bug always returns true.
+   * @return the sanitized vale or true if successful, otherwise false.
    **/
   public function sanitize()
   {
+
+    foreach($this->value as $k => $v)
+    {
+      if(!array_key_exists($v, $this->list))
+      {
+
+      }
+    }
+
     return true;
   }
 
   /**
    * Validate this form's values
-   * @todo Write this.
-   * @bug always returns true.
+   * @param array $errors an associated array of errors already encountered.
+   * @return the passed array of errors with any error encountered appended to it.
    **/
   public function validate($errors = array())
   {
     if($this->valid_func != null)
     {
-if(isset($_GET['dev']))
-{
-  echo('Trying to validate group using passed validate function');
-}
       $ret = call_user_func($this->valid_func,$this->value);
       if($ret != '')
       {
         $errors[$this->name] = $ret;
         return $errors;
       }
+    }
+
+    if($this->required && ($this->value === '' || $this->value === null || count($this->value) === 0))
+    {
+      $errors[$this->name] = $this->label . ' is required.';
     }
 
     return $errors;

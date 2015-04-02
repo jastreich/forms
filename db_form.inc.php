@@ -118,8 +118,7 @@ class db_form extends crud_form implements crud
     }
 
     call_user_func_array(array($stmnt,'bind_result'),$f_sql);
-    $stmnt->fetch();
-    //var_dump($out);
+    $stmnt->fetch() or $ret = false;
 
     $stmnt->close();
     if($ret)
