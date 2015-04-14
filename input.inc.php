@@ -8,7 +8,6 @@ require_once('field.inc.php');
 
 /**
  * Defines the RegEx that a phone number must match to be valid.
- *
  **/
 define('RX_PHONE','^((\+?)((1|0)?)([\s-./]?)((\(\d{3}\)?)|(\d{3}))([\s-./]?)(\d{3})([\s-./]?)(\d{4}))$');
 
@@ -19,7 +18,7 @@ define('RX_PHONE','^((\+?)((1|0)?)([\s-./]?)((\(\d{3}\)?)|(\d{3}))([\s-./]?)(\d{
 define('RX_ZIP','^([0-9]{5}([-][0-9]{4})?)$');
 
 /**
- * Associated Array, where the key is the state abbreviation and the value is name of the full name of the state.
+ * @var array $state_list Associated Array, where the key is the state abbreviation and the value is name of the full name of the state.
  **/
 $state_list = array
 (
@@ -77,7 +76,7 @@ $state_list = array
 );
 
 /**
- * State Abbreviations
+ * @var array $state_abrs Standard two letter US state abbreviations
  **/
 $state_abrs =array( "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
       "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA",
@@ -86,8 +85,9 @@ $state_abrs =array( "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
       "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY");
 
 
-/** @class input
- *  @brief The class input describes a form element, it's attributes and how it is validated and sanitized.  Meant to be used with the class forms or it's dervative classes.
+/** 
+ * @class input
+ * The class input describes a form element, it's attributes and how it is validated and sanitized.  Meant to be used with the class forms or it's dervative classes.
  **/
 class input implements field
 {
@@ -156,7 +156,8 @@ class input implements field
    **/
   public $attributes;
 
-  /** Constructor, creates an input object.
+  /**
+   * Constructor, creates an input object.
    * @param string $label_text The text label on the form field.
    * @param string $name The name of the field used to identify this field in the database, and in the form.
    * @param string $type The type of input, should be a valid HTML type.
@@ -199,7 +200,8 @@ class input implements field
     $this->attributes = array();
   }
 
-  /** Generates the html for the input for inclusion in a form.
+  /**
+   * Generates the html for the input for inclusion in a form.
    * @param array $errors an accoiated array errors. If the field name appears in errors, the field's label will be a class of error.
    * @return array with two elements 'html' the HTML of the input field and 'js' any JavaScript that would assoicated with it (empty for basic input types at this time).
    **/
@@ -231,7 +233,8 @@ class input implements field
     return $ret;
   }
 
-  /** Display the name value pair
+  /**
+   * Display the name value pair
    * @return A string containing the HTML formated name value pair for this input.
    **/
   public function display()
@@ -239,9 +242,8 @@ class input implements field
     return '<tr><td class="field_name">' . $this->label_text . '</td><td class="field_value">' . htmlentities(trim($this->value)) . '</td></tr>';
   }
 
-
-
-  /** Display the name value pair
+  /**
+   * Display the name value pair
    * @return A string containing the TEXT formated name value pair for this input.
    **/
   public function display_text()
@@ -249,10 +251,8 @@ class input implements field
     return $this->label_text . ':' . trim($this->value) . "\n";
   }
 
-
-
-
-  /** Sanitizes value to help protect against HTML, SQL, PHP or other injections. Returns false if the value can't be cleaned in a sensible way.
+  /**
+   * Sanitizes value to help protect against HTML, SQL, PHP or other injections. Returns false if the value can't be cleaned in a sensible way.
    * @return mixed often the value of the field or true if sanitization occured properly, but false if we are unable to sanitize.
    * Use identical test '===' instaead of equality as input may have values of '' or 0.
    **/
@@ -328,7 +328,8 @@ class input implements field
     }
   }
 
-  /** Validates input's value, and adds errors to the $errors array if the value isn't valid, based on the attributes of this object or the input's valid_func.
+  /**
+   * Validates input's value, and adds errors to the $errors array if the value isn't valid, based on the attributes of this object or the input's valid_func.
    * @param array $errors an array of errors previously in the form, errors will be added to the array and the array returned.
    * @return array errors is returned, possibly with errors appended.
    **/
@@ -429,7 +430,8 @@ class input implements field
     return $errors;
   }
 
-  /** Inspector function for this input's value
+  /**
+   * Inspector function for this input's value
    * $return The current value of this input.
    **/
   public function get_value()
@@ -437,16 +439,18 @@ class input implements field
     return $this->value;
   }
 
-  /** Mutator function for this input's value.
+  /**
+   * Mutator function for this input's value.
    * @param mixed $v The new value of this input
-   * #post The value of this input will be set to $v
+   * @post The value of this input will be set to $v
    **/
   public function set_value($v)
   {
     $this->value = $v;
   }
 
-  /** Takes an assoicated array of values and assigns the values to input fileds, and the id of this form.
+  /**
+   * Takes an assoicated array of values and assigns the values to input fileds, and the id of this form.
    * @param array $values an associated array of values. Ignores values of keys that aren't fields in this form.
    **/
   public function values($values)

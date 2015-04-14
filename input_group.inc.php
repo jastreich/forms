@@ -45,6 +45,7 @@ class input_group extends input
     $this->value = $value;
     $this->required = $required;
     $this->placeholder = $placeholder;
+    $this->sanity_func = $sanity_func;
     $this->valid_func   = $valid_func;
   }
 
