@@ -137,9 +137,9 @@ class input_group extends input
 
     foreach($this->value as $k => $v)
     {
-      if(!array_key_exists($v, $this->list))
+      if(!array_key_exists($v, $this->value_list))
       {
-
+        return false;
       }
     }
 

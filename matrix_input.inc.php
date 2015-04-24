@@ -49,6 +49,9 @@ class matrix_input extends input
     $this->placeholder = '';
     $this->sanity_func = $sanity_func;
     $this->valid_func = $valid_func;
+
+    $this->table_attributes = array();
+    $this->attributes = array();
   }
 
   /**
@@ -56,6 +59,7 @@ class matrix_input extends input
    * @param array $errors An array of accumulated validation errors. (Optional)
    * @return an associative array where 'html' => The HTML of the input, and 'js' => any necessary javascript.
    * @see input::form()
+   * @todo Selected vales.
    **/
   public function form($errors = array())
   {
@@ -65,14 +69,14 @@ class matrix_input extends input
 
 
     $ret['html'] = $this->before_table;
-    $ret['hmtl'] .= '<table ';
-    foreach($table_attributes as $k => $v)
+    $ret['html'] .= '<table class="table table-stripped"';
+    foreach($this->table_attributes as $k => $v)
     {
       $ret['html'] .= $k . '="' . $v . '"';
     }
     $ret['html'] .= '>';
 
-    $ret['html'] .= '<thead><tr>';
+    $ret['html'] .= '<thead><tr><th>Question</th>';
     $f_inputs = array();
 
     $attr_line = '';
@@ -99,7 +103,7 @@ class matrix_input extends input
     }
 
     $ret['html'] .= '</tbody></table>';
-    $ret['html'] .= $after_table;
+    $ret['html'] .= $this->after_table;
 
     return $ret;
   }
@@ -112,7 +116,7 @@ class matrix_input extends input
   {
     foreach ($values as $key => $value)
     {
-      foreach($this->value_list as $name => $label)
+      foreach($this->inputs as $name => $label)
       {
         if($key == $name)
         {
@@ -121,7 +125,6 @@ class matrix_input extends input
       }
     }
   }
-
 
 }
 
