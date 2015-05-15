@@ -54,7 +54,15 @@ class db_form extends crud_form implements crud
       {
         $f[0] .= 's';
       }
-      $f[] = &$this->fields[$n]->value;
+
+      if(is_array($field->value))
+      {
+        $f[] = &$this->fields[$n]->value;
+      }
+      else
+      {
+        $f[] = &$this->fields[$n]->value;
+      }
       ++$i;
     }
     $q .= ') values (';

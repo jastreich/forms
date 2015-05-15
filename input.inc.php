@@ -319,7 +319,7 @@ class input implements field
         }
 
       case 'time':
-        return date_format(date_create_from_format('U',strtotime($this->value),'g:i A'));
+        return strtotime($this->value);
 
       case 'tel':
       case 'number':
