@@ -314,6 +314,41 @@ class date_input extends input
 
 }
 
+
+/** @class time_input
+ * This convience class creates a date input.
+ * @todo Polyfill.
+ **/
+class time_input extends input
+{
+  /** constructor for time_input
+   * @param string $label_text The text label for this zip_input.
+   * @param string $name The name of this field for internal use. (i.e. the name attribute in the render HTML and/or used in form)
+   * @param string $value The current value of this input. Optional. Default is ''.
+   * @param bool $required Weather or not the user is required to enter this field. This effects both HTML5 element and validation. Optional. Default is false.
+   * @param string $min a string representing the minimum date. Optional.
+   * @param string $max a string representing the maximum date. Optional.
+   * @param $sanity_func Optional function for sanitization. Defualt is null.
+   * @param $valid_func Optional function for validation. Default is null.
+   **/
+  public function __construct
+  (
+    $label_text,
+    $name,
+    $value,
+    $required = false,
+    $min = '',
+    $max = '',
+    $sanity_func = null,
+    $valid_func = null
+  )
+  {
+    date_default_timezone_set('America/Chicago');
+    parent::__construct($label_text,$name,'time',$value,$required,'','','','',date('Y-m-j'),$sanity_func,$valid_func);
+  }
+}
+
+
 /** Adaptor to input class, adds a datalist.
  * @extends input
  **/
