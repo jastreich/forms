@@ -97,7 +97,8 @@ class input implements field
   public $valid_func;
   public $attributes;
 
-  /** Constructor, creates an input object.
+  /** 
+   * Constructor, creates an input object.
    * @param string $label_text The text label on the form field.
    * @param string $name The name of the field used to identify this field in the database, and in the form.
    * @param string $type The type of input, should be a valid HTML type.
