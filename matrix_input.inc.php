@@ -98,7 +98,7 @@ class matrix_input extends input
       $ret['html'] .= '<tr><td>' . $label . '</td>';
       foreach($f_inputs as $html)
       {
-        $ret['html'] .= '<td>' . $html . 'name=' . $name . '[]"/></td>';
+        $ret['html'] .= '<td>' . $html . ' name=' . $name . '[]"/></td>';
       }
     }
 

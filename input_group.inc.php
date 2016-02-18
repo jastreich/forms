@@ -82,6 +82,30 @@ class input_group extends input
     return $ret;
   }
 
+
+  /**
+   * Values function to retreieve values from the passed array.
+   * @param array $values the values of the form as it was submitted.
+   **/
+  public function values($values)
+  {
+    foreach($values as $k => $v)
+    {
+      if($k == $this->name)
+      {
+        if(!is_array($v))
+        {
+          $this->value = array($v);
+        }
+        else
+        {
+          $this->value = $v;
+        }
+        return;
+      }
+    }
+  }
+
   /**
    * Display the name value pair
    * @return A string containing the HTML formated name value pair for this input.

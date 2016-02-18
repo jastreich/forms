@@ -35,6 +35,7 @@ class db_form extends crud_form implements crud
     $f[0] = '';
     $count_fields = count($this->fields);
     $i = 0;
+    $arr_ser = array();
     foreach($this->fields as $n => $field)
     {
       $q .= $field->name;
@@ -57,7 +58,8 @@ class db_form extends crud_form implements crud
 
       if(is_array($field->value))
       {
-        $f[] = &$this->fields[$n]->value;
+        $arr_ser[] = serialize($this->fields[$n]->value);
+        $f[] = &$arr_ser[count($arr_ser)-1];
       }
       else
       {
@@ -148,7 +150,7 @@ class db_form extends crud_form implements crud
   public function update()
   {
     global $db;
-    $this->notify(new event($this,PRE_READ,array('table'=>$this->name,'ids' => array($this->id))));
+    $this->notify(new event($this,PRE_UPDATE,array('table'=>$this->name,'ids' => array($this->id))));
     $ret = true;
     $q = 'update ' . $this->name . ' set ';
     $count_fields = count($this->fields);

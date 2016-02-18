@@ -16,7 +16,7 @@ class observer
   /** Constructor for the observer class.
    * @param function $f The function to call when an event is fired.
    **/
-  public function observer($f)
+  public function __construct($f)
   {
     $this->func = $f;
   }
