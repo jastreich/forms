@@ -64,8 +64,7 @@ class database_form extends forms implements crud
     $theform = unserialize($t);
     if(isset($_GET['dev']))
     {
-    echo $stmnt->error;
-
+      echo $stmnt->error;
       var_dump($t);
     }
     $stmnt->close();
@@ -132,7 +131,7 @@ if(isset($_GET['dev']))
     $stmnt = $db->prepare('select max(id)+1 from forms_data');
     $stmnt->execute();
     $stmnt->bind_result($this->id);
-    $stmnt->fetch();
+    //$stmnt->fetch();
     if(!$stmnt->fetch() || !isset($this->id) || $this->id === null )
     {
       $this->id = 1;
@@ -145,23 +144,26 @@ if(isset($_GET['dev']))
 
     $stmnt = $db->prepare('insert into forms_data (id,form_name,name,value) values (?,?,?,?)');
     $stmnt->bind_param('isss',$this->id,$this->name,$k,$v);
+$ret = true;
     foreach($this->fields as $k => $fv)
     {
+
       if(is_array($fv->get_value()))
       {
-        $v = implode($fv->get_value(),',');
+        $v = serialize($fv->get_value());
       }
       else
       {
         $v = $fv->get_value();
       }
-      $stmnt->execute();
+      $ret = $ret && $stmnt->execute();
     }
 
     $stmnt->close();
     flock($fp, LOCK_UN);
     fclose($fp);
     $this->notify(new event($this,POST_CREATE));
+    return $ret;
   }
 
   /** Read the data into this form from database $db table forms_data
@@ -181,8 +183,17 @@ if(isset($_GET['dev']))
       if(isset($this->fields[$k]))
       {
         if($this->fields[$k]->type == 'radio' || $this->fields[$k]->type == 'checkbox')
-        {
-          $this->fields[$k]->set_value(explode(',',$v));
+        { 
+          
+          $ans = unserialize($v);
+          if($ans !== false)
+          {
+            $this->fields[$k]->set_value($ans);
+          }
+          else
+          {
+            $this->fields[$k]->set_value(explode(',',$v));
+          }
         }
         else
         {
@@ -204,13 +215,15 @@ if(isset($_GET['dev']))
     $this->notify(new event($this,PRE_UPDATE));
     $stmnt = $db->prepare('update forms_data set value = ? where name = ? and id = ?');
     $stmnt->bind_param('ssi',$v,$k,$this->id);
+    $ret = true;
     foreach($this->fields as $k => $fv)
     {
       $v = $fv->get_value();
-      $stmnt->execute();
+      $ret = $ret && $stmnt->execute();
     }
     $stmnt->close();
     $this->notify(new event($this,POST_UPDATE));
+    return $ret;
   }
 
   /** Deletes the data record for this form.

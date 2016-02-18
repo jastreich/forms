@@ -16,12 +16,56 @@ require_once('event.inc.php');
  **/
 class forms implements field, observable
 {
+  /**
+   * @var string $name The name of the form.
+   **/
   public $name;
+
+  /**
+   * @var int $id The id number of this form, for use in databases and the like.
+   **/
   public $id;
+
+  /**
+   * @var string $pre Prefix, for nesting forms.
+   **/
   public $pre;
+
+  /** 
+   * @var array $fields an array of field objects.
+   **/
   public $fields;
+
+  /**
+   * @var array $observers Array of observers observing this object.
+   **/
   public $observers;
+
+  /**
+   * @var string $nounce The unique identifer to combat cross site scripting and cross site referal attacks.
+   **/
   public $nonce;
+
+  /**
+   * @var string $before_input HTML to place before each input.
+   **/
+  public $before_input = '';
+
+
+  /**
+   * @var string $after_input HTML place after each.
+   **/
+  public $after_input = '';
+
+  /**
+   * @var string $before_form HTML to add before form.
+   **/
+  public $before_form = '';
+
+  /**
+   * @var string $after_form HTML to add after the form.
+   **/
+  public $after_form = '';
 
   /**
    * Constructor for form class
@@ -49,7 +93,7 @@ class forms implements field, observable
   {
     $this->notify(new event($this,PRE_FORM,$errors));
     $ret = array();
-    $ret['html'] = '';
+    $ret['html'] = $this->before_form;
     $ret['js'] = '';
     if('' !== $this->id)
     {
@@ -60,7 +104,9 @@ class forms implements field, observable
     {
 
       $form = $field->form($errors);
+      $ret['html'] .= $this->before_input;
       $ret['html'] .= $form['html'];
+      $ret['html'] .= $this->after_input;
       $ret['js'] .= $form['js'];
 
       if(isset($form['jquery']) && $form['jquery'])
@@ -73,6 +119,7 @@ class forms implements field, observable
         $ret['tinymce'] = true;
       }
     }
+    $ret['html'] .= $this->after_form;
     $params = array($errors,$ret);
     $this->notify(new event($this,POST_FORM,$params));
     return $ret;
@@ -165,7 +212,7 @@ if(isset($_GET['dev']))
 
   /**
    * Adds a field to this form.
-   * @param field input $f The new input, Two fields cannot have the same name.
+   * @param field $f The new input, Two fields cannot have the same name.
    * @return true if field is added
    **/
   public function add_field(field $f)

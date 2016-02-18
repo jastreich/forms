@@ -45,6 +45,7 @@ class input_group extends input
     $this->value = $value;
     $this->required = $required;
     $this->placeholder = $placeholder;
+    $this->sanity_func = $sanity_func;
     $this->valid_func   = $valid_func;
   }
 
@@ -57,18 +58,18 @@ class input_group extends input
   {
     $ret = array();
     $ret['js'] = '';
-    $ret['html'] = '<fieldset><legend>' . $this->label_text . '</legend>';
+    $ret['html'] = '<fieldset><legend';
+    $ret['html'] .= ' class="'
+                 .  ($this->required ? ' required ' : ' optional ')
+                 .  (array_key_exists($this->name,$errors) ? ' error ' : '') . '"';
+    $ret ['html'] .= '>' . $this->label_text . '</legend>';
+
     foreach($this->value_list as $k => $v)
     {
       $ret['html'] .= '<label';
-      if(array_key_exists($this->name,$errors) || $this->required)
-      {
-        //Think about required display...
-        $ret['html'] .= ' class="'
-                     .  ($this->required ? 'required' . (array_key_exists($this->name,$errors) ? ' ' : '') : '')
-                     .  (array_key_exists($this->name,$errors) ? 'error' : '') . '"';
-      }
+
       $ret['html'] .= '>';
+
       $ret['html'] .= '<input type="' . $this->type . '" name="' . $this->name . '[]" value="' . $k . '"';
 
       $ret['html'] .= (isset($this->value) && '' != $this->value && in_array($k,$this->value)? ' checked' : '');
@@ -79,6 +80,30 @@ class input_group extends input
     }
     $ret['html'] .= '</fieldset>';
     return $ret;
+  }
+
+
+  /**
+   * Values function to retreieve values from the passed array.
+   * @param array $values the values of the form as it was submitted.
+   **/
+  public function values($values)
+  {
+    foreach($values as $k => $v)
+    {
+      if($k == $this->name)
+      {
+        if(!is_array($v))
+        {
+          $this->value = array($v);
+        }
+        else
+        {
+          $this->value = $v;
+        }
+        return;
+      }
+    }
   }
 
   /**
@@ -129,33 +154,42 @@ class input_group extends input
 
   /**
    * Sanitize this form's values
-   * @todo Write this.
-   * @bug always returns true.
+   * @return the sanitized vale or true if successful, otherwise false.
    **/
   public function sanitize()
   {
+
+    foreach($this->value as $k => $v)
+    {
+      if(!array_key_exists($v, $this->value_list))
+      {
+        return false;
+      }
+    }
+
     return true;
   }
 
   /**
    * Validate this form's values
-   * @todo Write this.
-   * @bug always returns true.
+   * @param array $errors an associated array of errors already encountered.
+   * @return the passed array of errors with any error encountered appended to it.
    **/
   public function validate($errors = array())
   {
     if($this->valid_func != null)
     {
-if(isset($_GET['dev']))
-{
-  echo('Trying to validate group using passed validate function');
-}
       $ret = call_user_func($this->valid_func,$this->value);
       if($ret != '')
       {
         $errors[$this->name] = $ret;
         return $errors;
       }
+    }
+
+    if($this->required && ($this->value === '' || $this->value === null || count($this->value) === 0))
+    {
+      $errors[$this->name] = $this->label . ' is required.';
     }
 
     return $errors;

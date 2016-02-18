@@ -1,6 +1,8 @@
-Process Creator
+Forms Frame Work
 =========================
 
-This project aims to create a procecess creator that will model business processes, end to end.
+This project is a framework for creating forms, processes and applications quickly and securely.
 
-PDF of documentation can be found at https://lswebdev.uwm.edu/secure/travel/doc/latex/refman.pdf .
+/**
+ * @todo Write a good description and example.
+ **/
