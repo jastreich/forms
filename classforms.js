@@ -1,0 +1,25 @@
+var classforms =
+[
+    [ "__construct", "classforms.html#a979ca9595a9f3c94796f45a33eb35199", null ],
+    [ "add_field", "classforms.html#ad85afb257cfdcf8834590774fd9ef357", null ],
+    [ "add_observer", "classforms.html#a6c88ab2728699cc06ba8110b1f5aacbc", null ],
+    [ "display", "classforms.html#abbb54cc0731f483777e6baa39f9fe494", null ],
+    [ "display_text", "classforms.html#ad78a6f47ecded8987dda90468dbb8f77", null ],
+    [ "form", "classforms.html#a99c214e9f70e6c614299ce1bc74539b7", null ],
+    [ "get_value", "classforms.html#ac17a10c4dfa3edd23d2ff8bfa6912b8b", null ],
+    [ "notify", "classforms.html#a82bc2b5e603ecd535f362c3dfdcae96e", null ],
+    [ "remove_observer", "classforms.html#af5c72c905909819f8824958c2faa015d", null ],
+    [ "sanitize", "classforms.html#a2494aca1309491b0ba423e233f4210b3", null ],
+    [ "validate", "classforms.html#a80d7d5c6d738b6f42cfbb258b3c3a3d1", null ],
+    [ "values", "classforms.html#a2d82420ee65d45bcc4ed3e20ea0faf89", null ],
+    [ "$after_form", "classforms.html#a79c4b294d97272d4e4214a2ca04c53b7", null ],
+    [ "$after_input", "classforms.html#abfa9bff3cd9bcd1fb705f6b0499a130b", null ],
+    [ "$before_form", "classforms.html#ab8d5d9c050440e79482f2d683b3a5580", null ],
+    [ "$before_input", "classforms.html#a2376b7fa3a0d4514fa0a4477d679cfa0", null ],
+    [ "$fields", "classforms.html#a4df40ac2adbfb971665ab358fc8954b5", null ],
+    [ "$id", "classforms.html#a43144384180122ef4434845671a45e4c", null ],
+    [ "$name", "classforms.html#aa84609327e0f9bdf2ba799c8cd2268fd", null ],
+    [ "$nonce", "classforms.html#a6d215f823bedee39a37a80d1bd8a16f5", null ],
+    [ "$observers", "classforms.html#aebf137dbe732b7eee3786e3b1ec24535", null ],
+    [ "$pre", "classforms.html#a55665dfe896e78efdfd33a650f6e2d7c", null ]
+];
