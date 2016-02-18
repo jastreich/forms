@@ -1,0 +1,7 @@
+<map id="db_form" name="db_form">
+<area shape="rect" id="node2" href="$classcrud__form.html" title="{crud_form\n||+ do_form()\l}" alt="" coords="92,645,180,722"/>
+<area shape="rect" id="node3" href="$classforms.html" title="This class describes an HTML form, containing a collection of inputs, and does mass validation and sa..." alt="" coords="67,204,205,575"/>
+<area shape="rect" id="node4" href="$interfacefield.html" title="{field\n||+ values()\l+ form()\l+ validate()\l+ sanitize()\l+ display()\l+ display_text()\l}" alt="" coords="5,5,117,156"/>
+<area shape="rect" id="node5" href="$interfaceobservable.html" title="Describes objects that are able to be observed by observer objects. " alt="" coords="141,27,280,134"/>
+<area shape="rect" id="node6" href="$interfacecrud.html" title="Describes an object that knows how to Create, Read, Update and Delete iteself. " alt="" coords="205,623,286,744"/>
+</map>

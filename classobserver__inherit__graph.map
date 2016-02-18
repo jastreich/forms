@@ -1,0 +1,4 @@
+<map id="observer" name="observer">
+<area shape="rect" id="node2" href="$classemail__form__values.html" title="This observer object emails the values of a form when the action in condition is performed. " alt="" coords="5,160,133,325"/>
+<area shape="rect" id="node3" href="$classmessage.html" title="Display a message on event. " alt="" coords="158,175,253,311"/>
+</map>

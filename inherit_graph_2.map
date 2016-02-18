@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classobserver.html" title="Impliments the observer in the observer patters. " alt="" coords="5,31,76,57"/>
+<area shape="rect" id="node2" href="$classemail__form__values.html" title="This observer object emails the values of a form when the action in condition is performed. " alt="" coords="124,5,252,32"/>
+<area shape="rect" id="node3" href="$classmessage.html" title="Display a message on event. " alt="" coords="151,56,225,83"/>
+</map>

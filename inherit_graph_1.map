@@ -1,0 +1,29 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$interfacecrud.html" title="Describes an object that knows how to Create, Read, Update and Delete iteself. " alt="" coords="140,5,187,32"/>
+<area shape="rect" id="node2" href="$classdatabase__form.html" title="This class allows the both the structure and the data for this form to be written out to a database..." alt="" coords="241,31,348,57"/>
+<area shape="rect" id="node3" href="$classdb__form.html" title="Represents an HTML form, and saves form data in $db table named by the name attribue of this object..." alt="" coords="403,56,471,83"/>
+<area shape="rect" id="node4" href="$interfacefield.html" title="field" alt="" coords="24,385,69,412"/>
+<area shape="rect" id="node5" href="$classforms.html" title="This class describes an HTML form, containing a collection of inputs, and does mass validation and sa..." alt="" coords="136,132,191,159"/>
+<area shape="rect" id="node9" href="$classinput.html" title="The class input describes a form element, it&#39;s attributes and how it is validated and sanitized..." alt="" coords="138,563,189,589"/>
+<area shape="rect" id="node6" href="$classbuilder__form.html" title="This form build up a form by creating fields. " alt="" coords="249,81,341,108"/>
+<area shape="rect" id="node7" href="$classcrud__form.html" title="crud_form" alt="" coords="255,132,334,159"/>
+<area shape="rect" id="node8" href="$classfile__form.html" title="This class represents an HTML form, it&#39;s values, how it is validated and allows to read/write form da..." alt="" coords="259,183,330,209"/>
+<area shape="rect" id="node10" href="$classcolor__input.html" title="This convience class creates a color input with validation and sanitization. " alt="" coords="252,233,337,260"/>
+<area shape="rect" id="node11" href="$classdatalist__input.html" title="Adaptor to input class, adds a datalist. " alt="" coords="245,284,344,311"/>
+<area shape="rect" id="node12" href="$classdate__input.html" title="This convience class creates a date input. " alt="" coords="253,335,336,361"/>
+<area shape="rect" id="node13" href="$classemail__input.html" title="email_input" alt="" coords="251,385,339,412"/>
+<area shape="rect" id="node14" href="$classhidden__input.html" title="The class hidden_input describes a form element, it&#39;s attributes and how it is validated and sanitize..." alt="" coords="247,436,342,463"/>
+<area shape="rect" id="node16" href="$classinput__group.html" title="Defines a group of related inputs like raido buttons or checkboxes that have the same name..." alt="" coords="250,487,339,513"/>
+<area shape="rect" id="node17" href="$classmatrix__input.html" title="This class represents a matrix_input. " alt="" coords="248,537,341,564"/>
+<area shape="rect" id="node18" href="$classnumber__input.html" title="This convience class allows easy creation of an input with type=&quot;number&quot;. " alt="" coords="245,588,345,615"/>
+<area shape="rect" id="node19" href="$classpassword__input.html" title="password_input" alt="" coords="239,639,351,665"/>
+<area shape="rect" id="node20" href="$classrange__input.html" title="Represents a slider element, an input with type=&quot;range&quot;. " alt="" coords="250,689,339,716"/>
+<area shape="rect" id="node21" href="$classtel__input.html" title="This represents a telephone number input, has regex sanitization and validation to ensure valid forma..." alt="" coords="259,740,330,767"/>
+<area shape="rect" id="node22" href="$classtext__input.html" title="convience function for creating text inputs " alt="" coords="255,791,334,817"/>
+<area shape="rect" id="node23" href="$classtextarea.html" title="Descibes a textarea, it&#39;s sanitzation and validation. " alt="" coords="260,841,329,868"/>
+<area shape="rect" id="node25" href="$classtime__input.html" title="This convience class creates a date input. " alt="" coords="253,892,336,919"/>
+<area shape="rect" id="node26" href="$classzip__input.html" title="This convience class creates a text input with validation for long or short form US zip codes..." alt="" coords="257,943,332,969"/>
+<area shape="rect" id="node15" href="$classget__input.html" title="An hidden_input that reads its value from the $_GET global array on creation. " alt="" coords="399,436,474,463"/>
+<area shape="rect" id="node24" href="$classtexteditor.html" title="This is a form element wrapping the testarea with javascript to turn it into a rich text editor..." alt="" coords="399,841,475,868"/>
+<area shape="rect" id="node27" href="$interfaceobservable.html" title="Describes objects that are able to be observed by observer objects. " alt="" coords="5,132,88,159"/>
+</map>

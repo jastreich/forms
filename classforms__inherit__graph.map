@@ -1,0 +1,9 @@
+<map id="forms" name="forms">
+<area shape="rect" id="node4" href="$classbuilder__form.html" title="This form build up a form by creating fields. " alt="" coords="5,681,116,788"/>
+<area shape="rect" id="node5" href="$classcrud__form.html" title="{crud_form\n||+ do_form()\l}" alt="" coords="141,696,229,773"/>
+<area shape="rect" id="node7" href="$classdatabase__form.html" title="This class allows the both the structure and the data for this form to be written out to a database..." alt="" coords="253,623,394,847"/>
+<area shape="rect" id="node8" href="$classfile__form.html" title="This class represents an HTML form, it&#39;s values, how it is validated and allows to read/write form da..." alt="" coords="418,652,554,817"/>
+<area shape="rect" id="node2" href="$interfacefield.html" title="{field\n||+ values()\l+ form()\l+ validate()\l+ sanitize()\l+ display()\l+ display_text()\l}" alt="" coords="123,5,235,156"/>
+<area shape="rect" id="node3" href="$interfaceobservable.html" title="Describes objects that are able to be observed by observer objects. " alt="" coords="259,27,398,134"/>
+<area shape="rect" id="node6" href="$classdb__form.html" title="Represents an HTML form, and saves form data in $db table named by the name attribue of this object..." alt="" coords="133,895,236,1031"/>
+</map>

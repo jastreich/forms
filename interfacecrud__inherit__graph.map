@@ -1,0 +1,4 @@
+<map id="crud" name="crud">
+<area shape="rect" id="node2" href="$classdatabase__form.html" title="This class allows the both the structure and the data for this form to be written out to a database..." alt="" coords="5,175,147,399"/>
+<area shape="rect" id="node3" href="$classdb__form.html" title="Represents an HTML form, and saves form data in $db table named by the name attribue of this object..." alt="" coords="171,219,274,355"/>
+</map>
