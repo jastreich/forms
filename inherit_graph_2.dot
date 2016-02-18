@@ -1,0 +1,11 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="observer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classobserver.html",tooltip="Impliments the observer in the observer patters. "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="email_form_values",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classemail__form__values.html",tooltip="This observer object emails the values of a form when the action in condition is performed. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="message",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmessage.html",tooltip="Display a message on event. "];
+}

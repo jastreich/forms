@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "Frame Work Page", "index.html", [
+  [ "Forms Framework", "index.html", [
     [ "ChangeLog", "md_ChangeLog.html", null ],
     [ "Todo List", "todo.html", null ],
     [ "Classes", null, [

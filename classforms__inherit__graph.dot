@@ -1,0 +1,20 @@
+digraph "forms"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{forms\n|+ $name\l+ $id\l+ $pre\l+ $fields\l+ $observers\l+ $nonce\l+ $before_input\l+ $after_input\l+ $before_form\l+ $after_form\l|+ __construct()\l+ form()\l+ sanitize()\l+ display()\l+ display_text()\l+ validate()\l+ add_field()\l+ values()\l+ get_value()\l+ notify()\l+ add_observer()\l+ remove_observer()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{field\n||+ values()\l+ form()\l+ validate()\l+ sanitize()\l+ display()\l+ display_text()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacefield.html"];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{observable\n||+ notify()\l+ add_observer()\l+ remove_observer()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceobservable.html",tooltip="Describes objects that are able to be observed by observer objects. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{builder_form\n||+ __construct()\l+ make_field()\l+ form()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbuilder__form.html",tooltip="This form build up a form by creating fields. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node5 [label="{crud_form\n||+ do_form()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcrud__form.html"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node6 [label="{db_form\n||+ create()\l+ read()\l+ update()\l+ delete()\l+ create_sql()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdb__form.html",tooltip="Represents an HTML form, and saves form data in $db table named by the name attribue of this object..."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node7 [label="{database_form\n||+ __construct()\l+ create_form()\l+ read_form()\l+ update_form()\l+ delete_form()\l+ create()\l+ read()\l+ update()\l+ delete()\l+ display_structure()\l+ display_table()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdatabase__form.html",tooltip="This class allows the both the structure and the data for this form to be written out to a database..."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node8 [label="{file_form\n||+ serialize_data()\l+ deserialize_data()\l+ save()\l+ create()\l+ read()\l+ update()\l+ delete()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfile__form.html",tooltip="This class represents an HTML form, it&#39;s values, how it is validated and allows to read/write form da..."];
+}

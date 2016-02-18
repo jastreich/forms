@@ -1,0 +1,10 @@
+digraph "crud"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{crud\n||+ create()\l+ read()\l+ update()\l+ delete()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{database_form\n||+ __construct()\l+ create_form()\l+ read_form()\l+ update_form()\l+ delete_form()\l+ create()\l+ read()\l+ update()\l+ delete()\l+ display_structure()\l+ display_table()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdatabase__form.html",tooltip="This class allows the both the structure and the data for this form to be written out to a database..."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{db_form\n||+ create()\l+ read()\l+ update()\l+ delete()\l+ create_sql()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdb__form.html",tooltip="Represents an HTML form, and saves form data in $db table named by the name attribue of this object..."];
+}

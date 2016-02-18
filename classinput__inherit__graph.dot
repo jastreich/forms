@@ -1,0 +1,43 @@
+digraph "input"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{input\n|+ $label_text\l+ $name\l+ $type\l+ $value\l+ $min\l+ $max\l+ $maxlength\l+ $pattern\l+ $required\l+ $placeholder\l+ $sanity_func\l+ $valid_func\l+ $attributes\l|+ __construct()\l+ form()\l+ display()\l+ display_text()\l+ sanitize()\l+ validate()\l+ get_value()\l+ set_value()\l+ values()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{field\n||+ values()\l+ form()\l+ validate()\l+ sanitize()\l+ display()\l+ display_text()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacefield.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{color_input\n||+ __construct()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcolor__input.html",tooltip="This convience class creates a color input with validation and sanitization. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{datalist_input\n||+ form()\l+ __construct()\l+ display()\l+ sanitize()\l+ validate()\l+ get_value()\l+ set_value()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdatalist__input.html",tooltip="Adaptor to input class, adds a datalist. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node5 [label="{date_input\n||+ __construct()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdate__input.html",tooltip="This convience class creates a date input. "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node6 [label="{email_input\n||+ __construct()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classemail__input.html"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node7 [label="{hidden_input\n||+ hidden_input()\l+ form()\l+ display()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhidden__input.html",tooltip="The class hidden_input describes a form element, it&#39;s attributes and how it is validated and sanitize..."];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node8 [label="{get_input\n||+ __construct()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classget__input.html",tooltip="An hidden_input that reads its value from the $_GET global array on creation. "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node9 [label="{input_group\n|+ $value_list\l|+ input_group()\l+ form()\l+ values()\l+ display()\l+ display_text()\l+ sanitize()\l+ validate()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classinput__group.html",tooltip="Defines a group of related inputs like raido buttons or checkboxes that have the same name..."];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node10 [label="{matrix_input\n|+ $table_attributes\l+ $before_table\l+ $after_table\l|+ __construct()\l+ form()\l+ values()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmatrix__input.html",tooltip="This class represents a matrix_input. "];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node11 [label="{number_input\n||+ __construct()\l+ get_value()\l+ set_value()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classnumber__input.html",tooltip="This convience class allows easy creation of an input with type=\"number\". "];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node12 [label="{password_input\n||+ __construct()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpassword__input.html"];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node13 [label="{range_input\n|+ $step\l|+ __construct()\l+ form()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrange__input.html",tooltip="Represents a slider element, an input with type=\"range\". "];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node14 [label="{tel_input\n||+ __construct()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtel__input.html",tooltip="This represents a telephone number input, has regex sanitization and validation to ensure valid forma..."];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node15 [label="{text_input\n||+ __construct()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtext__input.html",tooltip="convience function for creating text inputs "];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node16 [label="{textarea\n||+ textarea()\l+ form()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtextarea.html",tooltip="Descibes a textarea, it&#39;s sanitzation and validation. "];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node17 [label="{texteditor\n||+ texteditor()\l+ form()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtexteditor.html",tooltip="This is a form element wrapping the testarea with javascript to turn it into a rich text editor..."];
+  Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node18 [label="{time_input\n||+ __construct()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtime__input.html",tooltip="This convience class creates a date input. "];
+  Node1 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node19 [label="{zip_input\n||+ __construct()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classzip__input.html",tooltip="This convience class creates a text input with validation for long or short form US zip codes..."];
+}

@@ -1,0 +1,10 @@
+digraph "hidden_input"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{hidden_input\n||+ hidden_input()\l+ form()\l+ display()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{input\n|+ $label_text\l+ $name\l+ $type\l+ $value\l+ $min\l+ $max\l+ $maxlength\l+ $pattern\l+ $required\l+ $placeholder\l+ $sanity_func\l+ $valid_func\l+ $attributes\l|+ __construct()\l+ form()\l+ display()\l+ display_text()\l+ sanitize()\l+ validate()\l+ get_value()\l+ set_value()\l+ values()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classinput.html",tooltip="The class input describes a form element, it&#39;s attributes and how it is validated and sanitized..."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{field\n||+ values()\l+ form()\l+ validate()\l+ sanitize()\l+ display()\l+ display_text()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacefield.html"];
+}
