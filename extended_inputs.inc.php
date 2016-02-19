@@ -282,7 +282,6 @@ class color_input extends input
 
 /** @class date_input
  * This convience class creates a date input.
- * @todo Polyfill.
  **/
 class date_input extends input
 {
@@ -317,7 +316,6 @@ class date_input extends input
 
 /** @class time_input
  * This convience class creates a date input.
- * @todo Polyfill.
  **/
 class time_input extends input
 {
@@ -360,13 +358,11 @@ class datalist_input extends input
   /** Generates the html for the input for inclusion in a form.
    * @param array $errors an accoiated array errors. If the field name appears in errors, the field's label will be a class of error.
    * @return array with two elements 'html' the HTML of the input field and 'js' any JavaScript that would assoicated with it (empty for basic input types at this time).
-   * @todo fix so it doesn't require JS.
    **/
   public function form($errors = array())
   {
+    $this->input->attributes['list'] = $this->input->name . '_data';
     $ret = $this->input->form($errors);
-    $ret['jquery'] = true;
-    $ret['js'] .= '$("input[name=' . $this->input->name . ']").attr("list","' . $this->input->name . '_data");';
     $ret['html'] .= '<datalist id="' . $this->input->name . '_data">';
     foreach($this->datalist as $i)
     {

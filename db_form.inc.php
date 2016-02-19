@@ -222,15 +222,16 @@ class db_form extends crud_form implements crud
 
   /**
    * Generates and returns the SQL to create the table for this form.
-   * @todo
    **/
   public function create_sql()
   {
-    $q = 'create ' . $this->name . ' (';
+    $q = 'create table ' . $this->name . ' (ID MEDIUMINT NOT NULL AUTO_INCREMENT, ';
     foreach($this->fields as $k => $v)
     {
-      $q .= '$k' . ' ' . ($v->type == 'number' || $v->type == 'range' ? 'int' : 'varchar');
+      $q .= '$k' . ' ' . ($v->type == 'number' || $v->type == 'range' ? 'int' : 'varchar') . ',';
     }
+    $q = 'PRIMARY KEY (id))';
+    return $q;
   }
 
 };

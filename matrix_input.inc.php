@@ -88,7 +88,10 @@ class matrix_input extends input
     foreach($this->value_list as $k => $v)
     {
       $ret['html'] .= '<th>' . $v . '</th>';
-      $f_inputs[$k] = '<input type="' . $this->type . '" value="' . $v . '"' . ($this->required ? ' required' : '') . $attr_line;
+      $f_inputs[$k] = '<input type="' . $this->type . '" value="' . $v . '" ' 
+                    . ($this->required ? 'required ' : '') 
+                    . (isset($this->values[$k]) && $this->values[$k] == $v ? 'checked="checked"' : '')
+                    . $attr_line;
     }
 
     $ret['html'] .= '</tr></thead><tbody>';

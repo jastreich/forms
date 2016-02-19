@@ -1,4 +1,4 @@
-Forms Frame Work
+Forms Framework
 =========================
 
 This project is a framework for creating forms, processes and applications quickly and securely.
